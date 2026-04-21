@@ -61,17 +61,17 @@ export const Navigation = () => {
         <div className="container">
           <nav
             className={cn(
-              "flex items-center justify-between rounded-full px-6 py-3 transition-all",
+              "flex items-center gap-6 rounded-full px-6 py-3 transition-all",
               scrolled ? "glass shadow-card" : "bg-transparent"
             )}
           >
             <button
               onClick={() => handleClick("inicio")}
-            className="font-display text-lg font-bold text-gradient"
-          >
-            DiegoGarcía
-          </button>
-            <ul className="flex items-center gap-1">
+              className="font-display text-lg font-bold text-gradient shrink-0"
+            >
+              DiegoGarcía
+            </button>
+            <ul className="flex items-center gap-1 ml-auto">
               {links.map((link) => (
                 <li key={link.id}>
                   <button
@@ -91,7 +91,6 @@ export const Navigation = () => {
                 </li>
               ))}
             </ul>
-            <span aria-hidden="true" className="w-[120px]" />
           </nav>
         </div>
       </header>
