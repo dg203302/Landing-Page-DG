@@ -91,12 +91,7 @@ export const Navigation = () => {
                 </li>
               ))}
             </ul>
-            <a
-              href="mailto:diegogarcia479@yahoo.com.ar"
-              className="text-sm font-medium px-5 py-2 rounded-full bg-gradient-brand text-brand-foreground hover:shadow-glow transition-shadow"
-            >
-              Contactar
-            </a>
+            <span aria-hidden="true" className="w-[120px]" />
           </nav>
         </div>
       </header>
