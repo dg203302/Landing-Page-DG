@@ -92,6 +92,8 @@ export const Contact = () => {
                 <Reveal key={c.label} delay={i * 80}>
                   <a
                     href={c.href}
+                    target={c.href.startsWith("http") ? "_blank" : undefined}
+                    rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}
                     className={`group block h-full p-6 rounded-2xl glass shadow-card transition-all hover:-translate-y-1 ${
                       c.primary ? "ring-1 ring-brand/40" : ""
                     }`}
