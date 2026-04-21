@@ -1,6 +1,6 @@
 import { Reveal } from "@/components/Reveal";
 import { SectionHeader } from "@/components/SectionHeader";
-import { Mail, Phone, MapPin, Calendar, Flag, AtSign } from "lucide-react";
+import { Mail, Phone, MapPin, Calendar, Flag, AtSign, Linkedin, Github } from "lucide-react";
 
 const personal = [
   { icon: Calendar, label: "Fecha de nacimiento", value: "16 / 08 / 2003" },
