@@ -57,10 +57,10 @@ export const Navigation = () => {
           >
             <button
               onClick={() => handleClick("inicio")}
-              className="font-display text-lg font-bold text-gradient"
-            >
-              DG.
-            </button>
+            className="font-display text-lg font-bold text-gradient"
+          >
+            DiegoGarcía
+          </button>
             <ul className="flex items-center gap-1">
               {links.map((link) => (
                 <li key={link.id}>
