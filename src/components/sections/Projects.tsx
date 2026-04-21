@@ -155,7 +155,7 @@ const ProxyRTCard = () => (
             <Bus className="h-6 w-6 text-brand-foreground" />
           </div>
           <span className="text-[10px] font-semibold tracking-widest uppercase text-brand px-2.5 py-1 rounded-full border border-brand/30">
-            PWA de transporte público
+            API DE TRANSPORTE PÚBLICO
           </span>
         </div>
         <h3 className="font-display text-3xl md:text-4xl font-bold mb-3">ProxyRT</h3>
