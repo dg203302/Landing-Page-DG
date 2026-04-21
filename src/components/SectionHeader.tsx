@@ -3,7 +3,7 @@ import { Reveal } from "@/components/Reveal";
 interface SectionHeaderProps {
   eyebrow: string;
   title: string;
-  description?: string;
+  description?: React.ReactNode;
 }
 
 export const SectionHeader = ({ eyebrow, title, description }: SectionHeaderProps) => (
@@ -20,7 +20,7 @@ export const SectionHeader = ({ eyebrow, title, description }: SectionHeaderProp
     </Reveal>
     {description && (
       <Reveal delay={160}>
-        <p className="text-lg text-foreground/70 leading-relaxed">{description}</p>
+        <div className="text-lg text-foreground/70 leading-relaxed">{description}</div>
       </Reveal>
     )}
   </div>
