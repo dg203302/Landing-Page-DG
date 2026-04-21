@@ -1,11 +1,17 @@
 import { useEffect, useState } from "react";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeader } from "@/components/SectionHeader";
-import { Bus, Sparkles, Github, ExternalLink } from "lucide-react";
+import { Bus, Sparkles, Github, ExternalLink, Users, Briefcase, Smartphone } from "lucide-react";
 import trainerLogo from "@/assets/trainer-logo.png";
 import trainer1 from "@/assets/trainer-1.png";
 import trainer2 from "@/assets/trainer-2.png";
 import trainer3 from "@/assets/trainer-3.png";
+import debituLogo from "@/assets/debitu-logo.png";
+import debitu1 from "@/assets/debitu-1.png";
+import zondamovLogo from "@/assets/zondamov-logo.png";
+import zondamov1 from "@/assets/zondamov-1.png";
+import loteLogo from "@/assets/lote-logo.png";
+import lote1 from "@/assets/lote-1.png";
 
 const trainerSlides = [trainer1, trainer2, trainer3];
 
@@ -34,17 +40,14 @@ const TrainerCard = () => {
             }`}
           />
         ))}
-        {/* Dark overlay for legibility */}
         <div className="absolute inset-0 bg-background/80 backdrop-blur-[2px]" />
         <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/70 to-background/40" />
       </div>
 
-      {/* Decorative blobs */}
       <div className="absolute -top-32 -right-32 w-80 h-80 rounded-full bg-brand/15 blur-3xl" />
       <div className="absolute -bottom-32 -left-32 w-80 h-80 rounded-full bg-[hsl(var(--accent-2)/0.12)] blur-3xl" />
 
       <div className="relative p-7 md:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8">
-        {/* Left column */}
         <div className="lg:col-span-4">
           <div className="flex items-center gap-3 mb-5">
             <span className="text-[10px] font-semibold tracking-widest uppercase text-brand px-2.5 py-1 rounded-full border border-brand/30 bg-background/60 backdrop-blur">
@@ -87,7 +90,6 @@ const TrainerCard = () => {
           </a>
         </div>
 
-        {/* Right column */}
         <div className="lg:col-span-8 space-y-5">
           <p className="text-sm md:text-base text-foreground/85 leading-relaxed">
             App pensada para que cualquier persona pueda tener un plan de entrenamiento y
@@ -124,7 +126,6 @@ const TrainerCard = () => {
             </div>
           </div>
 
-          {/* Slide indicators */}
           <div className="flex items-center gap-2 pt-2">
             {trainerSlides.map((_, idx) => (
               <button
@@ -159,9 +160,13 @@ const ProxyRTCard = () => (
           </span>
         </div>
         <h3 className="font-display text-3xl md:text-4xl font-bold mb-3">ProxyRT</h3>
-        <p className="text-foreground/70 leading-relaxed mb-6">
+        <p className="text-foreground/70 leading-relaxed mb-4">
           Tiempos de arribo en tiempo real para Red Tulum, sin API oficial.
         </p>
+        <div className="mb-6 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-brand/10 border border-brand/30 text-xs text-brand font-medium">
+          <Sparkles className="h-3.5 w-3.5" />
+          Backend de datos para ZondaMov
+        </div>
 
         <div className="flex flex-wrap gap-2 mb-6">
           {["Python", "Playwright", "FastAPI", "Uvicorn", "Docker"].map((s) => (
@@ -217,7 +222,7 @@ const ProxyRTCard = () => (
         <p className="text-sm md:text-base text-foreground/75 leading-relaxed">
           Resultado: un proxy liviano, dockerizado, que responde como si fuera la API de Moovit
           — construido encima de datos que siempre estuvieron ahí, solo había que saber cómo
-          leerlos.
+          leerlos. Hoy es la base de datos en tiempo real que alimenta a <span className="text-brand font-medium">ZondaMov</span>.
         </p>
 
         <div className="flex gap-3 p-4 rounded-2xl bg-surface-elevated/40 border border-foreground/5 text-xs text-foreground/55 leading-relaxed">
@@ -234,23 +239,185 @@ const ProxyRTCard = () => (
   </article>
 );
 
+type TeamProject = {
+  name: string;
+  eyebrow: string;
+  tagline: string;
+  description: string;
+  logo: string;
+  image: string;
+  role: { icon: typeof Briefcase; label: string };
+  stack: string[];
+  links: { label: string; url: string; icon: typeof Github; primary?: boolean }[];
+};
+
+const teamProjects: TeamProject[] = [
+  {
+    name: "ZondaMov",
+    eyebrow: "Transporte en tiempo real",
+    tagline: "App de transporte público con estética Liquid Glass.",
+    description:
+      "Mapa con OpenStreetMap, búsqueda multimodal de líneas, paradas y ubicaciones, planificador de recorridos con control de trasbordos y horarios en tiempo real. Compatible con teléfonos, tablets y navegador, con modo oscuro y control de rendimiento.",
+    logo: zondamovLogo,
+    image: zondamov1,
+    role: { icon: Briefcase, label: "Desarrollador y arquitecto principal" },
+    stack: ["React", "OpenStreetMap", "Liquid Glass UI", "PWA", "TypeScript"],
+    links: [
+      { label: "Repositorio", url: "https://github.com/dg203302/ZondaMov", icon: Github, primary: true },
+    ],
+  },
+  {
+    name: "Debitú",
+    eyebrow: "Cuentas corrientes",
+    tagline: "App para gestionar cuentas corrientes en negocios de barrio.",
+    description:
+      "Registrá clientes, anotá deudas y pagos, enviá saldos por WhatsApp y usá la calculadora integrada. Interfaz moderna con bottom-sheets, transparencias elegantes y login seguro con Google.",
+    logo: debituLogo,
+    image: debitu1,
+    role: { icon: Smartphone, label: "Dev backend y diseñador móvil" },
+    stack: ["Mobile", "WhatsApp API", "Google Auth", "Bottom Sheets"],
+    links: [
+      { label: "Repositorio", url: "https://github.com/dg203302/SistemaClientesC", icon: Github, primary: true },
+    ],
+  },
+  {
+    name: "Clientes El Lote",
+    eyebrow: "Fidelización en tiempo real",
+    tagline: "Ecosistema de fidelización con sincronización en tiempo real.",
+    description:
+      "Basado en Supabase con sincronización en tiempo real entre el negocio y el cliente. App con sistema de puntos por compras presenciales, canje por promociones exclusivas, catálogo dinámico de ofertas, avisos, horarios y mapa integrado. Incluye panel admin interno para gestionar usuarios, cargar promos y enviar comunicados masivos. Ya disponible en Google Play.",
+    logo: loteLogo,
+    image: lote1,
+    role: { icon: Briefcase, label: "Dev backend" },
+    stack: ["Supabase", "Realtime", "Mobile", "Admin Panel"],
+    links: [
+      { label: "Repo Usuarios", url: "https://github.com/dg203302/SistemaClientes", icon: Github, primary: true },
+      { label: "Repo Admin", url: "https://github.com/dg203302/SistemaAdmin", icon: Github },
+      { label: "Google Play", url: "https://play.google.com/store/apps/details?id=app.netlify.loteclientes.twa&hl=es_AR", icon: ExternalLink },
+    ],
+  },
+];
+
+const TeamProjectCard = ({ project }: { project: TeamProject }) => {
+  const RoleIcon = project.role.icon;
+  return (
+    <article className="group relative w-full rounded-3xl overflow-hidden shadow-card border border-foreground/10 hover:border-brand/40 transition-all duration-500">
+      <div className="absolute inset-0">
+        <img
+          src={project.image}
+          alt={`Captura de ${project.name}`}
+          className="absolute inset-0 w-full h-full object-cover opacity-100"
+        />
+        <div className="absolute inset-0 bg-background/85 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/75 to-background/40" />
+      </div>
+
+      <div className="absolute -top-32 -right-32 w-80 h-80 rounded-full bg-[hsl(var(--accent-2)/0.15)] blur-3xl" />
+      <div className="absolute -bottom-32 -left-32 w-80 h-80 rounded-full bg-brand/10 blur-3xl" />
+
+      <div className="relative p-7 md:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div className="lg:col-span-5">
+          <div className="flex items-center gap-3 mb-5">
+            <span className="text-[10px] font-semibold tracking-widest uppercase text-brand px-2.5 py-1 rounded-full border border-brand/30 bg-background/60 backdrop-blur">
+              {project.eyebrow}
+            </span>
+          </div>
+
+          <div className="flex items-center gap-4 mb-4">
+            <img
+              src={project.logo}
+              alt={`Logo de ${project.name}`}
+              className="w-16 h-16 rounded-2xl shadow-glow object-contain bg-background/60 p-2 border border-foreground/10"
+            />
+            <h3 className="font-display text-3xl md:text-4xl font-bold">{project.name}</h3>
+          </div>
+
+          <p className="text-foreground/85 leading-relaxed mb-5">{project.tagline}</p>
+
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 mb-6 rounded-full bg-brand/10 border border-brand/30 text-xs text-brand font-medium">
+            <RoleIcon className="h-3.5 w-3.5" />
+            Mi rol: {project.role.label}
+          </div>
+
+          <div className="flex flex-wrap gap-2 mb-6">
+            {project.stack.map((s) => (
+              <span
+                key={s}
+                className="text-xs font-medium px-3 py-1.5 rounded-full bg-surface-elevated/80 backdrop-blur text-foreground/80 border border-foreground/10"
+              >
+                {s}
+              </span>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap gap-2">
+            {project.links.map((l) => {
+              const Icon = l.icon;
+              return (
+                <a
+                  key={l.url}
+                  href={l.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={
+                    l.primary
+                      ? "inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-gradient-brand text-brand-foreground text-sm font-medium hover:shadow-glow transition-all"
+                      : "inline-flex items-center gap-2 px-4 py-2.5 rounded-full glass text-sm font-medium hover:bg-surface-elevated transition-all"
+                  }
+                >
+                  <Icon className="h-4 w-4" />
+                  {l.label}
+                </a>
+              );
+            })}
+          </div>
+        </div>
+
+        <div className="lg:col-span-7 flex items-center">
+          <p className="text-sm md:text-base text-foreground/85 leading-relaxed">
+            {project.description}
+          </p>
+        </div>
+      </div>
+    </article>
+  );
+};
+
 export const Projects = () => {
   return (
     <section id="proyectos" className="py-24 md:py-32 relative">
-      <div className="container">
-        <SectionHeader
-          eyebrow="Proyectos personales"
-          title="En lo que estoy trabajando"
-          description="Proyectos donde combino ingenio técnico, IA y desarrollo end-to-end para resolver problemas reales."
-        />
+      <div className="container space-y-20">
+        <div>
+          <SectionHeader
+            eyebrow="Proyectos personales"
+            title="En lo que estoy trabajando"
+            description="Proyectos donde combino ingenio técnico, IA y desarrollo end-to-end para resolver problemas reales."
+          />
 
-        <div className="flex flex-col gap-6">
-          <Reveal>
-            <TrainerCard />
-          </Reveal>
-          <Reveal delay={120}>
-            <ProxyRTCard />
-          </Reveal>
+          <div className="flex flex-col gap-6">
+            <Reveal>
+              <TrainerCard />
+            </Reveal>
+            <Reveal delay={120}>
+              <ProxyRTCard />
+            </Reveal>
+          </div>
+        </div>
+
+        <div>
+          <SectionHeader
+            eyebrow="Proyectos en conjunto"
+            title="Trabajos en equipo"
+            description="Productos construidos junto a D&JSolutions, donde participé en distintos roles técnicos y de diseño."
+          />
+
+          <div className="flex flex-col gap-6">
+            {teamProjects.map((p, i) => (
+              <Reveal key={p.name} delay={i * 100}>
+                <TeamProjectCard project={p} />
+              </Reveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>
