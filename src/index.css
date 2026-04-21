@@ -92,10 +92,43 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground antialiased;
+    position: relative;
+  }
+
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -2;
     background-image:
-      radial-gradient(60% 50% at 50% 0%, hsl(var(--brand) / 0.18), transparent 70%),
-      radial-gradient(40% 40% at 90% 30%, hsl(var(--accent-2) / 0.15), transparent 70%);
-    background-attachment: fixed;
+      radial-gradient(circle at 18% 22%, hsl(var(--brand) / 0.28), transparent 38%),
+      radial-gradient(circle at 82% 18%, hsl(var(--accent-2) / 0.26), transparent 42%),
+      radial-gradient(circle at 25% 80%, hsl(var(--brand-glow) / 0.22), transparent 40%),
+      radial-gradient(circle at 78% 78%, hsl(199 89% 56% / 0.20), transparent 42%),
+      radial-gradient(circle at 50% 50%, hsl(271 91% 65% / 0.14), transparent 55%);
+    background-size: 200% 200%;
+    animation: bg-shift 22s ease-in-out infinite alternate;
+    pointer-events: none;
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image:
+      linear-gradient(to right, hsl(var(--foreground) / 0.04) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--foreground) / 0.04) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+    -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 75%);
+    pointer-events: none;
+  }
+
+  @keyframes bg-shift {
+    0%   { background-position: 0% 0%, 100% 0%, 0% 100%, 100% 100%, 50% 50%; }
+    50%  { background-position: 30% 20%, 70% 30%, 20% 70%, 80% 60%, 60% 40%; }
+    100% { background-position: 100% 100%, 0% 100%, 100% 0%, 0% 0%, 50% 50%; }
   }
 
   ::selection {
