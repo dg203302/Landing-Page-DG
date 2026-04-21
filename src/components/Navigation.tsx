@@ -41,6 +41,16 @@ export const Navigation = () => {
 
   return (
     <>
+      {/* Mobile floating brand pill */}
+      <header className="md:hidden fixed top-4 inset-x-4 z-50 flex justify-center">
+        <button
+          onClick={() => handleClick("inicio")}
+          className="glass shadow-card rounded-full px-5 py-2 font-display text-base font-bold text-gradient"
+        >
+          DiegoGarcía
+        </button>
+      </header>
+
       {/* Desktop header */}
       <header
         className={cn(
