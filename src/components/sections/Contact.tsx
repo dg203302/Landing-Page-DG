@@ -34,6 +34,18 @@ const contacts = [
     value: "+54 264 585-9124",
     href: "tel:+542645859124",
   },
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    value: "/in/diego-jose-garcía",
+    href: "https://www.linkedin.com/in/diego-jose-garc%C3%ADa/",
+  },
+  {
+    icon: Github,
+    label: "GitHub",
+    value: "@dg203302",
+    href: "https://github.com/dg203302",
+  },
 ];
 
 export const Contact = () => {
