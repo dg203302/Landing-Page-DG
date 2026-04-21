@@ -1,6 +1,6 @@
 import { Reveal } from "@/components/Reveal";
 import { SectionHeader } from "@/components/SectionHeader";
-import { Mail, Phone, MapPin, Calendar, Flag, AtSign } from "lucide-react";
+import { Mail, Phone, MapPin, Calendar, Flag, AtSign, Linkedin, Github } from "lucide-react";
 
 const personal = [
   { icon: Calendar, label: "Fecha de nacimiento", value: "16 / 08 / 2003" },
@@ -33,6 +33,18 @@ const contacts = [
     label: "Teléfono secundario",
     value: "+54 264 585-9124",
     href: "tel:+542645859124",
+  },
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    value: "/in/diego-jose-garcía",
+    href: "https://www.linkedin.com/in/diego-jose-garc%C3%ADa/",
+  },
+  {
+    icon: Github,
+    label: "GitHub",
+    value: "@dg203302",
+    href: "https://github.com/dg203302",
   },
 ];
 
@@ -80,6 +92,8 @@ export const Contact = () => {
                 <Reveal key={c.label} delay={i * 80}>
                   <a
                     href={c.href}
+                    target={c.href.startsWith("http") ? "_blank" : undefined}
+                    rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}
                     className={`group block h-full p-6 rounded-2xl glass shadow-card transition-all hover:-translate-y-1 ${
                       c.primary ? "ring-1 ring-brand/40" : ""
                     }`}
