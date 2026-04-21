@@ -74,7 +74,7 @@ export const Hero = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-foreground/40">
+        <div className="absolute -bottom-12 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-foreground/40">
           <span className="text-xs uppercase tracking-widest">Scroll</span>
           <ArrowDown className="h-4 w-4 animate-bounce" />
         </div>
