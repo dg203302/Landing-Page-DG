@@ -408,7 +408,18 @@ export const Projects = () => {
           <SectionHeader
             eyebrow="Proyectos en conjunto"
             title="Trabajos en equipo"
-            description="Productos construidos junto a D&JSolutions, donde participé en distintos roles técnicos y de diseño."
+            description={<>
+              Productos construidos junto a{" "}
+              <a
+                href="https://djsolutions.lovable.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-brand hover:text-brand/80 underline underline-offset-2"
+              >
+                D&JSolutions
+              </a>
+              , donde participé en distintos roles técnicos y de diseño.
+            </>}
           />
 
           <div className="flex flex-col gap-6">
