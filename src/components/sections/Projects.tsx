@@ -277,7 +277,8 @@ const teamProjects: TeamProject[] = [
     role: { icon: Smartphone, label: "Dev backend y diseñador móvil" },
     stack: ["Mobile", "WhatsApp API", "Google Auth", "Bottom Sheets"],
     links: [
-      { label: "Repositorio", url: "https://github.com/dg203302/SistemaClientesC", icon: Github, primary: true },
+      { label: "Sitio web", url: "https://debitu.lovable.app/", icon: ExternalLink, primary: true },
+      { label: "Repositorio", url: "https://github.com/dg203302/SistemaClientesC", icon: Github },
     ],
   },
   {
@@ -291,9 +292,9 @@ const teamProjects: TeamProject[] = [
     role: { icon: Briefcase, label: "Dev backend" },
     stack: ["Supabase", "Realtime", "Mobile", "Admin Panel"],
     links: [
-      { label: "Repo Usuarios", url: "https://github.com/dg203302/SistemaClientes", icon: Github, primary: true },
+      { label: "Google Play", url: "https://play.google.com/store/apps/details?id=app.netlify.loteclientes.twa&hl=es_AR", icon: ExternalLink, primary: true },
+      { label: "Repo Usuarios", url: "https://github.com/dg203302/SistemaClientes", icon: Github },
       { label: "Repo Admin", url: "https://github.com/dg203302/SistemaAdmin", icon: Github },
-      { label: "Google Play", url: "https://play.google.com/store/apps/details?id=app.netlify.loteclientes.twa&hl=es_AR", icon: ExternalLink },
     ],
   },
 ];
