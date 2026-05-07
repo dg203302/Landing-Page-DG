@@ -296,13 +296,13 @@ const ViceClockCard = () => {
           </div>
 
           <a
-            href="https://github.com/dg203302"
+            href="https://viceclock.netlify.app"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-gradient-brand text-brand-foreground text-sm font-medium hover:shadow-glow transition-all"
           >
-            <Github className="h-4 w-4" />
-            Ver repositorio
+            <ExternalLink className="h-4 w-4" />
+            Visitar sitio
           </a>
         </div>
 
