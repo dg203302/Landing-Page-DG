@@ -233,6 +233,127 @@ const ProxyRTCard = () => (
   </article>
 );
 
+const ViceClockCard = () => {
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setActive((p) => (p + 1) % viceclockSlides.length);
+    }, 4500);
+    return () => clearInterval(id);
+  }, []);
+
+  return (
+    <article className="group relative w-full rounded-3xl overflow-hidden shadow-card border border-foreground/10 transition-all duration-500 hover:border-brand/40">
+      <div className="absolute inset-0">
+        {viceclockSlides.map((src, idx) => (
+          <img
+            key={src}
+            src={src}
+            alt=""
+            aria-hidden="true"
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out ${
+              active === idx ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        ))}
+        <div className="absolute inset-0 bg-background/85 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/75 to-background/40" />
+      </div>
+
+      <div className="absolute -top-32 -right-32 w-80 h-80 rounded-full bg-brand/15 blur-3xl" />
+      <div className="absolute -bottom-32 -left-32 w-80 h-80 rounded-full bg-[hsl(var(--accent-2)/0.12)] blur-3xl" />
+
+      <div className="relative p-7 md:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div className="lg:col-span-5">
+          <div className="flex items-center gap-3 mb-5">
+            <span className="text-[10px] font-semibold tracking-widest uppercase text-brand px-2.5 py-1 rounded-full border border-brand/30 bg-background/60 backdrop-blur">
+              Cuenta regresiva GTA VI
+            </span>
+          </div>
+
+          <div className="flex items-center gap-4 mb-4">
+            <div className="w-16 h-16 rounded-2xl bg-gradient-brand flex items-center justify-center shadow-glow shrink-0">
+              <Timer className="h-7 w-7 text-brand-foreground" />
+            </div>
+            <h3 className="font-display text-3xl md:text-4xl font-bold">ViceClock</h3>
+          </div>
+
+          <p className="text-foreground/85 leading-relaxed mb-6">
+            Webpage con un contador en tiempo real hasta el lanzamiento de GTA VI, trailers,
+            enlaces oficiales e información actualizada del juego.
+          </p>
+
+          <div className="flex flex-wrap gap-2 mb-6">
+            {["JavaScript", "YouTube API"].map((s) => (
+              <span
+                key={s}
+                className="text-xs font-medium px-3 py-1.5 rounded-full bg-surface-elevated/80 backdrop-blur text-foreground/80 border border-foreground/10"
+              >
+                {s}
+              </span>
+            ))}
+          </div>
+
+          <a
+            href="https://github.com/dg203302"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-gradient-brand text-brand-foreground text-sm font-medium hover:shadow-glow transition-all"
+          >
+            <Github className="h-4 w-4" />
+            Ver repositorio
+          </a>
+        </div>
+
+        <div className="lg:col-span-7 space-y-5">
+          <p className="text-sm md:text-base text-foreground/85 leading-relaxed">
+            Una landing inmersiva pensada para los fans del juego: diseño moderno con estética
+            Vice City, totalmente responsivo en mobile, tablet y desktop, con imágenes y
+            música de fondo que refuerzan la atmósfera.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+            <div className="p-5 rounded-2xl bg-surface/70 backdrop-blur border border-foreground/10">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-xl">📱</span>
+                <h4 className="font-display font-semibold">Diseño responsivo</h4>
+              </div>
+              <p className="text-sm text-foreground/75 leading-relaxed">
+                Layout adaptativo y estética moderna inspirada en la identidad visual del
+                juego, optimizado para cualquier dispositivo.
+              </p>
+            </div>
+            <div className="p-5 rounded-2xl bg-surface/70 backdrop-blur border border-foreground/10">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-xl">🎬</span>
+                <h4 className="font-display font-semibold">Multimedia inmersiva</h4>
+              </div>
+              <p className="text-sm text-foreground/75 leading-relaxed">
+                Trailers integrados vía YouTube API, imágenes de fondo del universo Vice y
+                música ambiental para una experiencia inmersiva.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2 pt-2">
+            {viceclockSlides.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setActive(idx)}
+                aria-label={`Mostrar captura ${idx + 1}`}
+                className={`h-1.5 rounded-full transition-all ${
+                  active === idx ? "w-8 bg-brand" : "w-2 bg-foreground/30"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </article>
+  );
+};
+
 type TeamProject = {
   name: string;
   eyebrow: string;
