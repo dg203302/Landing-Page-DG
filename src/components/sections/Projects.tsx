@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeader } from "@/components/SectionHeader";
-import { Bus, Sparkles, Github, ExternalLink, Users, Briefcase, Smartphone } from "lucide-react";
+import { Bus, Sparkles, Github, ExternalLink, Users, Briefcase, Smartphone, Timer } from "lucide-react";
 import trainerLogo from "@/assets/trainer-logo.png";
 import trainer1 from "@/assets/trainer-1.png";
 import trainer2 from "@/assets/trainer-2.png";
@@ -12,8 +12,12 @@ import zondamovLogo from "@/assets/zondamov-logo.png";
 import zondamov1 from "@/assets/zondamov-1.png";
 import loteLogo from "@/assets/lote-logo.png";
 import lote1 from "@/assets/lote-1.png";
+import viceclock1 from "@/assets/viceclock-1.png";
+import viceclock2 from "@/assets/viceclock-2.png";
+import viceclock3 from "@/assets/viceclock-3.png";
 
 const trainerSlides = [trainer1, trainer2, trainer3];
+const viceclockSlides = [viceclock1, viceclock2, viceclock3];
 
 const TrainerCard = () => {
   const [active, setActive] = useState(0);
