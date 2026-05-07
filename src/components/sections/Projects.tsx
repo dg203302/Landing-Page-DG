@@ -396,6 +396,9 @@ export const Projects = () => {
             <Reveal delay={120}>
               <ProxyRTCard />
             </Reveal>
+            <Reveal delay={240}>
+              <ViceClockCard />
+            </Reveal>
           </div>
         </div>
 
