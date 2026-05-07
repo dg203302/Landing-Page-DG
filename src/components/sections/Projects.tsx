@@ -515,10 +515,10 @@ export const Projects = () => {
               <TrainerCard />
             </Reveal>
             <Reveal delay={120}>
-              <ProxyRTCard />
+              <ViceClockCard />
             </Reveal>
             <Reveal delay={240}>
-              <ViceClockCard />
+              <ProxyRTCard />
             </Reveal>
           </div>
         </div>
