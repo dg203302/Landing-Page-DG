@@ -203,26 +203,16 @@ const ProxyRTCard = () => (
 
       <div className="lg:col-span-8 space-y-5">
         <p className="text-sm md:text-base text-foreground/75 leading-relaxed">
-          Llevo meses construyendo una PWA de seguimiento de transporte público. El mayor desafío
-          no fue la interfaz — fue conseguir los datos: tiempos de arribo en tiempo real para
-          cada parada de la red de Red Tulum, sin API oficial ni integración formal. Solo
-          ingenio.
+          El mayor desafío al construir una PWA de transporte público no fue la interfaz, sino
+          conseguir los datos: tiempos de arribo en tiempo real para Red Tulum sin API oficial.
+          La solución fue un proxy que intercepta las peticiones a la API de Moovit desde el sitio
+          público y las expone como endpoint propio.
         </p>
         <p className="text-sm md:text-base text-foreground/75 leading-relaxed">
-          La respuesta: un proxy que intercepta las peticiones a la API de Moovit desde el sitio
-          público de Red Tulum y las expone como un endpoint propio. Tres prototipos. Dos
-          descartados. Uno que funciona.
-        </p>
-        <p className="text-sm md:text-base text-foreground/75 leading-relaxed">
-          La clave del tercero fue descubrir que cada línea tiene una URL canónica única en el
-          sitio y que todas las paradas se cargan en el DOM al accederla. Eso permitió
-          pre-indexar líneas y paradas, eliminando toda búsqueda secuencial y reduciendo el
-          acceso a tiempo constante.
-        </p>
-        <p className="text-sm md:text-base text-foreground/75 leading-relaxed">
-          Resultado: un proxy liviano, dockerizado, que responde como si fuera la API de Moovit
-          — construido encima de datos que siempre estuvieron ahí, solo había que saber cómo
-          leerlos. Hoy es la base de datos en tiempo real que alimenta a <span className="text-brand font-medium">ZondaMov</span>.
+          Tras dos prototipos descartados, la clave fue descubrir que cada línea tiene una URL
+          canónica única donde todas las paradas se cargan en el DOM. Eso permitió pre-indexar
+          todo y reducir el acceso a tiempo constante. Hoy es un proxy liviano y dockerizado que
+          alimenta a <span className="text-brand font-medium">ZondaMov</span>.
         </p>
 
         <div className="flex gap-3 p-4 rounded-2xl bg-surface-elevated/40 border border-foreground/5 text-xs text-foreground/55 leading-relaxed">
