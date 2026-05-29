@@ -652,10 +652,13 @@ export const Projects = () => {
             <Reveal>
               <TrainerCard />
             </Reveal>
-            <Reveal delay={120}>
+            <Reveal delay={100}>
+              <PostCreditsCard />
+            </Reveal>
+            <Reveal delay={200}>
               <ViceClockCard />
             </Reveal>
-            <Reveal delay={240}>
+            <Reveal delay={300}>
               <ProxyRTCard />
             </Reveal>
           </div>
