@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeader } from "@/components/SectionHeader";
-import { Bus, Sparkles, Github, ExternalLink, Users, Briefcase, Smartphone, Timer } from "lucide-react";
+import { Bus, Sparkles, Github, ExternalLink, Users, Briefcase, Smartphone, Timer, Film, Download } from "lucide-react";
 import trainerLogo from "@/assets/trainer-logo.png";
 import trainer1 from "@/assets/trainer-1.png";
 import trainer2 from "@/assets/trainer-2.png";
@@ -15,9 +15,147 @@ import lote1 from "@/assets/lote-1.png";
 import viceclock1 from "@/assets/viceclock-1.png";
 import viceclock2 from "@/assets/viceclock-2.png";
 import viceclock3 from "@/assets/viceclock-3.png";
+import postcredits1 from "@/assets/postcredits-1.png";
+import postcredits2 from "@/assets/postcredits-2.png";
+import postcredits3 from "@/assets/postcredits-3.png";
+import postcredits4 from "@/assets/postcredits-4.png";
+import postcredits5 from "@/assets/postcredits-5.png";
 
 const trainerSlides = [trainer1, trainer2, trainer3];
 const viceclockSlides = [viceclock1, viceclock2, viceclock3];
+const postcreditsSlides = [postcredits1, postcredits2, postcredits3, postcredits4, postcredits5];
+
+const PostCreditsCard = () => {
+  const [active, setActive] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setActive((p) => (p + 1) % postcreditsSlides.length);
+    }, 4500);
+    return () => clearInterval(id);
+  }, []);
+
+  return (
+    <article className="group relative w-full rounded-3xl overflow-hidden shadow-card border border-foreground/10 transition-all duration-500 hover:border-brand/40">
+      <div className="absolute inset-0">
+        {postcreditsSlides.map((src, idx) => (
+          <img
+            key={src}
+            src={src}
+            alt=""
+            aria-hidden="true"
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-[1500ms] ease-in-out ${
+              active === idx ? "opacity-100" : "opacity-0"
+            }`}
+          />
+        ))}
+        <div className="absolute inset-0 bg-background/85 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/75 to-background/40" />
+      </div>
+
+      <div className="absolute -top-32 -right-32 w-80 h-80 rounded-full bg-brand/15 blur-3xl" />
+      <div className="absolute -bottom-32 -left-32 w-80 h-80 rounded-full bg-[hsl(var(--accent-2)/0.12)] blur-3xl" />
+
+      <div className="relative p-7 md:p-10 grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div className="lg:col-span-5">
+          <div className="flex items-center gap-3 mb-5">
+            <span className="text-[10px] font-semibold tracking-widest uppercase text-brand px-2.5 py-1 rounded-full border border-brand/30 bg-background/60 backdrop-blur">
+              PWA · Companion app de cine
+            </span>
+          </div>
+
+          <div className="flex items-center gap-4 mb-4">
+            <div className="w-16 h-16 rounded-2xl bg-gradient-brand flex items-center justify-center shadow-glow shrink-0">
+              <Film className="h-7 w-7 text-brand-foreground" />
+            </div>
+            <h3 className="font-display text-3xl md:text-4xl font-bold">Post Credits</h3>
+          </div>
+
+          <p className="text-foreground/85 leading-relaxed mb-6">
+            Un lugar moderno para explorar películas, series y las personas que las
+            hacen: créditos, escenas, trailers y detalles del cast en una sola app.
+          </p>
+
+          <div className="flex flex-wrap gap-2 mb-6">
+            {["PWA", "React", "TMDB API", "Responsive"].map((s) => (
+              <span
+                key={s}
+                className="text-xs font-medium px-3 py-1.5 rounded-full bg-surface-elevated/80 backdrop-blur text-foreground/80 border border-foreground/10"
+              >
+                {s}
+              </span>
+            ))}
+          </div>
+
+          <div className="flex flex-wrap gap-2">
+            <a
+              href="https://postcredits.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-gradient-brand text-brand-foreground text-sm font-medium hover:shadow-glow transition-all"
+            >
+              <ExternalLink className="h-4 w-4" />
+              Visitar sitio
+            </a>
+            <a
+              href="https://www.pwastore.io/app/post-credits"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full glass text-sm font-medium hover:bg-surface-elevated transition-all"
+            >
+              <Download className="h-4 w-4" />
+              PWA Store
+            </a>
+          </div>
+        </div>
+
+        <div className="lg:col-span-7 space-y-5">
+          <p className="text-sm md:text-base text-foreground/85 leading-relaxed">
+            Post Credits es una PWA pensada para fans del cine: descubrí qué hay en
+            cartelera, qué está en tendencia, fichas detalladas con sinopsis, rating,
+            duración, presupuesto y enlaces a Letterboxd, IMDb y TMDB.
+          </p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-2">
+            <div className="p-5 rounded-2xl bg-surface/70 backdrop-blur border border-foreground/10">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-xl">🎬</span>
+                <h4 className="font-display font-semibold">Descubrimiento</h4>
+              </div>
+              <p className="text-sm text-foreground/75 leading-relaxed">
+                Películas en cartelera, trending, últimas series y personas del momento,
+                con buscador global de títulos y personas.
+              </p>
+            </div>
+            <div className="p-5 rounded-2xl bg-surface/70 backdrop-blur border border-foreground/10">
+              <div className="flex items-center gap-2 mb-2">
+                <span className="text-xl">📲</span>
+                <h4 className="font-display font-semibold">Instalable como PWA</h4>
+              </div>
+              <p className="text-sm text-foreground/75 leading-relaxed">
+                Publicada en PWA Store con métricas de performance perfectas en
+                desktop y mobile. Se instala como app nativa.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2 pt-2">
+            {postcreditsSlides.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => setActive(idx)}
+                aria-label={`Mostrar captura ${idx + 1}`}
+                className={`h-1.5 rounded-full transition-all ${
+                  active === idx ? "w-8 bg-brand" : "w-2 bg-foreground/30"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </article>
+  );
+};
 
 const TrainerCard = () => {
   const [active, setActive] = useState(0);
@@ -514,10 +652,13 @@ export const Projects = () => {
             <Reveal>
               <TrainerCard />
             </Reveal>
-            <Reveal delay={120}>
+            <Reveal delay={100}>
+              <PostCreditsCard />
+            </Reveal>
+            <Reveal delay={200}>
               <ViceClockCard />
             </Reveal>
-            <Reveal delay={240}>
+            <Reveal delay={300}>
               <ProxyRTCard />
             </Reveal>
           </div>
