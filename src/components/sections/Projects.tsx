@@ -439,15 +439,26 @@ const ViceClockCard = () => {
             ))}
           </div>
 
-          <a
-            href="https://viceclock.netlify.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-gradient-brand text-brand-foreground text-sm font-medium hover:shadow-glow transition-all"
-          >
-            <ExternalLink className="h-4 w-4" />
-            Visitar sitio
-          </a>
+          <div className="flex flex-wrap gap-2">
+            <a
+              href="https://viceclock.netlify.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full bg-gradient-brand text-brand-foreground text-sm font-medium hover:shadow-glow transition-all"
+            >
+              <ExternalLink className="h-4 w-4" />
+              Visitar sitio
+            </a>
+            <a
+              href="https://www.pwastore.io/app/viceclock"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-full glass text-sm font-medium hover:bg-surface-elevated transition-all"
+            >
+              <Download className="h-4 w-4" />
+              PWA Store
+            </a>
+          </div>
         </div>
 
         <div className="lg:col-span-7 space-y-5">
