@@ -20,6 +20,7 @@ import postcredits2 from "@/assets/postcredits-2.png";
 import postcredits3 from "@/assets/postcredits-3.png";
 import postcredits4 from "@/assets/postcredits-4.png";
 import postcredits5 from "@/assets/postcredits-5.png";
+import postcreditsLogo from "@/assets/postcredits-logo.png";
 
 const trainerSlides = [trainer1, trainer2, trainer3];
 const viceclockSlides = [viceclock1, viceclock2, viceclock3];
@@ -65,9 +66,11 @@ const PostCreditsCard = () => {
           </div>
 
           <div className="flex items-center gap-4 mb-4">
-            <div className="w-16 h-16 rounded-2xl bg-gradient-brand flex items-center justify-center shadow-glow shrink-0">
-              <Film className="h-7 w-7 text-brand-foreground" />
-            </div>
+            <img
+              src={postcreditsLogo}
+              alt="Logo de Post Credits"
+              className="w-16 h-16 rounded-2xl shadow-glow object-contain bg-background/60 p-1.5 border border-foreground/10 shrink-0"
+            />
             <h3 className="font-display text-3xl md:text-4xl font-bold">Post Credits</h3>
           </div>
 
