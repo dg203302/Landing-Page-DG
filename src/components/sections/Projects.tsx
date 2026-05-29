@@ -15,6 +15,7 @@ import lote1 from "@/assets/lote-1.png";
 import viceclock1 from "@/assets/viceclock-1.png";
 import viceclock2 from "@/assets/viceclock-2.png";
 import viceclock3 from "@/assets/viceclock-3.png";
+import viceclockLogo from "@/assets/viceclock-logo.png";
 import postcredits1 from "@/assets/postcredits-1.png";
 import postcredits2 from "@/assets/postcredits-2.png";
 import postcredits3 from "@/assets/postcredits-3.png";
