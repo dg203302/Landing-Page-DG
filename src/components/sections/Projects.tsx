@@ -415,9 +415,11 @@ const ViceClockCard = () => {
           </div>
 
           <div className="flex items-center gap-4 mb-4">
-            <div className="w-16 h-16 rounded-2xl bg-gradient-brand flex items-center justify-center shadow-glow shrink-0">
-              <Timer className="h-7 w-7 text-brand-foreground" />
-            </div>
+            <img
+              src={viceclockLogo}
+              alt="Logo de ViceClock (GTA VI)"
+              className="w-16 h-16 rounded-2xl shadow-glow object-contain bg-background/60 p-1.5 border border-foreground/10 shrink-0"
+            />
             <h3 className="font-display text-3xl md:text-4xl font-bold">ViceClock</h3>
           </div>
 
