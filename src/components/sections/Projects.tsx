@@ -50,8 +50,8 @@ const PostCreditsCard = () => {
             }`}
           />
         ))}
-        <div className="absolute inset-0 bg-background/85 backdrop-blur-[2px]" />
-        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/75 to-background/40" />
+        <div className="absolute inset-0 bg-background/60 backdrop-blur-[1px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/55 to-background/20" />
       </div>
 
       <div className="absolute -top-32 -right-32 w-80 h-80 rounded-full bg-brand/15 blur-3xl" />
@@ -185,8 +185,8 @@ const TrainerCard = () => {
             }`}
           />
         ))}
-        <div className="absolute inset-0 bg-background/80 backdrop-blur-[2px]" />
-        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/70 to-background/40" />
+        <div className="absolute inset-0 bg-background/55 backdrop-blur-[1px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/50 to-background/20" />
       </div>
 
       <div className="absolute -top-32 -right-32 w-80 h-80 rounded-full bg-brand/15 blur-3xl" />
@@ -398,8 +398,8 @@ const ViceClockCard = () => {
             }`}
           />
         ))}
-        <div className="absolute inset-0 bg-background/85 backdrop-blur-[2px]" />
-        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/75 to-background/40" />
+        <div className="absolute inset-0 bg-background/60 backdrop-blur-[1px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/55 to-background/20" />
       </div>
 
       <div className="absolute -top-32 -right-32 w-80 h-80 rounded-full bg-brand/15 blur-3xl" />
@@ -565,8 +565,8 @@ const TeamProjectCard = ({ project }: { project: TeamProject }) => {
           alt={`Captura de ${project.name}`}
           className="absolute inset-0 w-full h-full object-cover opacity-100"
         />
-        <div className="absolute inset-0 bg-background/85 backdrop-blur-[2px]" />
-        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/75 to-background/40" />
+        <div className="absolute inset-0 bg-background/60 backdrop-blur-[1px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/55 to-background/20" />
       </div>
 
       <div className="absolute -top-32 -right-32 w-80 h-80 rounded-full bg-[hsl(var(--accent-2)/0.15)] blur-3xl" />
