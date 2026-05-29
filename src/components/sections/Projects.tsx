@@ -15,6 +15,7 @@ import lote1 from "@/assets/lote-1.png";
 import viceclock1 from "@/assets/viceclock-1.png";
 import viceclock2 from "@/assets/viceclock-2.png";
 import viceclock3 from "@/assets/viceclock-3.png";
+import viceclockLogo from "@/assets/viceclock-logo.png";
 import postcredits1 from "@/assets/postcredits-1.png";
 import postcredits2 from "@/assets/postcredits-2.png";
 import postcredits3 from "@/assets/postcredits-3.png";
@@ -50,8 +51,8 @@ const PostCreditsCard = () => {
             }`}
           />
         ))}
-        <div className="absolute inset-0 bg-background/85 backdrop-blur-[2px]" />
-        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/75 to-background/40" />
+        <div className="absolute inset-0 bg-background/60 backdrop-blur-[1px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/55 to-background/20" />
       </div>
 
       <div className="absolute -top-32 -right-32 w-80 h-80 rounded-full bg-brand/15 blur-3xl" />
@@ -185,8 +186,8 @@ const TrainerCard = () => {
             }`}
           />
         ))}
-        <div className="absolute inset-0 bg-background/80 backdrop-blur-[2px]" />
-        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/70 to-background/40" />
+        <div className="absolute inset-0 bg-background/55 backdrop-blur-[1px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/50 to-background/20" />
       </div>
 
       <div className="absolute -top-32 -right-32 w-80 h-80 rounded-full bg-brand/15 blur-3xl" />
@@ -398,8 +399,8 @@ const ViceClockCard = () => {
             }`}
           />
         ))}
-        <div className="absolute inset-0 bg-background/85 backdrop-blur-[2px]" />
-        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/75 to-background/40" />
+        <div className="absolute inset-0 bg-background/60 backdrop-blur-[1px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/55 to-background/20" />
       </div>
 
       <div className="absolute -top-32 -right-32 w-80 h-80 rounded-full bg-brand/15 blur-3xl" />
@@ -414,9 +415,11 @@ const ViceClockCard = () => {
           </div>
 
           <div className="flex items-center gap-4 mb-4">
-            <div className="w-16 h-16 rounded-2xl bg-gradient-brand flex items-center justify-center shadow-glow shrink-0">
-              <Timer className="h-7 w-7 text-brand-foreground" />
-            </div>
+            <img
+              src={viceclockLogo}
+              alt="Logo de ViceClock (GTA VI)"
+              className="w-16 h-16 rounded-2xl shadow-glow object-contain bg-background/60 p-1.5 border border-foreground/10 shrink-0"
+            />
             <h3 className="font-display text-3xl md:text-4xl font-bold">ViceClock</h3>
           </div>
 
@@ -565,8 +568,8 @@ const TeamProjectCard = ({ project }: { project: TeamProject }) => {
           alt={`Captura de ${project.name}`}
           className="absolute inset-0 w-full h-full object-cover opacity-100"
         />
-        <div className="absolute inset-0 bg-background/85 backdrop-blur-[2px]" />
-        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/75 to-background/40" />
+        <div className="absolute inset-0 bg-background/60 backdrop-blur-[1px]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/55 to-background/20" />
       </div>
 
       <div className="absolute -top-32 -right-32 w-80 h-80 rounded-full bg-[hsl(var(--accent-2)/0.15)] blur-3xl" />
