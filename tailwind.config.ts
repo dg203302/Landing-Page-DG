@@ -71,6 +71,7 @@ export default {
         sans: ["Inter", "system-ui", "sans-serif"],
         display: ["'Instrument Serif'", "'Cormorant Garamond'", "Georgia", "serif"],
         serifItalic: ["'Cormorant Garamond'", "Georgia", "serif"],
+        editorial: ["'Archivo Black'", "Archivo", "Impact", "system-ui", "sans-serif"],
       },
       boxShadow: {
         glow: "var(--shadow-glow)",
