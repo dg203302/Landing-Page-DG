@@ -69,7 +69,8 @@ export default {
       },
       fontFamily: {
         sans: ["Inter", "system-ui", "sans-serif"],
-        display: ["'Space Grotesk'", "Inter", "system-ui", "sans-serif"],
+        display: ["'Instrument Serif'", "'Cormorant Garamond'", "Georgia", "serif"],
+        serifItalic: ["'Cormorant Garamond'", "Georgia", "serif"],
       },
       boxShadow: {
         glow: "var(--shadow-glow)",
