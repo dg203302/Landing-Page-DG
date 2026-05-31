@@ -45,10 +45,10 @@ export const Navigation = () => {
       <header className="md:hidden fixed top-4 inset-x-4 z-50 flex justify-center">
         <button
           onClick={() => handleClick("inicio")}
-          className="glass shadow-card rounded-full px-5 py-2 font-display text-base font-bold"
+          className="glass shadow-card rounded-full px-5 py-2 font-display text-xl"
         >
-          <span className="text-gradient">Diego</span>
-          <span className="text-foreground">García</span>
+          <span className="text-foreground">Diego</span>
+          <span className="font-serifItalic italic text-brand"> García</span>
         </button>
       </header>
 
@@ -68,9 +68,10 @@ export const Navigation = () => {
           >
             <button
               onClick={() => handleClick("inicio")}
-              className="font-display text-lg font-bold text-gradient shrink-0"
+              className="font-display text-2xl shrink-0"
             >
-              DiegoGarcía
+              <span className="text-foreground">Diego</span>
+              <span className="font-serifItalic italic text-brand">García</span>
             </button>
             <ul className="flex items-center gap-1 ml-auto">
               {links.map((link) => (
