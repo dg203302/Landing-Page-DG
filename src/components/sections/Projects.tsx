@@ -92,7 +92,7 @@ const projects: Project[] = [
       { label: "Visitar sitio", url: "https://postcredits.netlify.app", icon: ExternalLink, primary: true },
       { label: "PWA Store", url: "https://www.pwastore.io/app/post-credits", icon: Download },
     ],
-    gallery: [postcredits1, postcredits2, postcredits3, postcredits4, postcredits5],
+    gallery: [postcredits1, postcredits2, postcredits3, postcredits4, postcredits5, postcredits6, postcredits7, postcredits8, postcredits9, postcredits10],
     logo: postcreditsLogo,
     variant: "dark",
   },
