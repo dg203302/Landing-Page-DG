@@ -10,6 +10,6 @@ export const BackgroundVideo = () => (
       playsInline
       className="w-full h-full object-cover"
     />
-    <div className="absolute inset-0 bg-background/70" />
+    <div className="absolute inset-0 bg-background/20" />
   </div>
 );
