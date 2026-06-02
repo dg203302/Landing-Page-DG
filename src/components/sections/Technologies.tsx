@@ -43,8 +43,8 @@ const cards = [
 
 export const Technologies = () => {
   return (
-    <div className="relative">
-      <div>
+    <section id="tecnologias" className="py-24 md:py-32 relative">
+      <div className="container">
         {/* Top pill badge */}
         <Reveal>
           <div className="flex justify-center mb-10">
@@ -117,6 +117,6 @@ export const Technologies = () => {
           })}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
