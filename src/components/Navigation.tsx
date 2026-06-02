@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { User, Briefcase, GraduationCap, FolderGit2, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
+import diegoPhoto from "@/assets/diego.jpg.asset.json";
 
 const links = [
   { id: "inicio", label: "Home", icon: User },
@@ -45,10 +46,17 @@ export const Navigation = () => {
       <header className="md:hidden fixed top-4 inset-x-4 z-50 flex justify-center">
         <button
           onClick={() => handleClick("inicio")}
-          className="glass shadow-card rounded-full px-5 py-2 font-display text-xl"
+          className="glass shadow-card rounded-full pl-1.5 pr-5 py-1.5 font-display text-xl flex items-center gap-2.5"
         >
-          <span className="text-foreground">Diego</span>
-          <span className="font-serifItalic italic text-brand"> García</span>
+          <img
+            src={diegoPhoto.url}
+            alt="Diego García"
+            className="h-8 w-8 rounded-full object-cover ring-1 ring-foreground/15"
+          />
+          <span>
+            <span className="text-foreground">Diego</span>
+            <span className="font-serifItalic italic text-brand"> García</span>
+          </span>
         </button>
       </header>
 
@@ -68,10 +76,17 @@ export const Navigation = () => {
           >
             <button
               onClick={() => handleClick("inicio")}
-              className="font-display text-2xl shrink-0"
+              className="font-display text-2xl shrink-0 flex items-center gap-3"
             >
-              <span className="text-foreground">Diego</span>
-              <span className="font-serifItalic italic text-brand">García</span>
+              <img
+                src={diegoPhoto.url}
+                alt="Diego García"
+                className="h-10 w-10 rounded-full object-cover ring-1 ring-foreground/15 shadow-card"
+              />
+              <span>
+                <span className="text-foreground">Diego</span>
+                <span className="font-serifItalic italic text-brand"> García</span>
+              </span>
             </button>
             <ul className="flex items-center gap-1 ml-auto">
               {links.map((link) => (
