@@ -1,4 +1,5 @@
 import { ArrowDown, MapPin } from "lucide-react";
+import diegoPhoto from "@/assets/diego.jpg.asset.json";
 
 export const Hero = () => {
   return (
@@ -18,6 +19,25 @@ export const Hero = () => {
             Available for new projects
           </div>
 
+          {/* Portrait */}
+          <div
+            className="relative mx-auto mb-10 animate-fade-in-up"
+            style={{ animationDelay: "60ms", opacity: 0 }}
+          >
+            <div className="relative w-40 h-40 md:w-52 md:h-52 mx-auto">
+              <div className="absolute inset-0 rounded-full bg-gradient-brand blur-2xl opacity-40" />
+              <div className="relative w-full h-full rounded-full overflow-hidden ring-1 ring-foreground/15 shadow-card">
+                <img
+                  src={diegoPhoto.url}
+                  alt="Portrait of Diego Jose Garcia"
+                  className="w-full h-full object-cover grayscale contrast-110"
+                  loading="eager"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/40" />
+              </div>
+            </div>
+          </div>
+
           <h1
             className="font-display text-6xl md:text-8xl lg:text-9xl font-normal leading-[0.95] tracking-tight mb-8 animate-fade-in-up"
             style={{ animationDelay: "120ms", opacity: 0 }}
@@ -26,6 +46,7 @@ export const Hero = () => {
             <br />
             <span className="font-serifItalic italic text-brand">&amp; Designer</span>
           </h1>
+
 
           <p
             className="text-base md:text-lg text-foreground/65 max-w-xl mx-auto mb-10 animate-fade-in-up leading-relaxed"
