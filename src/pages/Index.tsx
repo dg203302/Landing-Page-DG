@@ -8,14 +8,16 @@ import { Contact } from "@/components/sections/Contact";
 
 const Index = () => {
   return (
-    <main className="min-h-screen">
+    <main className="relative min-h-screen">
       <BackgroundVideo />
-      <Navigation />
-      <Hero />
-      <Experience />
-      <Education />
-      <Projects />
-      <Contact />
+      <div className="relative z-10">
+        <Navigation />
+        <Hero />
+        <Experience />
+        <Education />
+        <Projects />
+        <Contact />
+      </div>
     </main>
   );
 };
