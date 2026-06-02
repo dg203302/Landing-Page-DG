@@ -15,7 +15,7 @@ export const Hero = () => {
             className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass text-[11px] uppercase tracking-[0.25em] text-foreground/70 mb-10 animate-fade-in-up"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-brand animate-pulse" />
-            Disponible para nuevos proyectos
+            Available for new projects
           </div>
 
           <h1
@@ -31,9 +31,9 @@ export const Hero = () => {
             className="text-base md:text-lg text-foreground/65 max-w-xl mx-auto mb-10 animate-fade-in-up leading-relaxed"
             style={{ animationDelay: "240ms", opacity: 0 }}
           >
-            Soy <span className="text-foreground">Diego Jose Garcia</span> — desarrollador
-            junior especializado en JavaScript, Python y Flask. Construyo PWAs rápidas, APIs
-            y experiencias listas para producción.
+            I'm <span className="text-foreground">Diego Jose Garcia</span> — a junior
+            developer specialized in JavaScript, Python and Flask. I build fast PWAs, APIs
+            and production-ready experiences.
           </p>
 
           <div
@@ -56,7 +56,7 @@ export const Hero = () => {
               }}
               className="px-6 py-3 rounded-full bg-brand text-brand-foreground text-sm font-medium tracking-wide hover:shadow-glow transition-all"
             >
-              Ver proyectos
+              View projects
             </a>
             <a
               href="#contacto"
@@ -66,7 +66,7 @@ export const Hero = () => {
               }}
               className="px-6 py-3 rounded-full border border-foreground/15 text-sm font-medium tracking-wide hover:bg-surface-elevated transition-all"
             >
-              Contactar
+              Get in touch
             </a>
           </div>
         </div>
