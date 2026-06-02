@@ -3,34 +3,34 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { Mail, Phone, MapPin, Calendar, Flag, AtSign, Linkedin, Github } from "lucide-react";
 
 const personal = [
-  { icon: Calendar, label: "Fecha de nacimiento", value: "16 / 08 / 2003" },
-  { icon: Flag, label: "Nacionalidad", value: "Argentino" },
-  { icon: MapPin, label: "Ubicación", value: "San Juan, Argentina" },
+  { icon: Calendar, label: "Date of birth", value: "08 / 16 / 2003" },
+  { icon: Flag, label: "Nationality", value: "Argentinian" },
+  { icon: MapPin, label: "Location", value: "San Juan, Argentina" },
 ];
 
 const contacts = [
   {
     icon: Mail,
-    label: "Email profesional",
+    label: "Professional email",
     value: "diegogarcia479@yahoo.com.ar",
     href: "mailto:diegogarcia479@yahoo.com.ar",
     primary: true,
   },
   {
     icon: AtSign,
-    label: "Email personal",
+    label: "Personal email",
     value: "dg15828@gmail.com",
     href: "mailto:dg15828@gmail.com",
   },
   {
     icon: Phone,
-    label: "Teléfono principal",
+    label: "Main phone",
     value: "+54 264 442-9758",
     href: "tel:+542644429758",
   },
   {
     icon: Phone,
-    label: "Teléfono secundario",
+    label: "Secondary phone",
     value: "+54 264 585-9124",
     href: "tel:+542645859124",
   },
@@ -53,16 +53,16 @@ export const Contact = () => {
     <section id="contacto" className="py-24 md:py-32 pb-32 md:pb-32 relative">
       <div className="container">
         <SectionHeader
-          eyebrow="Contacto"
-          title="Trabajemos juntos"
-          description="Estoy disponible para nuevos proyectos, colaboraciones y oportunidades. No dudes en escribirme."
+          eyebrow="Contact"
+          title="Let's work together"
+          description="I'm available for new projects, collaborations and opportunities. Don't hesitate to reach out."
         />
 
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
           {/* Personal info card */}
           <Reveal className="lg:col-span-2">
             <div className="h-full p-8 rounded-3xl glass shadow-card">
-              <h3 className="font-display text-xl font-semibold mb-6">Información personal</h3>
+              <h3 className="font-display text-xl font-semibold mb-6">Personal information</h3>
               <ul className="space-y-5">
                 {personal.map((p) => {
                   const Icon = p.icon;
@@ -125,7 +125,7 @@ export const Contact = () => {
         </div>
 
         <Reveal className="mt-16 text-center text-sm text-foreground/40">
-          © {new Date().getFullYear()} Diego Jose Garcia · Hecho con cariño desde San Juan
+          © {new Date().getFullYear()} Diego Jose Garcia · Made with care from San Juan
         </Reveal>
       </div>
     </section>

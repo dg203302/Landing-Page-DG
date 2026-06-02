@@ -5,33 +5,33 @@ import { Code2, Database, Rocket, ShieldCheck, BarChart3, TestTube2 } from "luci
 const skills = [
   {
     icon: Code2,
-    title: "Arquitecturas modernas",
-    text: "Flask con APIs REST, frontend HTML/CSS/JS, autenticación segura y despliegues orquestados en Netlify y contenedores.",
+    title: "Modern architectures",
+    text: "Flask with REST APIs, HTML/CSS/JS frontend, secure authentication and orchestrated deployments on Netlify and containers.",
   },
   {
     icon: Database,
-    title: "Integraciones cloud",
-    text: "Supabase (Auth, Postgres, Storage) y pipelines CI/CD para entregas rápidas y confiables.",
+    title: "Cloud integrations",
+    text: "Supabase (Auth, Postgres, Storage) and CI/CD pipelines for fast and reliable delivery.",
   },
   {
     icon: Rocket,
-    title: "Rendimiento & SEO",
-    text: "Optimización de tiempos de carga, accesibilidad, diseño responsive y auditorías con Lighthouse.",
+    title: "Performance & SEO",
+    text: "Load time optimization, accessibility, responsive design and Lighthouse audits.",
   },
   {
     icon: BarChart3,
-    title: "Analítica y crecimiento",
-    text: "Instrumentación de métricas, seguimiento de eventos, A/B testing y mejora continua de la conversión.",
+    title: "Analytics & growth",
+    text: "Metrics instrumentation, event tracking, A/B testing and continuous conversion improvement.",
   },
   {
     icon: TestTube2,
-    title: "Calidad y mantenimiento",
-    text: "Testing automatizado, logging/monitoring, documentación clara y soporte evolutivo del producto.",
+    title: "Quality & maintenance",
+    text: "Automated testing, logging/monitoring, clear documentation and ongoing product support.",
   },
   {
     icon: ShieldCheck,
     title: "End-to-end",
-    text: "Desde el descubrimiento y MVP hasta producción y escalado, priorizando agilidad, seguridad y experiencia.",
+    text: "From discovery and MVP to production and scaling, prioritizing agility, security and experience.",
   },
 ];
 
@@ -40,9 +40,9 @@ export const Experience = () => {
     <section id="experiencia" className="py-24 md:py-32 relative">
       <div className="container">
         <SectionHeader
-          eyebrow="Experiencia"
-          title="Desarrollo enfocado en resultados"
-          description="Construyo PWAs rápidas, aplicaciones nativas/CLI con Python y sitios web con backend en Flask, todos listos para producción y desplegados de manera segura en entornos locales y en la nube."
+          eyebrow="Experience"
+          title="Results-driven development"
+          description="I build fast PWAs, native/CLI applications with Python and websites with a Flask backend, all production-ready and safely deployed to local and cloud environments."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">

@@ -3,11 +3,11 @@ import { User, Briefcase, GraduationCap, FolderGit2, Mail } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const links = [
-  { id: "inicio", label: "Inicio", icon: User },
-  { id: "experiencia", label: "Experiencia", icon: Briefcase },
-  { id: "educacion", label: "Educación", icon: GraduationCap },
-  { id: "proyectos", label: "Proyectos", icon: FolderGit2 },
-  { id: "contacto", label: "Contacto", icon: Mail },
+  { id: "inicio", label: "Home", icon: User },
+  { id: "experiencia", label: "Experience", icon: Briefcase },
+  { id: "educacion", label: "Education", icon: GraduationCap },
+  { id: "proyectos", label: "Projects", icon: FolderGit2 },
+  { id: "contacto", label: "Contact", icon: Mail },
 ];
 
 export const Navigation = () => {

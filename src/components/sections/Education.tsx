@@ -5,24 +5,24 @@ import { GraduationCap, School, BookOpen } from "lucide-react";
 const items = [
   {
     icon: GraduationCap,
-    period: "Actualmente — 4° año",
-    title: "Licenciatura en Ciencias de la Computación",
-    place: "Universidad Nacional de San Juan (UNSJ) — FCEFN",
-    text: "Sólida base en principios de programación, desarrollo de software y gestión de proyectos, complementando mis habilidades prácticas como desarrollador web.",
+    period: "Currently — 4th year",
+    title: "Bachelor's Degree in Computer Science",
+    place: "National University of San Juan (UNSJ) — FCEFN",
+    text: "Solid foundation in programming principles, software development and project management, complementing my hands-on skills as a web developer.",
   },
   {
     icon: School,
     period: "2017 — 2022",
-    title: "Técnico Electrónico",
-    place: "EPET N.º 1 Ingeniero Rogelio A. Boero",
-    text: "Formación técnica en Electrónica y Computación, sentando las bases para mi desarrollo en el campo de la tecnología.",
+    title: "Electronics Technician",
+    place: "EPET No. 1 Ingeniero Rogelio A. Boero",
+    text: "Technical training in Electronics and Computing, laying the foundation for my development in the technology field.",
   },
   {
     icon: BookOpen,
-    period: "Primaria",
-    title: "Educación primaria",
-    place: "Escuela Francisco Narciso Laprida",
-    text: "Habilidades fundamentales en lectura, escritura y matemáticas, esenciales para mi crecimiento académico posterior.",
+    period: "Primary school",
+    title: "Primary education",
+    place: "Francisco Narciso Laprida School",
+    text: "Fundamental skills in reading, writing and mathematics, essential for my later academic growth.",
   },
 ];
 
@@ -31,9 +31,9 @@ export const Education = () => {
     <section id="educacion" className="py-24 md:py-32 relative">
       <div className="container">
         <SectionHeader
-          eyebrow="Formación"
-          title="Trayectoria académica"
-          description="Una combinación de teoría sólida y formación técnica aplicada."
+          eyebrow="Education"
+          title="Academic background"
+          description="A blend of solid theory and applied technical training."
         />
 
         <div className="relative max-w-3xl">
