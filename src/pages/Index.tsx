@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/Navigation";
+import { BackgroundVideo } from "@/components/BackgroundVideo";
 import { Hero } from "@/components/sections/Hero";
 import { Experience } from "@/components/sections/Experience";
 import { Education } from "@/components/sections/Education";
@@ -8,6 +9,7 @@ import { Contact } from "@/components/sections/Contact";
 const Index = () => {
   return (
     <main className="min-h-screen">
+      <BackgroundVideo />
       <Navigation />
       <Hero />
       <Experience />
