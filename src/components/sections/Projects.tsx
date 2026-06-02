@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeader } from "@/components/SectionHeader";
+import { Technologies } from "@/components/sections/Technologies";
 import { Github, ExternalLink, Download, Bus } from "lucide-react";
 import trainerLogo from "@/assets/trainer-logo.png";
 import trainer1 from "@/assets/trainer-1.png";
@@ -421,6 +422,7 @@ export const Projects = () => {
   return (
     <section id="proyectos" className="py-24 md:py-32 relative">
       <div className="container space-y-20">
+        <Technologies />
         <div>
           <SectionHeader
             eyebrow="Personal projects"

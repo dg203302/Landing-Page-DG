@@ -117,6 +117,6 @@ export const Technologies = () => {
           })}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
