@@ -52,24 +52,24 @@ type Project = {
 const projects: Project[] = [
   {
     index: "01",
-    kicker: "EXAMPLE — APP DE SALUD & FITNESS",
+    kicker: "EXAMPLE — HEALTH & FITNESS APP",
     name: "TrAIner",
     role: "AI · PWA · JavaScript",
     description:
-      "Tu entrenador y nutricionista personal impulsado por IA. El usuario ingresa peso, altura y edad y la IA genera planes personalizados de entrenamiento y alimentación.",
+      "Your AI-powered personal trainer and nutritionist. Users input weight, height and age, and the AI generates personalized training and nutrition plans.",
     features: [
       {
-        title: "Plan de entrenamiento",
-        text: "Biblioteca de +10 ejercicios segmentados por grupo muscular, días seleccionables y nivel de intensidad. Rutina estructurada y progresiva.",
+        title: "Training plan",
+        text: "Library of 10+ exercises segmented by muscle group, selectable days and intensity level. Structured and progressive routine.",
       },
       {
-        title: "Plan de alimentación",
-        text: "La IA calcula calorías diarias según objetivo (perder peso, ganar masa o mantener) y arma un plan nutricional adaptado.",
+        title: "Nutrition plan",
+        text: "The AI calculates daily calories based on goal (lose weight, gain mass or maintain) and builds an adapted nutrition plan.",
       },
     ],
-    stack: ["IA / LLM", "PWA", "JavaScript", "Personalización"],
+    stack: ["AI / LLM", "PWA", "JavaScript", "Personalization"],
     links: [
-      { label: "Repositorio", url: "https://github.com/dg203302/AIPersonalTrainer", icon: Github, primary: true },
+      { label: "Repository", url: "https://github.com/dg203302/AIPersonalTrainer", icon: Github, primary: true },
     ],
     gallery: [trainer1, trainer2, trainer3, trainer4, trainer5, trainer6, trainer7, trainer8],
     logo: trainerLogo,
@@ -77,24 +77,24 @@ const projects: Project[] = [
   },
   {
     index: "02",
-    kicker: "EXAMPLE — PWA / COMPANION APP DE CINE",
+    kicker: "EXAMPLE — PWA / CINEMA COMPANION APP",
     name: "Post Credits",
     role: "PWA · React · TMDB API",
     description:
-      "Un lugar moderno para explorar películas, series y las personas que las hacen: créditos, escenas, trailers y detalles del cast en una sola app.",
+      "A modern place to explore movies, series and the people who make them: credits, scenes, trailers and cast details in a single app.",
     features: [
       {
-        title: "Descubrimiento",
-        text: "Películas en cartelera, trending, últimas series y personas del momento, con buscador global de títulos y personas.",
+        title: "Discovery",
+        text: "Movies in theaters, trending, latest series and trending people, with a global search for titles and people.",
       },
       {
-        title: "Instalable como PWA",
-        text: "Publicada en PWA Store con métricas de performance perfectas en desktop y mobile. Se instala como app nativa.",
+        title: "Installable as PWA",
+        text: "Published on PWA Store with perfect performance metrics on desktop and mobile. Installs as a native app.",
       },
     ],
     stack: ["PWA", "React", "TMDB API", "Responsive"],
     links: [
-      { label: "Visitar sitio", url: "https://postcredits.netlify.app", icon: ExternalLink, primary: true },
+      { label: "Visit site", url: "https://postcredits.netlify.app", icon: ExternalLink, primary: true },
       { label: "PWA Store", url: "https://www.pwastore.io/app/post-credits", icon: Download },
     ],
     gallery: [postcredits1, postcredits2, postcredits3, postcredits4, postcredits5, postcredits6, postcredits7, postcredits8, postcredits9, postcredits10],
@@ -103,24 +103,24 @@ const projects: Project[] = [
   },
   {
     index: "03",
-    kicker: "EXAMPLE — CUENTA REGRESIVA GTA VI",
+    kicker: "EXAMPLE — GTA VI COUNTDOWN",
     name: "ViceClock",
     role: "JavaScript · YouTube API",
     description:
-      "Landing inmersiva con contador en tiempo real hasta el lanzamiento de GTA VI. Estética Vice City, trailers integrados, imágenes y música de fondo.",
+      "Immersive landing page with a real-time countdown to the GTA VI launch. Vice City aesthetic, integrated trailers, background images and music.",
     features: [
       {
-        title: "Diseño responsivo",
-        text: "Layout adaptativo y estética moderna inspirada en la identidad visual del juego, optimizado para cualquier dispositivo.",
+        title: "Responsive design",
+        text: "Adaptive layout and modern aesthetic inspired by the game's visual identity, optimized for any device.",
       },
       {
-        title: "Multimedia inmersiva",
-        text: "Trailers integrados vía YouTube API, imágenes de fondo del universo Vice y música ambiental.",
+        title: "Immersive multimedia",
+        text: "Trailers embedded via the YouTube API, background images from the Vice universe and ambient music.",
       },
     ],
     stack: ["JavaScript", "YouTube API"],
     links: [
-      { label: "Visitar sitio", url: "https://viceclock.netlify.app", icon: ExternalLink, primary: true },
+      { label: "Visit site", url: "https://viceclock.netlify.app", icon: ExternalLink, primary: true },
       { label: "PWA Store", url: "https://www.pwastore.io/app/viceclock", icon: Download },
     ],
     gallery: [viceclock1, viceclock2, viceclock3],
@@ -129,25 +129,25 @@ const projects: Project[] = [
   },
   {
     index: "04",
-    kicker: "EXAMPLE — API DE TRANSPORTE PÚBLICO",
+    kicker: "EXAMPLE — PUBLIC TRANSPORT API",
     name: "ProxyRT",
     role: "Python · FastAPI · Docker",
     description:
-      "Tiempos de arribo en tiempo real para Red Tulum sin API oficial. Proxy que intercepta peticiones a la API de Moovit y las expone como endpoint propio. Backend de datos que alimenta a ZondaMov.",
+      "Real-time arrival times for Red Tulum without an official API. Proxy that intercepts requests to the Moovit API and exposes them as its own endpoint. Data backend that powers ZondaMov.",
     features: [
       {
-        title: "Pre-indexado canónico",
-        text: "Cada línea tiene una URL única donde todas las paradas se cargan en el DOM. Acceso a tiempo constante después de dos prototipos descartados.",
+        title: "Canonical pre-indexing",
+        text: "Each line has a unique URL where all stops are loaded into the DOM. Constant-time access after two discarded prototypes.",
       },
       {
-        title: "Liviano y dockerizado",
-        text: "Proxy minimalista contenerizado, listo para producción. Solo accede a información pública del sitio oficial.",
+        title: "Lightweight and dockerized",
+        text: "Minimalist containerized proxy, production-ready. Only accesses public information from the official site.",
       },
     ],
     stack: ["Python", "Playwright", "FastAPI", "Uvicorn", "Docker"],
     links: [
-      { label: "Repositorio", url: "https://github.com/dg203302/Proxy_RT", icon: Github, primary: true },
-      { label: "Informe en LinkedIn", url: "https://www.linkedin.com/posts/diego-jose-garc%C3%ADa_informe-de-desarrollo-activity-7450860633581006848-jY4Z", icon: ExternalLink },
+      { label: "Repository", url: "https://github.com/dg203302/Proxy_RT", icon: Github, primary: true },
+      { label: "LinkedIn report", url: "https://www.linkedin.com/posts/diego-jose-garc%C3%ADa_informe-de-desarrollo-activity-7450860633581006848-jY4Z", icon: ExternalLink },
     ],
     gallery: [],
     variant: "dark",
@@ -157,24 +157,24 @@ const projects: Project[] = [
 const teamProjects: Project[] = [
   {
     index: "05",
-    kicker: "EXAMPLE — TRANSPORTE EN TIEMPO REAL",
+    kicker: "EXAMPLE — REAL-TIME TRANSPORT",
     name: "ZondaMov",
-    role: "Desarrollador y arquitecto principal",
+    role: "Lead developer and architect",
     description:
-      "App de transporte público con estética Liquid Glass. Mapa con OpenStreetMap, búsqueda multimodal de líneas, paradas y ubicaciones, planificador de recorridos con control de trasbordos y horarios en tiempo real.",
+      "Public transport app with a Liquid Glass aesthetic. OpenStreetMap-based map, multimodal search for lines, stops and locations, route planner with transfer control and real-time schedules.",
     features: [
       {
-        title: "Multiplataforma",
-        text: "Compatible con teléfonos, tablets y navegador, con modo oscuro y control de rendimiento.",
+        title: "Cross-platform",
+        text: "Compatible with phones, tablets and browser, with dark mode and performance controls.",
       },
       {
         title: "Liquid Glass UI",
-        text: "Interfaz inspirada en transparencias y profundidad, con foco en legibilidad sobre el mapa.",
+        text: "Interface inspired by transparencies and depth, focused on legibility over the map.",
       },
     ],
     stack: ["React", "OpenStreetMap", "Liquid Glass UI", "PWA", "TypeScript"],
     links: [
-      { label: "Repositorio", url: "https://github.com/dg203302/ZondaMov", icon: Github, primary: true },
+      { label: "Repository", url: "https://github.com/dg203302/ZondaMov", icon: Github, primary: true },
     ],
     gallery: [zondamov1],
     logo: zondamovLogo,
@@ -182,25 +182,25 @@ const teamProjects: Project[] = [
   },
   {
     index: "06",
-    kicker: "EXAMPLE — CUENTAS CORRIENTES",
+    kicker: "EXAMPLE — CUSTOMER ACCOUNTS",
     name: "Debitú",
-    role: "Dev backend y diseñador móvil",
+    role: "Backend dev and mobile designer",
     description:
-      "App para gestionar cuentas corrientes en negocios de barrio. Registrá clientes, anotá deudas y pagos, enviá saldos por WhatsApp y usá la calculadora integrada.",
+      "App to manage customer accounts in neighborhood businesses. Register clients, log debts and payments, send balances via WhatsApp and use the built-in calculator.",
     features: [
       {
-        title: "UX móvil moderna",
-        text: "Interfaz con bottom-sheets, transparencias elegantes y navegación gestual.",
+        title: "Modern mobile UX",
+        text: "Interface with bottom sheets, elegant transparencies and gesture-based navigation.",
       },
       {
-        title: "Login seguro",
-        text: "Autenticación con Google y sincronización en la nube.",
+        title: "Secure login",
+        text: "Google authentication and cloud sync.",
       },
     ],
     stack: ["Mobile", "WhatsApp API", "Google Auth", "Bottom Sheets"],
     links: [
-      { label: "Sitio web", url: "https://debitu.lovable.app/", icon: ExternalLink, primary: true },
-      { label: "Repositorio", url: "https://github.com/dg203302/SistemaClientesC", icon: Github },
+      { label: "Website", url: "https://debitu.lovable.app/", icon: ExternalLink, primary: true },
+      { label: "Repository", url: "https://github.com/dg203302/SistemaClientesC", icon: Github },
     ],
     gallery: [debitu1],
     logo: debituLogo,
@@ -208,26 +208,26 @@ const teamProjects: Project[] = [
   },
   {
     index: "07",
-    kicker: "EXAMPLE — FIDELIZACIÓN EN TIEMPO REAL",
+    kicker: "EXAMPLE — REAL-TIME LOYALTY",
     name: "Clientes El Lote",
-    role: "Dev backend",
+    role: "Backend dev",
     description:
-      "Ecosistema de fidelización con sincronización en tiempo real entre el negocio y el cliente. Puntos por compras presenciales, canje por promociones, catálogo dinámico, avisos, horarios y mapa integrado.",
+      "Loyalty ecosystem with real-time sync between the business and the customer. Points for in-store purchases, redemption for promotions, dynamic catalog, notices, schedules and integrated map.",
     features: [
       {
-        title: "Panel admin",
-        text: "Gestión de usuarios, carga de promos y comunicados masivos. Disponible en Google Play.",
+        title: "Admin panel",
+        text: "User management, promotion uploads and mass announcements. Available on Google Play.",
       },
       {
         title: "Realtime",
-        text: "Sincronización en vivo basada en Supabase entre el cliente y el negocio.",
+        text: "Live sync based on Supabase between the customer and the business.",
       },
     ],
     stack: ["Supabase", "Realtime", "Mobile", "Admin Panel"],
     links: [
       { label: "Google Play", url: "https://play.google.com/store/apps/details?id=app.netlify.loteclientes.twa&hl=es_AR", icon: ExternalLink, primary: true },
-      { label: "Repo Usuarios", url: "https://github.com/dg203302/SistemaClientes", icon: Github },
-      { label: "Repo Admin", url: "https://github.com/dg203302/SistemaAdmin", icon: Github },
+      { label: "Users repo", url: "https://github.com/dg203302/SistemaClientes", icon: Github },
+      { label: "Admin repo", url: "https://github.com/dg203302/SistemaAdmin", icon: Github },
     ],
     gallery: [lote1],
     logo: loteLogo,
@@ -281,7 +281,7 @@ const EditorialCard = ({ project }: { project: Project }) => {
           {project.logo && (
             <img
               src={project.logo}
-              alt={`Logo de ${project.name}`}
+              alt={`${project.name} logo`}
               className={`shrink-0 hidden sm:block w-16 h-16 md:w-20 md:h-20 object-contain ${
                 isDark ? "bg-[#f5f3ee]/5" : "bg-[#0a0a0a]/5"
               } p-2 border ${rule}`}
@@ -307,7 +307,7 @@ const EditorialCard = ({ project }: { project: Project }) => {
                     <img
                       key={src}
                       src={src}
-                      alt={`Captura ${idx + 1} de ${project.name}`}
+                      alt={`Screenshot ${idx + 1} of ${project.name}`}
                       className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
                         active === idx ? "opacity-100" : "opacity-0"
                       }`}
@@ -321,7 +321,7 @@ const EditorialCard = ({ project }: { project: Project }) => {
                       <button
                         key={src}
                         onClick={() => setActive(idx)}
-                        aria-label={`Ver captura ${idx + 1}`}
+                        aria-label={`View screenshot ${idx + 1}`}
                         className={`relative aspect-square overflow-hidden border transition-all ${
                           active === idx
                             ? isDark
@@ -423,9 +423,9 @@ export const Projects = () => {
       <div className="container space-y-20">
         <div>
           <SectionHeader
-            eyebrow="Proyectos personales"
+            eyebrow="Personal projects"
             title="Selected Work"
-            description="Proyectos donde combino ingenio técnico, IA y desarrollo end-to-end para resolver problemas reales."
+            description="Projects where I combine technical ingenuity, AI and end-to-end development to solve real problems."
           />
 
           <div className="flex flex-col gap-8">
@@ -439,11 +439,11 @@ export const Projects = () => {
 
         <div>
           <SectionHeader
-            eyebrow="Proyectos en conjunto"
+            eyebrow="Collaborative projects"
             title="Team Work"
             description={
               <>
-                Productos construidos junto a{" "}
+                Products built together with{" "}
                 <a
                   href="https://djsolutions.lovable.app/"
                   target="_blank"
@@ -452,7 +452,7 @@ export const Projects = () => {
                 >
                   D&JSolutions
                 </a>
-                , donde participé en distintos roles técnicos y de diseño.
+                , where I took part in various technical and design roles.
               </>
             }
           />
