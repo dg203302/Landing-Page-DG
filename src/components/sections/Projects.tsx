@@ -21,6 +21,11 @@ import postcredits2 from "@/assets/postcredits-2.png";
 import postcredits3 from "@/assets/postcredits-3.png";
 import postcredits4 from "@/assets/postcredits-4.png";
 import postcredits5 from "@/assets/postcredits-5.png";
+import postcredits6 from "@/assets/postcredits-6.png";
+import postcredits7 from "@/assets/postcredits-7.png";
+import postcredits8 from "@/assets/postcredits-8.png";
+import postcredits9 from "@/assets/postcredits-9.png";
+import postcredits10 from "@/assets/postcredits-10.png";
 import postcreditsLogo from "@/assets/postcredits-logo.png";
 
 type Link = { label: string; url: string; icon: typeof Github; primary?: boolean };
@@ -87,7 +92,7 @@ const projects: Project[] = [
       { label: "Visitar sitio", url: "https://postcredits.netlify.app", icon: ExternalLink, primary: true },
       { label: "PWA Store", url: "https://www.pwastore.io/app/post-credits", icon: Download },
     ],
-    gallery: [postcredits1, postcredits2, postcredits3, postcredits4, postcredits5],
+    gallery: [postcredits1, postcredits2, postcredits3, postcredits4, postcredits5, postcredits6, postcredits7, postcredits8, postcredits9, postcredits10],
     logo: postcreditsLogo,
     variant: "dark",
   },
