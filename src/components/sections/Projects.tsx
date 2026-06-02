@@ -6,6 +6,11 @@ import trainerLogo from "@/assets/trainer-logo.png";
 import trainer1 from "@/assets/trainer-1.png";
 import trainer2 from "@/assets/trainer-2.png";
 import trainer3 from "@/assets/trainer-3.png";
+import trainer4 from "@/assets/trainer-4.png";
+import trainer5 from "@/assets/trainer-5.png";
+import trainer6 from "@/assets/trainer-6.png";
+import trainer7 from "@/assets/trainer-7.png";
+import trainer8 from "@/assets/trainer-8.png";
 import debituLogo from "@/assets/debitu-logo.png";
 import debitu1 from "@/assets/debitu-1.png";
 import zondamovLogo from "@/assets/zondamov-logo.png";
@@ -66,7 +71,7 @@ const projects: Project[] = [
     links: [
       { label: "Repositorio", url: "https://github.com/dg203302/AIPersonalTrainer", icon: Github, primary: true },
     ],
-    gallery: [trainer1, trainer2, trainer3],
+    gallery: [trainer1, trainer2, trainer3, trainer4, trainer5, trainer6, trainer7, trainer8],
     logo: trainerLogo,
     variant: "light",
   },
