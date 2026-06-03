@@ -18,7 +18,7 @@ export const Hero = () => {
               className="relative animate-fade-in-up shrink-0"
               style={{ animationDelay: "60ms", opacity: 0 }}
             >
-              <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80">
+              <div className="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80">
                 <div className="absolute inset-0 rounded-full bg-gradient-brand blur-3xl opacity-50" />
                 <div
                   className="relative w-full h-full overflow-hidden"
