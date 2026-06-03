@@ -1,0 +1,7 @@
+# Diego Jose Garcia
+
+> Portfolio of Diego Jose Garcia, junior web developer specialized in JavaScript, Python, and Flask. Focused on PWAs, APIs, and cloud solutions.
+
+## Pages
+
+- [Home](/): Portfolio landing page with hero section, experience, tech stack, projects, and contact information.
