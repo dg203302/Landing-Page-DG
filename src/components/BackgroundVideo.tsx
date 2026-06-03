@@ -8,7 +8,7 @@ export const BackgroundVideo = () => (
       loop
       muted
       playsInline
-      className="w-full h-full object-cover brightness-125 contrast-125 saturate-150"
+      className="w-full h-full object-cover brightness-[0.35] contrast-125 saturate-150"
     />
     <div className="absolute inset-0 bg-background/5" />
   </div>
