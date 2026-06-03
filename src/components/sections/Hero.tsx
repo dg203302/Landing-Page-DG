@@ -18,7 +18,7 @@ export const Hero = () => {
               className="relative animate-fade-in-up shrink-0"
               style={{ animationDelay: "60ms", opacity: 0 }}
             >
-              <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-80 lg:h-80">
+              <div className="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80">
                 <div className="absolute inset-0 rounded-full bg-gradient-brand blur-3xl opacity-50" />
                 <div
                   className="relative w-full h-full overflow-hidden"
@@ -49,7 +49,7 @@ export const Hero = () => {
               </div>
 
               <h1
-                className="font-display text-5xl md:text-7xl lg:text-8xl font-normal leading-[0.95] tracking-tight mb-6 animate-fade-in-up"
+                className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-normal leading-[0.95] tracking-tight mb-6 animate-fade-in-up break-words"
                 style={{ animationDelay: "120ms", opacity: 0 }}
               >
                 <span className="text-foreground">Web Developer</span>
@@ -58,7 +58,7 @@ export const Hero = () => {
               </h1>
 
               <p
-                className="text-base md:text-lg text-foreground/65 max-w-xl mx-auto md:mx-0 mb-8 animate-fade-in-up leading-relaxed"
+                className="text-sm sm:text-base md:text-lg text-foreground/65 max-w-xl mx-auto md:mx-0 mb-8 animate-fade-in-up leading-relaxed"
                 style={{ animationDelay: "240ms", opacity: 0 }}
               >
                 I'm <span className="text-foreground">Diego Jose Garcia</span> — a junior
