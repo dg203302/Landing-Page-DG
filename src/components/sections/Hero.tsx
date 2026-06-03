@@ -24,16 +24,23 @@ export const Hero = () => {
             className="relative mx-auto mb-10 animate-fade-in-up"
             style={{ animationDelay: "60ms", opacity: 0 }}
           >
-            <div className="relative w-40 h-40 md:w-52 md:h-52 mx-auto">
-              <div className="absolute inset-0 rounded-full bg-gradient-brand blur-2xl opacity-40" />
-              <div className="relative w-full h-full rounded-full overflow-hidden ring-1 ring-foreground/15 shadow-card">
+            <div className="relative w-60 h-60 md:w-80 md:h-80 mx-auto">
+              <div className="absolute inset-0 rounded-full bg-gradient-brand blur-3xl opacity-50" />
+              <div
+                className="relative w-full h-full overflow-hidden"
+                style={{
+                  WebkitMaskImage:
+                    "radial-gradient(circle at center, #000 45%, transparent 72%)",
+                  maskImage:
+                    "radial-gradient(circle at center, #000 45%, transparent 72%)",
+                }}
+              >
                 <img
                   src={diegoPhoto.url}
                   alt="Portrait of Diego Jose Garcia"
-                  className="w-full h-full object-cover grayscale contrast-110"
+                  className="w-full h-full object-cover"
                   loading="eager"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-background/40" />
               </div>
             </div>
           </div>
