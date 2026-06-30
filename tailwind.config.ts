@@ -93,6 +93,12 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
+        "bubble": {
+          "0%": { transform: "translateY(110vh) scale(0.9)", opacity: "0" },
+          "10%": { opacity: "1" },
+          "90%": { opacity: "1" },
+          "100%": { transform: "translateY(-20vh) scale(1.1)", opacity: "0" },
+        },
         "gradient-shift": {
           "0%, 100%": { "background-position": "0% 50%" },
           "50%": { "background-position": "100% 50%" },
