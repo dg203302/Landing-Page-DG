@@ -14,26 +14,9 @@ const Index = () => {
       <div className="relative z-10">
         <Navigation />
         <Hero />
-        <div className="container mx-auto px-4">
-          <AdBanner />
-        </div>
         <Experience />
-        <div className="container mx-auto px-4">
-          <IframeAdBanner
-            adKey="c7120d15f6948cb19a000f354d8c57d6"
-            width={468}
-            height={60}
-          />
-        </div>
         <Education />
         <Projects />
-        <div className="container mx-auto px-4">
-          <IframeAdBanner
-            adKey="b8e8436c6e5b6a76e846706af1213d14"
-            width={160}
-            height={300}
-          />
-        </div>
         <Contact />
       </div>
     </main>
