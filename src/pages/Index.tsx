@@ -29,7 +29,11 @@ const Index = () => {
         <Education />
         <Projects />
         <div className="container mx-auto px-4">
-          <AdBanner />
+          <IframeAdBanner
+            adKey="b8e8436c6e5b6a76e846706af1213d14"
+            width={300}
+            height={300}
+          />
         </div>
         <Contact />
       </div>
