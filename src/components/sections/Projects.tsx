@@ -224,18 +224,19 @@ const EditorialCard = ({ project }: { project: Project }) => {
   }, [project.gallery.length]);
 
   const isDark = project.variant === "dark";
-  // Pure editorial palette overriding the global theme on purpose
-  const bg = isDark ? "bg-[#0a0a0a]" : "bg-[#f5f3ee]";
+  // Translucent editorial palette: lets the bubble background show through
+  // while keeping text perfectly readable.
+  const bg = isDark ? "bg-[#0a0a0a]/80 backdrop-blur-md" : "bg-[#f5f3ee]/88 backdrop-blur-md";
   const fg = isDark ? "text-[#f5f3ee]" : "text-[#0a0a0a]";
-  const muted = isDark ? "text-[#f5f3ee]/55" : "text-[#0a0a0a]/55";
-  const rule = isDark ? "border-[#f5f3ee]/15" : "border-[#0a0a0a]/15";
-  const chipBorder = isDark ? "border-[#f5f3ee]/25" : "border-[#0a0a0a]/25";
+  const muted = isDark ? "text-[#f5f3ee]/60" : "text-[#0a0a0a]/60";
+  const rule = isDark ? "border-[#f5f3ee]/20" : "border-[#0a0a0a]/20";
+  const chipBorder = isDark ? "border-[#f5f3ee]/30" : "border-[#0a0a0a]/30";
   const primaryBtn = isDark
     ? "bg-[#f5f3ee] text-[#0a0a0a] hover:bg-white"
     : "bg-[#0a0a0a] text-[#f5f3ee] hover:bg-black";
   const ghostBtn = isDark
-    ? "border border-[#f5f3ee]/30 text-[#f5f3ee] hover:bg-[#f5f3ee]/10"
-    : "border border-[#0a0a0a]/25 text-[#0a0a0a] hover:bg-[#0a0a0a]/5";
+    ? "border border-[#f5f3ee]/40 text-[#f5f3ee] hover:bg-[#f5f3ee]/10"
+    : "border border-[#0a0a0a]/40 text-[#0a0a0a] hover:bg-[#0a0a0a]/5";
 
   const hasGallery = project.gallery.length > 0;
 
