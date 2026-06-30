@@ -45,10 +45,10 @@ export const Navigation = () => {
       <header className="md:hidden fixed top-4 inset-x-4 z-50 flex justify-center">
         <button
           onClick={() => handleClick("inicio")}
-          className="glass shadow-card rounded-full px-5 py-2 font-display text-xl"
+          className="glass shadow-card rounded-full px-5 py-2 font-display text-xl border border-foreground/10"
         >
-          <span className="text-foreground">Diego</span>
-          <span className="font-serifItalic italic text-brand"> García</span>
+          <span className="text-foreground drop-shadow-sm">Diego</span>
+          <span className="font-serifItalic italic text-brand drop-shadow-sm"> García</span>
         </button>
       </header>
 
@@ -62,16 +62,15 @@ export const Navigation = () => {
         <div className="container">
           <nav
             className={cn(
-              "flex items-center gap-6 rounded-full px-6 py-3 transition-all",
-              scrolled ? "glass shadow-card" : "bg-transparent"
+              "flex items-center gap-6 rounded-full px-6 py-3 transition-all duration-300 glass shadow-card border border-foreground/10"
             )}
           >
             <button
               onClick={() => handleClick("inicio")}
               className="font-display text-2xl shrink-0"
             >
-              <span className="text-foreground">Diego</span>
-              <span className="font-serifItalic italic text-brand">García</span>
+              <span className="text-foreground drop-shadow-sm">Diego</span>
+              <span className="font-serifItalic italic text-brand drop-shadow-sm">García</span>
             </button>
             <ul className="flex items-center gap-1 ml-auto">
               {links.map((link) => (
@@ -82,11 +81,11 @@ export const Navigation = () => {
                       "px-4 py-2 rounded-full text-sm font-medium transition-all relative",
                       active === link.id
                         ? "text-foreground"
-                        : "text-foreground/60 hover:text-foreground"
+                        : "text-foreground/70 hover:text-foreground"
                     )}
                   >
                     {active === link.id && (
-                      <span className="absolute inset-0 rounded-full bg-brand/15 border border-brand/30" />
+                      <span className="absolute inset-0 rounded-full bg-brand/20 border border-brand/40 shadow-inner" />
                     )}
                     <span className="relative">{link.label}</span>
                   </button>
@@ -98,7 +97,7 @@ export const Navigation = () => {
       </header>
 
       {/* Mobile bottom bar */}
-      <nav className="md:hidden fixed bottom-4 inset-x-4 z-50 glass rounded-2xl shadow-card">
+      <nav className="md:hidden fixed bottom-4 inset-x-4 z-50 glass rounded-2xl shadow-card border border-foreground/10">
         <ul className="flex items-center justify-around py-2">
           {links.map((link) => {
             const Icon = link.icon;
@@ -109,12 +108,15 @@ export const Navigation = () => {
                   onClick={() => handleClick(link.id)}
                   aria-label={link.label}
                   className={cn(
-                    "flex flex-col items-center gap-1 px-3 py-2 rounded-xl transition-all",
-                    isActive ? "text-brand" : "text-foreground/55"
+                    "flex flex-col items-center gap-1 px-3 py-2 rounded-xl transition-all relative",
+                    isActive ? "text-brand" : "text-foreground/70 hover:text-foreground"
                   )}
                 >
-                  <Icon className={cn("h-5 w-5 transition-transform", isActive && "scale-110")} />
-                  <span className="text-[10px] font-medium">{link.label}</span>
+                  {isActive && (
+                    <span className="absolute inset-0 rounded-xl bg-brand/15 border border-brand/30" />
+                  )}
+                  <Icon className={cn("h-5 w-5 transition-transform relative", isActive && "scale-110")} />
+                  <span className="text-[10px] font-medium relative">{link.label}</span>
                 </button>
               </li>
             );
