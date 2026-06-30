@@ -93,6 +93,12 @@ export default {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
+        "bubble": {
+          "0%, 100%": { transform: "translate(0, 0) scale(1)" },
+          "25%": { transform: "translate(var(--bubble-drift-x, 6%), var(--bubble-drift-y, -8%)) scale(1.05)" },
+          "50%": { transform: "translate(var(--bubble-drift-x, -4%), var(--bubble-drift-y, 6%)) scale(0.98)" },
+          "75%": { transform: "translate(var(--bubble-drift-x, 7%), var(--bubble-drift-y, 4%)) scale(1.02)" },
+        },
         "gradient-shift": {
           "0%, 100%": { "background-position": "0% 50%" },
           "50%": { "background-position": "100% 50%" },
@@ -103,6 +109,7 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in-up": "fade-in-up 0.7s cubic-bezier(0.22,1,0.36,1) forwards",
         "float": "float 6s ease-in-out infinite",
+        "bubble": "bubble 20s linear infinite",
         "gradient-shift": "gradient-shift 8s ease infinite",
       },
     },
