@@ -279,15 +279,15 @@ const EditorialCard = ({ project }: { project: Project }) => {
           <div className="lg:col-span-7">
             {hasGallery ? (
               <div className="space-y-3">
-                {/* main image */}
-                <div className={`relative aspect-[16/10] overflow-hidden border ${rule} ${isDark ? "bg-[#0a0a0a]" : "bg-[#f5f3ee]"}`}>
+                {/* main image — adapts to active image aspect ratio */}
+                <div className={`relative w-full overflow-hidden border ${rule} ${isDark ? "bg-[#0a0a0a]" : "bg-[#f5f3ee]"} flex items-center justify-center`}>
                   {project.gallery.map((src, idx) => (
                     <img
                       key={src}
                       src={src}
                       alt={`Screenshot ${idx + 1} of ${project.name}`}
-                      className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-700 ${
-                        active === idx ? "opacity-100" : "opacity-0"
+                      className={`w-full max-w-full max-h-[70vh] md:max-h-[80vh] object-contain transition-opacity duration-700 ${
+                        active === idx ? "relative opacity-100" : "absolute inset-0 opacity-0 pointer-events-none"
                       }`}
                     />
                   ))}
