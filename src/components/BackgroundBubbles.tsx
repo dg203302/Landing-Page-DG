@@ -36,7 +36,7 @@ export const BackgroundBubbles = () => {
       cx: random(5, 95),
       cy: random(5, 95),
       r: random(12, 34),
-      opacity: random(0.18, 0.32),
+      opacity: random(0.22, 0.38),
       color: palette[Math.floor(Math.random() * palette.length)],
       duration: random(18, 34),
       delay: random(-30, 0),
