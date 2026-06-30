@@ -9,7 +9,7 @@ import { Contact } from "@/components/sections/Contact";
 const Index = () => {
   return (
     <main className="relative min-h-screen">
-      <BackgroundVideo />
+      <BackgroundBubbles />
       <div className="relative z-10">
         <Navigation />
         <Hero />
