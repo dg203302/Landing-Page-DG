@@ -224,13 +224,15 @@ const EditorialCard = ({ project }: { project: Project }) => {
   }, [project.gallery.length]);
 
   const isDark = project.variant === "dark";
-  // Translucent editorial palette: lets the bubble background show through
-  // while keeping text perfectly readable.
-  const bg = isDark ? "bg-[#0a0a0a]/80 backdrop-blur-md" : "bg-[#f5f3ee]/88 backdrop-blur-md";
+  // High transparency + strong blur so the bubble background shows through.
+  // Light cards use a white tint to keep dark text perfectly readable.
+  const bg = isDark
+    ? "bg-[#0a0a0a]/55 backdrop-blur-xl"
+    : "bg-white/80 backdrop-blur-xl";
   const fg = isDark ? "text-[#f5f3ee]" : "text-[#0a0a0a]";
-  const muted = isDark ? "text-[#f5f3ee]/60" : "text-[#0a0a0a]/60";
-  const rule = isDark ? "border-[#f5f3ee]/20" : "border-[#0a0a0a]/20";
-  const chipBorder = isDark ? "border-[#f5f3ee]/30" : "border-[#0a0a0a]/30";
+  const muted = isDark ? "text-[#f5f3ee]/70" : "text-[#0a0a0a]/70";
+  const rule = isDark ? "border-[#f5f3ee]/20" : "border-[#0a0a0a]/15";
+  const chipBorder = isDark ? "border-[#f5f3ee]/30" : "border-[#0a0a0a]/25";
   const primaryBtn = isDark
     ? "bg-[#f5f3ee] text-[#0a0a0a] hover:bg-white"
     : "bg-[#0a0a0a] text-[#f5f3ee] hover:bg-black";
