@@ -5,6 +5,7 @@ import { Experience } from "@/components/sections/Experience";
 import { Education } from "@/components/sections/Education";
 import { Projects } from "@/components/sections/Projects";
 import { Contact } from "@/components/sections/Contact";
+import { AdBanner } from "@/components/AdBanner";
 
 const Index = () => {
   return (
@@ -13,9 +14,18 @@ const Index = () => {
       <div className="relative z-10">
         <Navigation />
         <Hero />
+        <div className="container mx-auto px-4">
+          <AdBanner />
+        </div>
         <Experience />
+        <div className="container mx-auto px-4">
+          <AdBanner />
+        </div>
         <Education />
         <Projects />
+        <div className="container mx-auto px-4">
+          <AdBanner />
+        </div>
         <Contact />
       </div>
     </main>
