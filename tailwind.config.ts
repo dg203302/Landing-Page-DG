@@ -109,6 +109,7 @@ export default {
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-in-up": "fade-in-up 0.7s cubic-bezier(0.22,1,0.36,1) forwards",
         "float": "float 6s ease-in-out infinite",
+        "bubble": "bubble 20s linear infinite",
         "gradient-shift": "gradient-shift 8s ease infinite",
       },
     },
