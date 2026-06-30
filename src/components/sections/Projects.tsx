@@ -160,7 +160,7 @@ const teamProjects: Project[] = [
     links: [
       { label: "Repository", url: "https://github.com/dg203302/ZondaMov", icon: Github, primary: true },
     ],
-    gallery: [zondamov1],
+    gallery: [zondamov1, zondamov2, zondamov3, zondamov4, zondamov5, zondamov6],
     logo: zondamovLogo,
     variant: "light",
   },
