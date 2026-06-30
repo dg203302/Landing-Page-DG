@@ -51,7 +51,8 @@ export const BackgroundBubbles = () => {
       <svg
         className="absolute inset-0 w-full h-full"
         xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="xMidYMid slice"
+        viewBox="0 0 100 100"
+        preserveAspectRatio="none"
       >
         <defs>
           <filter id="bubble-blur" x="-50%" y="-50%" width="200%" height="200%">
