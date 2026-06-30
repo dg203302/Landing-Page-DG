@@ -52,7 +52,7 @@ type Project = {
 const projects: Project[] = [
   {
     index: "01",
-    kicker: "EXAMPLE — HEALTH & FITNESS APP",
+    kicker: "HEALTH & FITNESS APP",
     name: "TrAIner",
     role: "AI · PWA · JavaScript",
     description:
@@ -77,7 +77,7 @@ const projects: Project[] = [
   },
   {
     index: "02",
-    kicker: "EXAMPLE — PWA / CINEMA COMPANION APP",
+    kicker: "PWA / CINEMA COMPANION APP",
     name: "Post Credits",
     role: "PWA · React · TMDB API",
     description:
@@ -103,7 +103,7 @@ const projects: Project[] = [
   },
   {
     index: "03",
-    kicker: "EXAMPLE — GTA VI COUNTDOWN",
+    kicker: "GTA VI COUNTDOWN",
     name: "ViceClock",
     role: "JavaScript · YouTube API",
     description:
@@ -132,7 +132,7 @@ const projects: Project[] = [
 const teamProjects: Project[] = [
   {
     index: "05",
-    kicker: "EXAMPLE — REAL-TIME TRANSPORT",
+    kicker: "REAL-TIME TRANSPORT",
     name: "ZondaMov",
     role: "Lead developer and architect",
     description:
@@ -157,7 +157,7 @@ const teamProjects: Project[] = [
   },
   {
     index: "06",
-    kicker: "EXAMPLE — CUSTOMER ACCOUNTS",
+    kicker: "CUSTOMER ACCOUNTS",
     name: "Debitú",
     role: "Backend dev and mobile designer",
     description:
@@ -183,7 +183,7 @@ const teamProjects: Project[] = [
   },
   {
     index: "07",
-    kicker: "EXAMPLE — REAL-TIME LOYALTY",
+    kicker: "REAL-TIME LOYALTY",
     name: "Clientes El Lote",
     role: "Backend dev",
     description:
@@ -344,7 +344,7 @@ const EditorialCard = ({ project }: { project: Project }) => {
                   className={i === 0 ? `pr-2 border-r ${rule}` : "pl-2"}
                 >
                   <p className={`text-[10px] tracking-[0.25em] uppercase ${muted} mb-2`}>
-                    Example 0{i + 1}
+                    0{i + 1}
                   </p>
                   <h4 className="font-editorial uppercase text-sm md:text-base leading-tight mb-2">
                     {f.title}
