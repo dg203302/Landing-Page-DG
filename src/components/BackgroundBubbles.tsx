@@ -35,13 +35,13 @@ export const BackgroundBubbles = () => {
       id: i,
       cx: random(5, 95),
       cy: random(5, 95),
-      r: random(10, 32),
-      opacity: random(0.35, 0.65),
+      r: random(12, 34),
+      opacity: random(0.18, 0.32),
       color: palette[Math.floor(Math.random() * palette.length)],
       duration: random(18, 34),
       delay: random(-30, 0),
-      driftX: random(-8, 8),
-      driftY: random(-12, 12),
+      driftX: random(-10, 10),
+      driftY: random(-14, 14),
       scale: random(0.85, 1.2),
     }));
   }, []);
