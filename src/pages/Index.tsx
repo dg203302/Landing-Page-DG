@@ -1,5 +1,5 @@
 import { Navigation } from "@/components/Navigation";
-import { BackgroundVideo } from "@/components/BackgroundVideo";
+import { BackgroundBubbles } from "@/components/BackgroundBubbles";
 import { Hero } from "@/components/sections/Hero";
 import { Experience } from "@/components/sections/Experience";
 import { Education } from "@/components/sections/Education";
