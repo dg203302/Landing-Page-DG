@@ -121,8 +121,11 @@ export const BackgroundBubbles = () => {
         ))}
       </svg>
 
-      {/* Subtle vignette to keep text readable */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_50%,hsl(0_0%_3%_/_0.55)_100%)]" />
+      {/* Central dark overlay to preserve text readability */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,hsl(0_0%_3%_/_0.62)_0%,transparent_65%)]" />
+
+      {/* Soft edge vignette */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_50%,hsl(0_0%_3%_/_0.65)_100%)]" />
     </div>
   );
 };
