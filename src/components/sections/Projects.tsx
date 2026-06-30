@@ -127,31 +127,6 @@ const projects: Project[] = [
     logo: viceclockLogo,
     variant: "light",
   },
-  {
-    index: "04",
-    kicker: "EXAMPLE — PUBLIC TRANSPORT API",
-    name: "ProxyRT",
-    role: "Python · FastAPI · Docker",
-    description:
-      "Real-time arrival times for Red Tulum without an official API. Proxy that intercepts requests to the Moovit API and exposes them as its own endpoint. Data backend that powers ZondaMov.",
-    features: [
-      {
-        title: "Canonical pre-indexing",
-        text: "Each line has a unique URL where all stops are loaded into the DOM. Constant-time access after two discarded prototypes.",
-      },
-      {
-        title: "Lightweight and dockerized",
-        text: "Minimalist containerized proxy, production-ready. Only accesses public information from the official site.",
-      },
-    ],
-    stack: ["Python", "Playwright", "FastAPI", "Uvicorn", "Docker"],
-    links: [
-      { label: "Repository", url: "https://github.com/dg203302/Proxy_RT", icon: Github, primary: true },
-      { label: "LinkedIn report", url: "https://www.linkedin.com/posts/diego-jose-garc%C3%ADa_informe-de-desarrollo-activity-7450860633581006848-jY4Z", icon: ExternalLink },
-    ],
-    gallery: [],
-    variant: "dark",
-  },
 ];
 
 const teamProjects: Project[] = [
