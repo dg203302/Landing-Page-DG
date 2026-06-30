@@ -10,7 +10,7 @@ import trainer4 from "@/assets/trainer-4.png";
 import trainer5 from "@/assets/trainer-5.png";
 import trainer6 from "@/assets/trainer-6.png";
 import trainer7 from "@/assets/trainer-7.png";
-import trainer8 from "@/assets/trainer-8.png";
+
 import debituLogo from "@/assets/debitu-logo.png";
 import debitu1 from "@/assets/debitu-1.png";
 import zondamovLogo from "@/assets/zondamov-logo.png";
@@ -71,7 +71,7 @@ const projects: Project[] = [
     links: [
       { label: "Repository", url: "https://github.com/dg203302/AIPersonalTrainer", icon: Github, primary: true },
     ],
-    gallery: [trainer1, trainer2, trainer3, trainer4, trainer5, trainer6, trainer7, trainer8],
+    gallery: [trainer1, trainer2, trainer3, trainer4, trainer5, trainer6, trainer7],
     logo: trainerLogo,
     variant: "light",
   },
@@ -280,13 +280,13 @@ const EditorialCard = ({ project }: { project: Project }) => {
             {hasGallery ? (
               <div className="space-y-3">
                 {/* main image */}
-                <div className={`relative aspect-[16/10] overflow-hidden border ${rule}`}>
+                <div className={`relative aspect-[16/10] overflow-hidden border ${rule} ${isDark ? "bg-[#0a0a0a]" : "bg-[#f5f3ee]"}`}>
                   {project.gallery.map((src, idx) => (
                     <img
                       key={src}
                       src={src}
                       alt={`Screenshot ${idx + 1} of ${project.name}`}
-                      className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${
+                      className={`absolute inset-0 w-full h-full object-contain transition-opacity duration-700 ${
                         active === idx ? "opacity-100" : "opacity-0"
                       }`}
                     />
@@ -308,7 +308,7 @@ const EditorialCard = ({ project }: { project: Project }) => {
                             : `${rule} opacity-50 hover:opacity-100`
                         }`}
                       >
-                        <img src={src} alt="" className="w-full h-full object-cover" />
+                        <img src={src} alt="" className={`w-full h-full object-contain ${isDark ? "bg-[#0a0a0a]" : "bg-[#f5f3ee]"}`} />
                       </button>
                     ))}
                   </div>
