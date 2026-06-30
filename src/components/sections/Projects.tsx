@@ -13,6 +13,10 @@ import trainer7 from "@/assets/trainer-7.png";
 
 import debituLogo from "@/assets/debitu-logo.png";
 import debitu1 from "@/assets/debitu-1.png";
+import debitu2 from "@/assets/debitu-2.png";
+import debitu3 from "@/assets/debitu-3.png";
+import debitu4 from "@/assets/debitu-4.png";
+import debitu5 from "@/assets/debitu-5.png";
 import zondamovLogo from "@/assets/zondamov-logo.png";
 import zondamov1 from "@/assets/zondamov-1.png";
 import loteLogo from "@/assets/lote-logo.png";
@@ -177,7 +181,7 @@ const teamProjects: Project[] = [
       { label: "Website", url: "https://debitu.lovable.app/", icon: ExternalLink, primary: true },
       { label: "Repository", url: "https://github.com/dg203302/SistemaClientesC", icon: Github },
     ],
-    gallery: [debitu1],
+    gallery: [debitu1, debitu2, debitu3, debitu4, debitu5],
     logo: debituLogo,
     variant: "dark",
   },
