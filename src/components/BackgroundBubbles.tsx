@@ -46,8 +46,24 @@ export const BackgroundBubbles = () => {
     }));
   }, []);
 
+  const keyframes = useMemo(() => {
+    return bubbles
+      .map(
+        (b) => `
+@keyframes bubble-${b.id} {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  25% { transform: translate(${b.driftX}%, ${b.driftY * 0.8}%) scale(${1 + (b.scale - 1) * 0.5}); }
+  50% { transform: translate(${b.driftX * -0.6}%, ${b.driftY}%) scale(${b.scale}); }
+  75% { transform: translate(${b.driftX * 0.4}%, ${b.driftY * -0.5}%) scale(${1 + (b.scale - 1) * 0.3}); }
+}`
+      )
+      .join("\n");
+  }, [bubbles]);
+
   return (
     <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none bg-background">
+      <style>{keyframes}</style>
+
       {/* Warm ambient glow */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,hsl(42_40%_22%_/_0.22),transparent_45%),radial-gradient(ellipse_at_70%_80%,hsl(36_35%_18%_/_0.18),transparent_45%),hsl(0_0%_3%)]" />
 
@@ -71,11 +87,10 @@ export const BackgroundBubbles = () => {
         {bubbles.map((b) => (
           <g
             key={b.id}
-            className="animate-bubble"
             style={{
               transformOrigin: `${b.cx}% ${b.cy}%`,
+              animation: `bubble-${b.id} ${b.duration}s ease-in-out infinite`,
               animationDelay: `${b.delay}s`,
-              animationDuration: `${b.duration}s`,
               opacity: b.opacity,
             }}
           >
