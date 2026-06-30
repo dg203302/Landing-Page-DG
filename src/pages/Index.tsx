@@ -6,6 +6,7 @@ import { Education } from "@/components/sections/Education";
 import { Projects } from "@/components/sections/Projects";
 import { Contact } from "@/components/sections/Contact";
 import { AdBanner } from "@/components/AdBanner";
+import { IframeAdBanner } from "@/components/IframeAdBanner";
 
 const Index = () => {
   return (
@@ -19,7 +20,11 @@ const Index = () => {
         </div>
         <Experience />
         <div className="container mx-auto px-4">
-          <AdBanner />
+          <IframeAdBanner
+            adKey="c7120d15f6948cb19a000f354d8c57d6"
+            width={468}
+            height={60}
+          />
         </div>
         <Education />
         <Projects />
