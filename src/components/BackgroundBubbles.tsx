@@ -9,18 +9,20 @@ interface Bubble {
   color: string;
   duration: number;
   delay: number;
-  drift: number;
+  driftX: number;
+  driftY: number;
   scale: number;
 }
 
-const BUBBLE_COUNT = 18;
+const BUBBLE_COUNT = 22;
 
 const palette = [
-  "hsl(45 90% 60%",   // warm yellow
-  "hsl(42 85% 55%",   // golden yellow
-  "hsl(38 80% 58%",   // amber
-  "hsl(48 70% 65%",   // soft yellow
-  "hsl(36 75% 52%",   // deep gold
+  "hsl(45 95% 60%",   // warm yellow
+  "hsl(48 90% 64%",   // bright yellow
+  "hsl(42 88% 58%",   // golden yellow
+  "hsl(38 85% 55%",   // amber
+  "hsl(50 80% 68%",   // soft lemon
+  "hsl(36 78% 52%",   // deep gold
 ];
 
 function random(min: number, max: number) {
@@ -32,21 +34,22 @@ export const BackgroundBubbles = () => {
     return Array.from({ length: BUBBLE_COUNT }).map((_, i) => ({
       id: i,
       cx: random(5, 95),
-      cy: random(10, 90),
-      r: random(8, 28),
-      opacity: random(0.12, 0.35),
+      cy: random(5, 95),
+      r: random(10, 32),
+      opacity: random(0.35, 0.65),
       color: palette[Math.floor(Math.random() * palette.length)],
-      duration: random(14, 26),
-      delay: random(-20, 0),
-      drift: random(-20, 20),
-      scale: random(0.85, 1.15),
+      duration: random(18, 34),
+      delay: random(-30, 0),
+      driftX: random(-8, 8),
+      driftY: random(-12, 12),
+      scale: random(0.85, 1.2),
     }));
   }, []);
 
   return (
     <div className="fixed inset-0 z-0 overflow-hidden pointer-events-none bg-background">
-      {/* Dark base gradient */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,hsl(36_30%_18%_/_0.12),transparent_50%),radial-gradient(ellipse_at_50%_100%,hsl(36_25%_12%_/_0.10),transparent_50%),hsl(0_0%_3%)]" />
+      {/* Warm ambient glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_30%_20%,hsl(42_40%_22%_/_0.22),transparent_45%),radial-gradient(ellipse_at_70%_80%,hsl(36_35%_18%_/_0.18),transparent_45%),hsl(0_0%_3%)]" />
 
       <svg
         className="absolute inset-0 w-full h-full"
@@ -55,11 +58,12 @@ export const BackgroundBubbles = () => {
         preserveAspectRatio="none"
       >
         <defs>
-          <filter id="bubble-blur" x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="12" />
+          <filter id="bubble-blur" x="-60%" y="-60%" width="220%" height="220%">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="10" />
           </filter>
-          <radialGradient id="bubble-glow" cx="30%" cy="30%" r="70%">
-            <stop offset="0%" stopColor="hsl(45 95% 85%)" stopOpacity="0.6" />
+          <radialGradient id="bubble-glow" cx="25%" cy="25%" r="75%">
+            <stop offset="0%" stopColor="hsl(50 100% 88%)" stopOpacity="0.85" />
+            <stop offset="50%" stopColor="hsl(45 90% 62%)" stopOpacity="0.4" />
             <stop offset="100%" stopColor="hsl(42 80% 55%)" stopOpacity="0" />
           </radialGradient>
         </defs>
@@ -72,6 +76,7 @@ export const BackgroundBubbles = () => {
               transformOrigin: `${b.cx}% ${b.cy}%`,
               animationDelay: `${b.delay}s`,
               animationDuration: `${b.duration}s`,
+              opacity: b.opacity,
             }}
           >
             <circle
@@ -80,26 +85,29 @@ export const BackgroundBubbles = () => {
               r={b.r}
               fill={`${b.color} / ${b.opacity})`}
               filter="url(#bubble-blur)"
-              style={{
-                transform: `translateX(${b.drift}%) scale(${b.scale})`,
-              }}
             />
             <circle
               cx={`${b.cx}%`}
               cy={`${b.cy}%`}
-              r={b.r * 0.55}
+              r={b.r * 0.5}
               fill="url(#bubble-glow)"
-              opacity={0.6}
+              opacity={0.75}
+            />
+            <circle
+              cx={`${b.cx}%`}
+              cy={`${b.cy}%`}
+              r={b.r * 0.18}
+              fill="hsl(50 100% 90% / 0.7)"
               style={{
-                transform: `translateX(${b.drift}%) scale(${b.scale})`,
+                transform: `translate(-${b.r * 0.22}%, -${b.r * 0.22}%)`,
               }}
             />
           </g>
         ))}
       </svg>
 
-      {/* Soft vignette overlay */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_40%,hsl(0_0%_3%_/_0.75)_100%)]" />
+      {/* Subtle vignette to keep text readable */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_50%,hsl(0_0%_3%_/_0.55)_100%)]" />
     </div>
   );
 };
