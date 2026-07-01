@@ -226,7 +226,7 @@ const teamProjects: Project[] = [
   },
 ];
 
-// Editorial card — black/white alternating, big bold uppercase title, image collage, micro columns
+// Editorial card — always black glass, legible light text
 const EditorialCard = ({ project }: { project: Project }) => {
   const [active, setActive] = useState(0);
 
@@ -239,23 +239,16 @@ const EditorialCard = ({ project }: { project: Project }) => {
     return () => clearInterval(id);
   }, [project.gallery.length]);
 
-  const isDark = project.variant === "dark";
-  // High transparency + strong blur so the bubble background shows through.
-  // Light cards use a white tint to keep dark text perfectly readable.
-  const bg = isDark
-    ? "bg-[#0a0a0a]/55 backdrop-blur-xl"
-    : "bg-white/80 backdrop-blur-xl";
-  const fg = isDark ? "text-[#f5f3ee]" : "text-[#0a0a0a]";
-  const muted = isDark ? "text-[#f5f3ee]/70" : "text-[#0a0a0a]/70";
-  const rule = isDark ? "border-[#f5f3ee]/20" : "border-[#0a0a0a]/15";
-  const chipBorder = isDark ? "border-[#f5f3ee]/30" : "border-[#0a0a0a]/25";
+  // All project cards now share a black translucent background so the bubble
+  // wallpaper shows through while keeping every project readable.
+  const bg = "bg-[#0a0a0a]/55 backdrop-blur-xl";
+  const fg = "text-[#f5f3ee]";
+  const muted = "text-[#f5f3ee]/70";
+  const rule = "border-[#f5f3ee]/20";
+  const chipBorder = "border-[#f5f3ee]/30";
   const imageBorder = "border-[#f5f3ee]/15";
-  const primaryBtn = isDark
-    ? "bg-[#f5f3ee] text-[#0a0a0a] hover:bg-white"
-    : "bg-[#0a0a0a] text-[#f5f3ee] hover:bg-black";
-  const ghostBtn = isDark
-    ? "border border-[#f5f3ee]/40 text-[#f5f3ee] hover:bg-[#f5f3ee]/10"
-    : "border border-[#0a0a0a]/40 text-[#0a0a0a] hover:bg-[#0a0a0a]/5";
+  const primaryBtn = "bg-[#f5f3ee] text-[#0a0a0a] hover:bg-white";
+  const ghostBtn = "border border-[#f5f3ee]/40 text-[#f5f3ee] hover:bg-[#f5f3ee]/10";
 
 
   const hasGallery = project.gallery.length > 0;
@@ -278,18 +271,16 @@ const EditorialCard = ({ project }: { project: Project }) => {
             <img
               src={project.logo}
               alt={`${project.name} logo`}
-              className={`shrink-0 hidden sm:block w-14 h-14 md:w-16 md:h-16 object-contain ${
-                isDark ? "bg-[#f5f3ee]/5" : "bg-[#0a0a0a]/5"
-              } p-2 border ${rule}`}
+              className={`shrink-0 hidden sm:block w-14 h-14 md:w-16 md:h-16 object-contain bg-[#f5f3ee]/5 p-2 border ${rule}`}
             />
           )}
         </div>
 
         {/* Three little stacked bars motif, like the template */}
         <div className="flex items-center gap-2 mb-5">
-          <span className={`h-1 w-6 ${isDark ? "bg-[#f5f3ee]" : "bg-[#0a0a0a]"}`} />
-          <span className={`h-1 w-3 ${isDark ? "bg-[#f5f3ee]" : "bg-[#0a0a0a]"}`} />
-          <span className={`h-1 w-3 ${isDark ? "bg-[#f5f3ee]/50" : "bg-[#0a0a0a]/50"}`} />
+          <span className={`h-1 w-6 bg-[#f5f3ee]`} />
+          <span className={`h-1 w-3 bg-[#f5f3ee]`} />
+          <span className={`h-1 w-3 bg-[#f5f3ee]/50`} />
         </div>
 
 
@@ -349,7 +340,7 @@ const EditorialCard = ({ project }: { project: Project }) => {
                 {project.role}
               </p>
             )}
-            <p className={`text-sm md:text-base leading-relaxed mb-8 ${isDark ? "text-[#f5f3ee]/85" : "text-[#0a0a0a]/85"}`}>
+            <p className={`text-sm md:text-base leading-relaxed mb-8 text-[#f5f3ee]/85`}>
               {project.description}
             </p>
 
@@ -366,7 +357,7 @@ const EditorialCard = ({ project }: { project: Project }) => {
                   <h4 className="font-editorial uppercase text-sm md:text-base leading-tight mb-2">
                     {f.title}
                   </h4>
-                  <p className={`text-xs leading-relaxed ${isDark ? "text-[#f5f3ee]/65" : "text-[#0a0a0a]/65"}`}>
+                  <p className={`text-xs leading-relaxed text-[#f5f3ee]/65`}>
                     {f.text}
                   </p>
                 </div>
