@@ -33,6 +33,9 @@ import lote5 from "@/assets/lote-5.png";
 import viceclock1 from "@/assets/viceclock-1.png";
 import viceclock2 from "@/assets/viceclock-2.png";
 import viceclock3 from "@/assets/viceclock-3.png";
+import viceclock4 from "@/assets/viceclock-4.png";
+import viceclock5 from "@/assets/viceclock-5.png";
+import viceclock6 from "@/assets/viceclock-6.png";
 import viceclockLogo from "@/assets/viceclock-logo.png";
 import postcredits1 from "@/assets/postcredits-1.png";
 import postcredits2 from "@/assets/postcredits-2.png";
@@ -136,7 +139,7 @@ const projects: Project[] = [
       { label: "Visit site", url: "https://viceclock.netlify.app", icon: ExternalLink, primary: true },
       { label: "PWA Store", url: "https://www.pwastore.io/app/viceclock", icon: Download },
     ],
-    gallery: [viceclock1, viceclock2, viceclock3],
+    gallery: [viceclock1, viceclock2, viceclock3, viceclock4, viceclock5, viceclock6],
     logo: viceclockLogo,
     variant: "light",
   },
