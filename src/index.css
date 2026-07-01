@@ -186,7 +186,12 @@ All colors MUST be HSL.
     opacity: 0;
     transform: translateY(28px);
     transition: opacity 0.8s var(--transition-smooth), transform 0.8s var(--transition-smooth);
-    will-change: opacity, transform;
+  }
+  .reveal.is-visible,
+  .reveal[data-visible="true"] {
+    /* Once revealed, drop transform so descendant backdrop-filter can blur the
+       page background (transform on ancestors breaks backdrop-filter). */
+    transform: none;
   }
   .reveal.is-visible {
     opacity: 1;
