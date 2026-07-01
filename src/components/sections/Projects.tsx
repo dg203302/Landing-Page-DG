@@ -254,7 +254,7 @@ const EditorialCard = ({ project }: { project: Project }) => {
   const hasGallery = project.gallery.length > 0;
 
   return (
-    <article className={`relative w-full ${bg} ${fg} overflow-hidden shadow-card`}>
+    <article className={`relative w-full ${bg} ${fg} overflow-hidden shadow-card border border-[#f5f3ee]/10`}>
       {/* Top meta bar */}
       <div className={`flex items-center justify-between px-6 md:px-12 pt-6 md:pt-8 text-[10px] tracking-[0.3em] uppercase ${muted}`}>
         <span>{project.kicker}</span>
