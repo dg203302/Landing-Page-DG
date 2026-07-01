@@ -217,7 +217,7 @@ const teamProjects: Project[] = [
       { label: "Users repo", url: "https://github.com/dg203302/SistemaClientes", icon: Github },
       { label: "Admin repo", url: "https://github.com/dg203302/SistemaAdmin", icon: Github },
     ],
-    gallery: [lote1],
+    gallery: [lote1, lote2, lote3, lote4, lote5],
     logo: loteLogo,
     variant: "light",
   },
