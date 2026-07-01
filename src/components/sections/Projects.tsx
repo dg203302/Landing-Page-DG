@@ -249,12 +249,14 @@ const EditorialCard = ({ project }: { project: Project }) => {
   const muted = isDark ? "text-[#f5f3ee]/70" : "text-[#0a0a0a]/70";
   const rule = isDark ? "border-[#f5f3ee]/20" : "border-[#0a0a0a]/15";
   const chipBorder = isDark ? "border-[#f5f3ee]/30" : "border-[#0a0a0a]/25";
+  const imageBorder = "border-[#f5f3ee]/15";
   const primaryBtn = isDark
     ? "bg-[#f5f3ee] text-[#0a0a0a] hover:bg-white"
     : "bg-[#0a0a0a] text-[#f5f3ee] hover:bg-black";
   const ghostBtn = isDark
     ? "border border-[#f5f3ee]/40 text-[#f5f3ee] hover:bg-[#f5f3ee]/10"
     : "border border-[#0a0a0a]/40 text-[#0a0a0a] hover:bg-[#0a0a0a]/5";
+
 
   const hasGallery = project.gallery.length > 0;
 
@@ -266,17 +268,17 @@ const EditorialCard = ({ project }: { project: Project }) => {
         <span className="font-editorial text-base tracking-normal">{project.index}</span>
       </div>
 
-      <div className="relative px-6 md:px-12 pt-6 md:pt-8 pb-10 md:pb-12">
+      <div className="relative px-6 md:px-12 pt-5 md:pt-7 pb-8 md:pb-10">
         {/* HEADER ROW: title + logo */}
-        <div className="flex items-end justify-between gap-6 mb-8 md:mb-10">
-          <h3 className="font-editorial uppercase leading-[0.9] tracking-tight text-5xl md:text-7xl lg:text-8xl">
+        <div className="flex items-end justify-between gap-6 mb-5 md:mb-6">
+          <h3 className="font-editorial uppercase leading-[0.9] tracking-tight text-4xl md:text-6xl lg:text-7xl">
             {project.name}
           </h3>
           {project.logo && (
             <img
               src={project.logo}
               alt={`${project.name} logo`}
-              className={`shrink-0 hidden sm:block w-16 h-16 md:w-20 md:h-20 object-contain ${
+              className={`shrink-0 hidden sm:block w-14 h-14 md:w-16 md:h-16 object-contain ${
                 isDark ? "bg-[#f5f3ee]/5" : "bg-[#0a0a0a]/5"
               } p-2 border ${rule}`}
             />
@@ -284,25 +286,26 @@ const EditorialCard = ({ project }: { project: Project }) => {
         </div>
 
         {/* Three little stacked bars motif, like the template */}
-        <div className="flex items-center gap-2 mb-8">
+        <div className="flex items-center gap-2 mb-5">
           <span className={`h-1 w-6 ${isDark ? "bg-[#f5f3ee]" : "bg-[#0a0a0a]"}`} />
           <span className={`h-1 w-3 ${isDark ? "bg-[#f5f3ee]" : "bg-[#0a0a0a]"}`} />
           <span className={`h-1 w-3 ${isDark ? "bg-[#f5f3ee]/50" : "bg-[#0a0a0a]/50"}`} />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-10">
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
           {/* LEFT: gallery */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-5">
             {hasGallery ? (
               <div className="space-y-3">
                 {/* main image — adapts to active image aspect ratio */}
-                <div className={`relative w-full overflow-hidden border ${rule} ${isDark ? "bg-[#0a0a0a]" : "bg-[#f5f3ee]"} flex items-center justify-center`}>
+                <div className={`relative w-full overflow-hidden border ${imageBorder} bg-[#0a0a0a] flex items-center justify-center`}>
                   {project.gallery.map((src, idx) => (
                     <img
                       key={src}
                       src={src}
                       alt={`Screenshot ${idx + 1} of ${project.name}`}
-                      className={`w-full max-w-full max-h-[70vh] md:max-h-[80vh] object-contain transition-opacity duration-700 ${
+                      className={`w-full max-w-full max-h-[55vh] md:max-h-[60vh] object-contain transition-opacity duration-700 ${
                         active === idx ? "relative opacity-100" : "absolute inset-0 opacity-0 pointer-events-none"
                       }`}
                     />
@@ -318,13 +321,11 @@ const EditorialCard = ({ project }: { project: Project }) => {
                         aria-label={`View screenshot ${idx + 1}`}
                         className={`relative aspect-square overflow-hidden border transition-all ${
                           active === idx
-                            ? isDark
-                              ? "border-[#f5f3ee] opacity-100"
-                              : "border-[#0a0a0a] opacity-100"
-                            : `${rule} opacity-50 hover:opacity-100`
+                            ? "border-[#f5f3ee] opacity-100"
+                            : "border-[#f5f3ee]/20 opacity-50 hover:opacity-100"
                         }`}
                       >
-                        <img src={src} alt="" className={`w-full h-full object-contain ${isDark ? "bg-[#0a0a0a]" : "bg-[#f5f3ee]"}`} />
+                        <img src={src} alt="" className="w-full h-full object-contain bg-[#0a0a0a]" />
                       </button>
                     ))}
                   </div>
@@ -332,7 +333,7 @@ const EditorialCard = ({ project }: { project: Project }) => {
               </div>
             ) : (
               // No images (ProxyRT) — big monogram block
-              <div className={`relative aspect-[16/10] border ${rule} flex items-center justify-center ${isDark ? "bg-[#f5f3ee]/[0.03]" : "bg-[#0a0a0a]/[0.03]"}`}>
+              <div className={`relative aspect-[16/10] border ${imageBorder} flex items-center justify-center bg-[#0a0a0a]/[0.03]`}>
                 <Bus className={`h-24 w-24 ${muted}`} strokeWidth={1} />
                 <span className={`absolute bottom-4 left-4 text-[10px] tracking-[0.3em] uppercase ${muted}`}>
                   Backend / no UI
@@ -342,7 +343,7 @@ const EditorialCard = ({ project }: { project: Project }) => {
           </div>
 
           {/* RIGHT: text columns */}
-          <div className="lg:col-span-5 flex flex-col">
+          <div className="lg:col-span-7 flex flex-col">
             {project.role && (
               <p className={`text-[10px] tracking-[0.3em] uppercase ${muted} mb-3`}>
                 {project.role}
