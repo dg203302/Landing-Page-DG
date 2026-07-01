@@ -261,7 +261,7 @@ const EditorialCard = ({ project }: { project: Project }) => {
         <span className="font-editorial text-base tracking-normal">{project.index}</span>
       </div>
 
-      <div className="relative px-6 md:px-12 pt-5 md:pt-7 pb-8 md:pb-10">
+      <div className="project-glass-content mx-3 md:mx-6 mb-3 md:mb-6 px-5 md:px-8 pt-5 md:pt-7 pb-8 md:pb-10">
         {/* HEADER ROW: title + logo */}
         <div className="flex items-end justify-between gap-6 mb-5 md:mb-6">
           <h3 className="font-editorial uppercase leading-[0.9] tracking-tight text-4xl md:text-6xl lg:text-7xl">
