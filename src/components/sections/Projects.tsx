@@ -271,18 +271,16 @@ const EditorialCard = ({ project }: { project: Project }) => {
             <img
               src={project.logo}
               alt={`${project.name} logo`}
-              className={`shrink-0 hidden sm:block w-14 h-14 md:w-16 md:h-16 object-contain ${
-                isDark ? "bg-[#f5f3ee]/5" : "bg-[#0a0a0a]/5"
-              } p-2 border ${rule}`}
+              className={`shrink-0 hidden sm:block w-14 h-14 md:w-16 md:h-16 object-contain bg-[#f5f3ee]/5 p-2 border ${rule}`}
             />
           )}
         </div>
 
         {/* Three little stacked bars motif, like the template */}
         <div className="flex items-center gap-2 mb-5">
-          <span className={`h-1 w-6 ${isDark ? "bg-[#f5f3ee]" : "bg-[#0a0a0a]"}`} />
-          <span className={`h-1 w-3 ${isDark ? "bg-[#f5f3ee]" : "bg-[#0a0a0a]"}`} />
-          <span className={`h-1 w-3 ${isDark ? "bg-[#f5f3ee]/50" : "bg-[#0a0a0a]/50"}`} />
+          <span className={`h-1 w-6 bg-[#f5f3ee]`} />
+          <span className={`h-1 w-3 bg-[#f5f3ee]`} />
+          <span className={`h-1 w-3 bg-[#f5f3ee]/50`} />
         </div>
 
 
@@ -342,7 +340,7 @@ const EditorialCard = ({ project }: { project: Project }) => {
                 {project.role}
               </p>
             )}
-            <p className={`text-sm md:text-base leading-relaxed mb-8 ${isDark ? "text-[#f5f3ee]/85" : "text-[#0a0a0a]/85"}`}>
+            <p className={`text-sm md:text-base leading-relaxed mb-8 text-[#f5f3ee]/85`}>
               {project.description}
             </p>
 
@@ -359,7 +357,7 @@ const EditorialCard = ({ project }: { project: Project }) => {
                   <h4 className="font-editorial uppercase text-sm md:text-base leading-tight mb-2">
                     {f.title}
                   </h4>
-                  <p className={`text-xs leading-relaxed ${isDark ? "text-[#f5f3ee]/65" : "text-[#0a0a0a]/65"}`}>
+                  <p className={`text-xs leading-relaxed text-[#f5f3ee]/65`}>
                     {f.text}
                   </p>
                 </div>
