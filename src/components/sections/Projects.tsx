@@ -226,7 +226,7 @@ const teamProjects: Project[] = [
   },
 ];
 
-// Editorial card — black/white alternating, big bold uppercase title, image collage, micro columns
+// Editorial card — always black glass, legible light text
 const EditorialCard = ({ project }: { project: Project }) => {
   const [active, setActive] = useState(0);
 
@@ -239,23 +239,16 @@ const EditorialCard = ({ project }: { project: Project }) => {
     return () => clearInterval(id);
   }, [project.gallery.length]);
 
-  const isDark = project.variant === "dark";
-  // High transparency + strong blur so the bubble background shows through.
-  // Light cards use a white tint to keep dark text perfectly readable.
-  const bg = isDark
-    ? "bg-[#0a0a0a]/55 backdrop-blur-xl"
-    : "bg-white/80 backdrop-blur-xl";
-  const fg = isDark ? "text-[#f5f3ee]" : "text-[#0a0a0a]";
-  const muted = isDark ? "text-[#f5f3ee]/70" : "text-[#0a0a0a]/70";
-  const rule = isDark ? "border-[#f5f3ee]/20" : "border-[#0a0a0a]/15";
-  const chipBorder = isDark ? "border-[#f5f3ee]/30" : "border-[#0a0a0a]/25";
+  // All project cards now share a black translucent background so the bubble
+  // wallpaper shows through while keeping every project readable.
+  const bg = "bg-[#0a0a0a]/55 backdrop-blur-xl";
+  const fg = "text-[#f5f3ee]";
+  const muted = "text-[#f5f3ee]/70";
+  const rule = "border-[#f5f3ee]/20";
+  const chipBorder = "border-[#f5f3ee]/30";
   const imageBorder = "border-[#f5f3ee]/15";
-  const primaryBtn = isDark
-    ? "bg-[#f5f3ee] text-[#0a0a0a] hover:bg-white"
-    : "bg-[#0a0a0a] text-[#f5f3ee] hover:bg-black";
-  const ghostBtn = isDark
-    ? "border border-[#f5f3ee]/40 text-[#f5f3ee] hover:bg-[#f5f3ee]/10"
-    : "border border-[#0a0a0a]/40 text-[#0a0a0a] hover:bg-[#0a0a0a]/5";
+  const primaryBtn = "bg-[#f5f3ee] text-[#0a0a0a] hover:bg-white";
+  const ghostBtn = "border border-[#f5f3ee]/40 text-[#f5f3ee] hover:bg-[#f5f3ee]/10";
 
 
   const hasGallery = project.gallery.length > 0;
