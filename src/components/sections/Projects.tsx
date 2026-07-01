@@ -249,12 +249,14 @@ const EditorialCard = ({ project }: { project: Project }) => {
   const muted = isDark ? "text-[#f5f3ee]/70" : "text-[#0a0a0a]/70";
   const rule = isDark ? "border-[#f5f3ee]/20" : "border-[#0a0a0a]/15";
   const chipBorder = isDark ? "border-[#f5f3ee]/30" : "border-[#0a0a0a]/25";
+  const imageBorder = "border-[#f5f3ee]/15";
   const primaryBtn = isDark
     ? "bg-[#f5f3ee] text-[#0a0a0a] hover:bg-white"
     : "bg-[#0a0a0a] text-[#f5f3ee] hover:bg-black";
   const ghostBtn = isDark
     ? "border border-[#f5f3ee]/40 text-[#f5f3ee] hover:bg-[#f5f3ee]/10"
     : "border border-[#0a0a0a]/40 text-[#0a0a0a] hover:bg-[#0a0a0a]/5";
+
 
   const hasGallery = project.gallery.length > 0;
 
