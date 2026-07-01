@@ -141,9 +141,10 @@ All colors MUST be HSL.
   }
   .project-glass-card {
     position: relative;
-    background: hsl(0 0% 2% / 0.22);
-    backdrop-filter: blur(42px) saturate(180%) brightness(1.08);
-    -webkit-backdrop-filter: blur(42px) saturate(180%) brightness(1.08);
+    isolation: isolate;
+    background: hsl(0 0% 2% / 0.08);
+    backdrop-filter: blur(120px) saturate(220%) contrast(1.08) brightness(1.12);
+    -webkit-backdrop-filter: blur(120px) saturate(220%) contrast(1.08) brightness(1.12);
     box-shadow:
       inset 0 1px 0 hsl(0 0% 100% / 0.28),
       inset 0 -1px 0 hsl(42 100% 75% / 0.12),
@@ -174,20 +175,41 @@ All colors MUST be HSL.
     pointer-events: none;
     background:
       linear-gradient(135deg, hsl(0 0% 100% / 0.10), transparent 34%, hsl(42 100% 70% / 0.08) 74%, transparent),
-      hsl(0 0% 0% / 0.18);
-    backdrop-filter: blur(34px) saturate(190%);
-    -webkit-backdrop-filter: blur(34px) saturate(190%);
+      hsl(0 0% 100% / 0.055);
+    backdrop-filter: blur(90px) saturate(230%);
+    -webkit-backdrop-filter: blur(90px) saturate(230%);
     border: 1px solid hsl(0 0% 100% / 0.16);
   }
   .project-glass-content {
     position: relative;
+    isolation: isolate;
+    overflow: hidden;
     border: 1px solid hsl(0 0% 100% / 0.10);
-    background: hsl(0 0% 0% / 0.24);
-    backdrop-filter: blur(28px) saturate(165%);
-    -webkit-backdrop-filter: blur(28px) saturate(165%);
+    background: hsl(0 0% 100% / 0.09);
+    backdrop-filter: blur(110px) saturate(240%) contrast(1.12);
+    -webkit-backdrop-filter: blur(110px) saturate(240%) contrast(1.12);
     box-shadow:
-      inset 0 1px 0 hsl(0 0% 100% / 0.12),
-      inset 0 0 36px hsl(0 0% 100% / 0.035);
+      inset 0 1px 0 hsl(0 0% 100% / 0.30),
+      inset 0 -1px 0 hsl(42 100% 76% / 0.16),
+      inset 0 0 72px hsl(0 0% 100% / 0.08),
+      0 26px 80px hsl(0 0% 0% / 0.35);
+  }
+  .project-glass-content::before {
+    content: "";
+    position: absolute;
+    inset: -28px;
+    z-index: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(circle at 18% 12%, hsl(45 100% 78% / 0.22), transparent 32%),
+      radial-gradient(circle at 86% 76%, hsl(0 0% 100% / 0.14), transparent 34%),
+      hsl(0 0% 0% / 0.08);
+    backdrop-filter: blur(140px) saturate(260%);
+    -webkit-backdrop-filter: blur(140px) saturate(260%);
+  }
+  .project-glass-content > * {
+    position: relative;
+    z-index: 1;
   }
   .reveal {
     opacity: 0;
