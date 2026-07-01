@@ -241,7 +241,7 @@ const EditorialCard = ({ project }: { project: Project }) => {
 
   // All project cards now share a black translucent background so the bubble
   // wallpaper shows through while keeping every project readable.
-  const bg = "bg-[#0a0a0a]/30 backdrop-blur-3xl";
+  const bg = "bg-[#0a0a0a]/20 backdrop-blur-3xl";
   const fg = "text-[#f5f3ee]";
   const muted = "text-[#f5f3ee]/70";
   const rule = "border-[#f5f3ee]/20";
