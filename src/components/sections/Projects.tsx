@@ -292,19 +292,19 @@ const EditorialCard = ({ project }: { project: Project }) => {
           <span className={`h-1 w-3 ${isDark ? "bg-[#f5f3ee]/50" : "bg-[#0a0a0a]/50"}`} />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
           {/* LEFT: gallery */}
-          <div className="lg:col-span-7">
+          <div className="lg:col-span-5">
             {hasGallery ? (
               <div className="space-y-3">
                 {/* main image — adapts to active image aspect ratio */}
-                <div className={`relative w-full overflow-hidden border ${rule} ${isDark ? "bg-[#0a0a0a]" : "bg-[#f5f3ee]"} flex items-center justify-center`}>
+                <div className={`relative w-full overflow-hidden border ${imageBorder} bg-[#0a0a0a] flex items-center justify-center`}>
                   {project.gallery.map((src, idx) => (
                     <img
                       key={src}
                       src={src}
                       alt={`Screenshot ${idx + 1} of ${project.name}`}
-                      className={`w-full max-w-full max-h-[70vh] md:max-h-[80vh] object-contain transition-opacity duration-700 ${
+                      className={`w-full max-w-full max-h-[55vh] md:max-h-[60vh] object-contain transition-opacity duration-700 ${
                         active === idx ? "relative opacity-100" : "absolute inset-0 opacity-0 pointer-events-none"
                       }`}
                     />
@@ -320,13 +320,11 @@ const EditorialCard = ({ project }: { project: Project }) => {
                         aria-label={`View screenshot ${idx + 1}`}
                         className={`relative aspect-square overflow-hidden border transition-all ${
                           active === idx
-                            ? isDark
-                              ? "border-[#f5f3ee] opacity-100"
-                              : "border-[#0a0a0a] opacity-100"
-                            : `${rule} opacity-50 hover:opacity-100`
+                            ? "border-[#f5f3ee] opacity-100"
+                            : "border-[#f5f3ee]/20 opacity-50 hover:opacity-100"
                         }`}
                       >
-                        <img src={src} alt="" className={`w-full h-full object-contain ${isDark ? "bg-[#0a0a0a]" : "bg-[#f5f3ee]"}`} />
+                        <img src={src} alt="" className="w-full h-full object-contain bg-[#0a0a0a]" />
                       </button>
                     ))}
                   </div>
@@ -334,7 +332,7 @@ const EditorialCard = ({ project }: { project: Project }) => {
               </div>
             ) : (
               // No images (ProxyRT) — big monogram block
-              <div className={`relative aspect-[16/10] border ${rule} flex items-center justify-center ${isDark ? "bg-[#f5f3ee]/[0.03]" : "bg-[#0a0a0a]/[0.03]"}`}>
+              <div className={`relative aspect-[16/10] border ${imageBorder} flex items-center justify-center bg-[#0a0a0a]/[0.03]`}>
                 <Bus className={`h-24 w-24 ${muted}`} strokeWidth={1} />
                 <span className={`absolute bottom-4 left-4 text-[10px] tracking-[0.3em] uppercase ${muted}`}>
                   Backend / no UI
@@ -344,7 +342,7 @@ const EditorialCard = ({ project }: { project: Project }) => {
           </div>
 
           {/* RIGHT: text columns */}
-          <div className="lg:col-span-5 flex flex-col">
+          <div className="lg:col-span-7 flex flex-col">
             {project.role && (
               <p className={`text-[10px] tracking-[0.3em] uppercase ${muted} mb-3`}>
                 {project.role}
