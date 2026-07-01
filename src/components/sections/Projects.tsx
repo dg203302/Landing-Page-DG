@@ -268,17 +268,17 @@ const EditorialCard = ({ project }: { project: Project }) => {
         <span className="font-editorial text-base tracking-normal">{project.index}</span>
       </div>
 
-      <div className="relative px-6 md:px-12 pt-6 md:pt-8 pb-10 md:pb-12">
+      <div className="relative px-6 md:px-12 pt-5 md:pt-7 pb-8 md:pb-10">
         {/* HEADER ROW: title + logo */}
-        <div className="flex items-end justify-between gap-6 mb-8 md:mb-10">
-          <h3 className="font-editorial uppercase leading-[0.9] tracking-tight text-5xl md:text-7xl lg:text-8xl">
+        <div className="flex items-end justify-between gap-6 mb-5 md:mb-6">
+          <h3 className="font-editorial uppercase leading-[0.9] tracking-tight text-4xl md:text-6xl lg:text-7xl">
             {project.name}
           </h3>
           {project.logo && (
             <img
               src={project.logo}
               alt={`${project.name} logo`}
-              className={`shrink-0 hidden sm:block w-16 h-16 md:w-20 md:h-20 object-contain ${
+              className={`shrink-0 hidden sm:block w-14 h-14 md:w-16 md:h-16 object-contain ${
                 isDark ? "bg-[#f5f3ee]/5" : "bg-[#0a0a0a]/5"
               } p-2 border ${rule}`}
             />
@@ -286,11 +286,12 @@ const EditorialCard = ({ project }: { project: Project }) => {
         </div>
 
         {/* Three little stacked bars motif, like the template */}
-        <div className="flex items-center gap-2 mb-8">
+        <div className="flex items-center gap-2 mb-5">
           <span className={`h-1 w-6 ${isDark ? "bg-[#f5f3ee]" : "bg-[#0a0a0a]"}`} />
           <span className={`h-1 w-3 ${isDark ? "bg-[#f5f3ee]" : "bg-[#0a0a0a]"}`} />
           <span className={`h-1 w-3 ${isDark ? "bg-[#f5f3ee]/50" : "bg-[#0a0a0a]/50"}`} />
         </div>
+
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
           {/* LEFT: gallery */}
