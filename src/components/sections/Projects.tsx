@@ -241,7 +241,7 @@ const EditorialCard = ({ project }: { project: Project }) => {
 
   // All project cards now share a black translucent background so the bubble
   // wallpaper shows through while keeping every project readable.
-  const bg = "bg-[#0a0a0a]/20 backdrop-blur-3xl";
+  const bg = "project-glass-card";
   const fg = "text-[#f5f3ee]";
   const muted = "text-[#f5f3ee]/70";
   const rule = "border-[#f5f3ee]/20";
@@ -254,7 +254,7 @@ const EditorialCard = ({ project }: { project: Project }) => {
   const hasGallery = project.gallery.length > 0;
 
   return (
-    <article className={`relative w-full ${bg} ${fg} overflow-hidden shadow-card border border-[#f5f3ee]/10`}>
+    <article className={`relative w-full ${bg} ${fg} overflow-hidden shadow-card border border-[#f5f3ee]/20`}>
       {/* Top meta bar */}
       <div className={`flex items-center justify-between px-6 md:px-12 pt-6 md:pt-8 text-[10px] tracking-[0.3em] uppercase ${muted}`}>
         <span>{project.kicker}</span>
