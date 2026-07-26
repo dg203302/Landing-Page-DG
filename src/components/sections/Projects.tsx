@@ -165,7 +165,10 @@ const projects: Project[] = [
       },
     ],
     stack: ["HTML5", "CSS Vanilla", "JavaScript ES6+", "localStorage", "Offline", "Glassmorphism"],
-    links: [],
+    links: [
+      { label: "Visit site", url: "https://habitxapp.netlify.app", icon: ExternalLink, primary: true },
+      { label: "PWA Store", url: "https://www.pwastore.io/app/habitx", icon: Download },
+    ],
     gallery: [habitx1, habitx2, habitx3],
     logo: habitxLogo,
     variant: "dark",
