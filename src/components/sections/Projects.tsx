@@ -48,6 +48,10 @@ import postcredits8 from "@/assets/postcredits-8.png";
 import postcredits9 from "@/assets/postcredits-9.png";
 import postcredits10 from "@/assets/postcredits-10.png";
 import postcreditsLogo from "@/assets/postcredits-logo.png";
+import habitx1 from "@/assets/habitx-1.png";
+import habitx2 from "@/assets/habitx-2.png";
+import habitx3 from "@/assets/habitx-3.png";
+import habitxLogo from "@/assets/habitx-logo.png";
 
 type Link = { label: string; url: string; icon: typeof Github; primary?: boolean };
 type Feature = { title: string; text: string };
