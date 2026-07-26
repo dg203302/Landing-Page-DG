@@ -147,9 +147,31 @@ const projects: Project[] = [
     logo: viceclockLogo,
     variant: "light",
   },
+  {
+    index: "04",
+    kicker: "HABIT TRACKING WEB APP",
+    name: "HabitX",
+    role: "Vanilla HTML · CSS · JavaScript",
+    description:
+      "A complete habit tracking web app built 100% with vanilla HTML, CSS and JavaScript — no frameworks, no UI libraries, no build step. It runs in the browser, works offline and stores everything locally: zero backend, zero subscriptions.",
+    features: [
+      {
+        title: "Tracking & calendar",
+        text: "Custom events with name, description and emoji picker, one-tap daily logging with live progress bar, and a visual calendar with activity dots plus retroactive editing of any past day.",
+      },
+      {
+        title: "Stats & streaks",
+        text: "Per-event history with current streak, best streak and total logs, plus a 'since last log' panel with visual alerts after 7+ days without activity.",
+      },
+    ],
+    stack: ["HTML5", "CSS Vanilla", "JavaScript ES6+", "localStorage", "Offline", "Glassmorphism"],
+    links: [],
+    gallery: [habitx1, habitx2, habitx3],
+    logo: habitxLogo,
+    variant: "dark",
+  },
 ];
 
-const teamProjects: Project[] = [
   {
     index: "05",
     kicker: "REAL-TIME TRANSPORT",
