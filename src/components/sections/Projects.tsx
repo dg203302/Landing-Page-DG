@@ -172,6 +172,9 @@ const projects: Project[] = [
   },
 ];
 
+const teamProjects: Project[] = [
+
+
   {
     index: "05",
     kicker: "REAL-TIME TRANSPORT",
