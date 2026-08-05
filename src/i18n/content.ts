@@ -459,7 +459,10 @@ export const content = {
           metrics: [
             { value: "112", label: "active customers" },
             { value: "84", label: "Google Play downloads" },
+            { value: "29", label: "new users (30 days)" },
+            { value: "4.0 ★", label: "Google Play rating" },
           ],
+
           stack: ["Supabase", "Realtime", "Mobile", "Admin Panel"],
           links: [
             { label: "Google Play", url: urls.lotePlay, icon: ExternalLink, primary: true },
@@ -851,7 +854,10 @@ export const content = {
           metrics: [
             { value: "112", label: "clientes activos" },
             { value: "84", label: "descargas en Google Play" },
+            { value: "29", label: "usuarios nuevos (30 días)" },
+            { value: "4,0 ★", label: "valoración en Google Play" },
           ],
+
           stack: ["Supabase", "Realtime", "Mobile", "Panel Admin"],
           links: [
             { label: "Google Play", url: urls.lotePlay, icon: ExternalLink, primary: true },
