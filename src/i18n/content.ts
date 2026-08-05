@@ -391,54 +391,6 @@ export const content = {
       teamItems: [
         {
           index: "05",
-          kicker: "REAL-TIME TRANSPORT",
-          name: "ZondaMov",
-          role: "Backend developer",
-          myRole: "Backend developer — data model, transport APIs and route logic.",
-          result: "Multimodal search and route planning with transfer control over live data.",
-          description:
-            "Public transport app with a Liquid Glass aesthetic. OpenStreetMap-based map, multimodal search for lines, stops and locations, route planner with transfer control and real-time schedules.",
-          features: [
-            {
-              title: "Cross-platform",
-              text: "Compatible with phones, tablets and browser, with dark mode and performance controls.",
-            },
-            {
-              title: "Liquid Glass UI",
-              text: "Interface inspired by transparencies and depth, focused on legibility over the map.",
-            },
-          ],
-          stack: ["React", "OpenStreetMap", "Liquid Glass UI", "PWA", "TypeScript"],
-          links: [{ label: "Repository", url: urls.zondamov, icon: Github, primary: true }],
-          gallery: g.zondamov,
-          logo: zondamovLogo,
-        },
-        {
-          index: "06",
-          kicker: "CUSTOMER ACCOUNTS",
-          name: "Debitú",
-          role: "Backend developer",
-          myRole: "Backend developer — accounts, balances and cloud sync.",
-          result: "Shopkeepers can send an up-to-date balance over WhatsApp in one tap.",
-          description:
-            "App to manage customer accounts in neighborhood businesses. Register clients, log debts and payments, send balances via WhatsApp and use the built-in calculator.",
-          features: [
-            {
-              title: "Modern mobile UX",
-              text: "Interface with bottom sheets, elegant transparencies and gesture-based navigation.",
-            },
-            { title: "Secure login", text: "Google authentication and cloud sync." },
-          ],
-          stack: ["Mobile", "WhatsApp API", "Google Auth", "Bottom Sheets"],
-          links: [
-            { label: "Website", url: urls.debitu, icon: ExternalLink, primary: true },
-            { label: "Repository", url: urls.debituRepo, icon: Github },
-          ],
-          gallery: g.debitu,
-          logo: debituLogo,
-        },
-        {
-          index: "07",
           kicker: "REAL-TIME LOYALTY",
           name: "Clientes El Lote",
           role: "Backend developer",
@@ -471,6 +423,54 @@ export const content = {
           ],
           gallery: g.lote,
           logo: loteLogo,
+        },
+        {
+          index: "06",
+          kicker: "REAL-TIME TRANSPORT",
+          name: "ZondaMov",
+          role: "Backend developer",
+          myRole: "Backend developer — data model, transport APIs and route logic.",
+          result: "Multimodal search and route planning with transfer control over live data.",
+          description:
+            "Public transport app with a Liquid Glass aesthetic. OpenStreetMap-based map, multimodal search for lines, stops and locations, route planner with transfer control and real-time schedules.",
+          features: [
+            {
+              title: "Cross-platform",
+              text: "Compatible with phones, tablets and browser, with dark mode and performance controls.",
+            },
+            {
+              title: "Liquid Glass UI",
+              text: "Interface inspired by transparencies and depth, focused on legibility over the map.",
+            },
+          ],
+          stack: ["React", "OpenStreetMap", "Liquid Glass UI", "PWA", "TypeScript"],
+          links: [{ label: "Repository", url: urls.zondamov, icon: Github, primary: true }],
+          gallery: g.zondamov,
+          logo: zondamovLogo,
+        },
+        {
+          index: "07",
+          kicker: "CUSTOMER ACCOUNTS",
+          name: "Debitú",
+          role: "Backend developer",
+          myRole: "Backend developer — accounts, balances and cloud sync.",
+          result: "Shopkeepers can send an up-to-date balance over WhatsApp in one tap.",
+          description:
+            "App to manage customer accounts in neighborhood businesses. Register clients, log debts and payments, send balances via WhatsApp and use the built-in calculator.",
+          features: [
+            {
+              title: "Modern mobile UX",
+              text: "Interface with bottom sheets, elegant transparencies and gesture-based navigation.",
+            },
+            { title: "Secure login", text: "Google authentication and cloud sync." },
+          ],
+          stack: ["Mobile", "WhatsApp API", "Google Auth", "Bottom Sheets"],
+          links: [
+            { label: "Website", url: urls.debitu, icon: ExternalLink, primary: true },
+            { label: "Repository", url: urls.debituRepo, icon: Github },
+          ],
+          gallery: g.debitu,
+          logo: debituLogo,
         },
       ] as Project[],
       teamUrl: urls.team,
@@ -786,54 +786,6 @@ export const content = {
       teamItems: [
         {
           index: "05",
-          kicker: "TRANSPORTE EN TIEMPO REAL",
-          name: "ZondaMov",
-          role: "Desarrollador backend",
-          myRole: "Desarrollador backend — modelo de datos, APIs de transporte y lógica de recorridos.",
-          result: "Búsqueda multimodal y planificación de viajes con control de trasbordos sobre datos en vivo.",
-          description:
-            "App de transporte público con estética Liquid Glass. Mapa basado en OpenStreetMap, búsqueda multimodal de líneas, paradas y lugares, planificador de rutas con control de trasbordos y horarios en tiempo real.",
-          features: [
-            {
-              title: "Multiplataforma",
-              text: "Compatible con teléfonos, tablets y navegador, con modo oscuro y controles de rendimiento.",
-            },
-            {
-              title: "UI Liquid Glass",
-              text: "Interfaz inspirada en transparencias y profundidad, enfocada en la legibilidad sobre el mapa.",
-            },
-          ],
-          stack: ["React", "OpenStreetMap", "Liquid Glass UI", "PWA", "TypeScript"],
-          links: [{ label: "Repositorio", url: urls.zondamov, icon: Github, primary: true }],
-          gallery: g.zondamov,
-          logo: zondamovLogo,
-        },
-        {
-          index: "06",
-          kicker: "CUENTAS DE CLIENTES",
-          name: "Debitú",
-          role: "Desarrollador backend",
-          myRole: "Desarrollador backend — cuentas, saldos y sincronización en la nube.",
-          result: "El comercio puede enviar el saldo actualizado por WhatsApp en un solo toque.",
-          description:
-            "App para gestionar cuentas de clientes en comercios de barrio. Registrar clientes, cargar deudas y pagos, enviar saldos por WhatsApp y usar la calculadora integrada.",
-          features: [
-            {
-              title: "UX móvil moderna",
-              text: "Interfaz con bottom sheets, transparencias elegantes y navegación por gestos.",
-            },
-            { title: "Login seguro", text: "Autenticación con Google y sincronización en la nube." },
-          ],
-          stack: ["Mobile", "WhatsApp API", "Google Auth", "Bottom Sheets"],
-          links: [
-            { label: "Sitio web", url: urls.debitu, icon: ExternalLink, primary: true },
-            { label: "Repositorio", url: urls.debituRepo, icon: Github },
-          ],
-          gallery: g.debitu,
-          logo: debituLogo,
-        },
-        {
-          index: "07",
           kicker: "FIDELIZACIÓN EN TIEMPO REAL",
           name: "Clientes El Lote",
           role: "Desarrollador backend",
@@ -866,6 +818,54 @@ export const content = {
           ],
           gallery: g.lote,
           logo: loteLogo,
+        },
+        {
+          index: "06",
+          kicker: "TRANSPORTE EN TIEMPO REAL",
+          name: "ZondaMov",
+          role: "Desarrollador backend",
+          myRole: "Desarrollador backend — modelo de datos, APIs de transporte y lógica de recorridos.",
+          result: "Búsqueda multimodal y planificación de viajes con control de trasbordos sobre datos en vivo.",
+          description:
+            "App de transporte público con estética Liquid Glass. Mapa basado en OpenStreetMap, búsqueda multimodal de líneas, paradas y lugares, planificador de rutas con control de trasbordos y horarios en tiempo real.",
+          features: [
+            {
+              title: "Multiplataforma",
+              text: "Compatible con teléfonos, tablets y navegador, con modo oscuro y controles de rendimiento.",
+            },
+            {
+              title: "UI Liquid Glass",
+              text: "Interfaz inspirada en transparencias y profundidad, enfocada en la legibilidad sobre el mapa.",
+            },
+          ],
+          stack: ["React", "OpenStreetMap", "Liquid Glass UI", "PWA", "TypeScript"],
+          links: [{ label: "Repositorio", url: urls.zondamov, icon: Github, primary: true }],
+          gallery: g.zondamov,
+          logo: zondamovLogo,
+        },
+        {
+          index: "07",
+          kicker: "CUENTAS DE CLIENTES",
+          name: "Debitú",
+          role: "Desarrollador backend",
+          myRole: "Desarrollador backend — cuentas, saldos y sincronización en la nube.",
+          result: "El comercio puede enviar el saldo actualizado por WhatsApp en un solo toque.",
+          description:
+            "App para gestionar cuentas de clientes en comercios de barrio. Registrar clientes, cargar deudas y pagos, enviar saldos por WhatsApp y usar la calculadora integrada.",
+          features: [
+            {
+              title: "UX móvil moderna",
+              text: "Interfaz con bottom sheets, transparencias elegantes y navegación por gestos.",
+            },
+            { title: "Login seguro", text: "Autenticación con Google y sincronización en la nube." },
+          ],
+          stack: ["Mobile", "WhatsApp API", "Google Auth", "Bottom Sheets"],
+          links: [
+            { label: "Sitio web", url: urls.debitu, icon: ExternalLink, primary: true },
+            { label: "Repositorio", url: urls.debituRepo, icon: Github },
+          ],
+          gallery: g.debitu,
+          logo: debituLogo,
         },
       ] as Project[],
       teamUrl: urls.team,
