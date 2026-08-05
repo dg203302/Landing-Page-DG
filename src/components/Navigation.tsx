@@ -1,18 +1,21 @@
 import { useEffect, useState } from "react";
-import { User, Briefcase, GraduationCap, FolderGit2, Mail } from "lucide-react";
+import { User, Briefcase, GraduationCap, FolderGit2, Mail, Wrench, Languages } from "lucide-react";
 import { cn } from "@/lib/utils";
-
-const links = [
-  { id: "inicio", label: "Home", icon: User },
-  { id: "experiencia", label: "Experience", icon: Briefcase },
-  { id: "educacion", label: "Education", icon: GraduationCap },
-  { id: "proyectos", label: "Projects", icon: FolderGit2 },
-  { id: "contacto", label: "Contact", icon: Mail },
-];
+import { useLang } from "@/i18n/LanguageContext";
 
 export const Navigation = () => {
+  const { t, other, switchLang } = useLang();
   const [active, setActive] = useState("inicio");
   const [scrolled, setScrolled] = useState(false);
+
+  const links = [
+    { id: "inicio", label: t.nav.home, icon: User },
+    { id: "experiencia", label: t.nav.experience, icon: Briefcase },
+    { id: "educacion", label: t.nav.education, icon: GraduationCap },
+    { id: "servicios", label: t.nav.services, icon: Wrench },
+    { id: "proyectos", label: t.nav.projects, icon: FolderGit2 },
+    { id: "contacto", label: t.nav.contact, icon: Mail },
+  ];
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24);
@@ -22,7 +25,9 @@ export const Navigation = () => {
   }, []);
 
   useEffect(() => {
-    const sections = links.map((l) => document.getElementById(l.id)).filter(Boolean) as HTMLElement[];
+    const sections = links
+      .map((l) => document.getElementById(l.id))
+      .filter(Boolean) as HTMLElement[];
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -33,6 +38,7 @@ export const Navigation = () => {
     );
     sections.forEach((s) => io.observe(s));
     return () => io.disconnect();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const handleClick = (id: string) => {
@@ -42,13 +48,20 @@ export const Navigation = () => {
   return (
     <>
       {/* Mobile floating brand pill */}
-      <header className="md:hidden fixed top-4 inset-x-4 z-50 flex justify-center">
+      <header className="md:hidden fixed top-4 inset-x-4 z-50 flex items-center justify-between gap-3">
         <button
           onClick={() => handleClick("inicio")}
           className="glass shadow-card rounded-full px-5 py-2 font-display text-xl border border-foreground/10"
         >
           <span className="text-foreground drop-shadow-sm">Diego</span>
           <span className="font-serifItalic italic text-brand drop-shadow-sm"> García</span>
+        </button>
+        <button
+          onClick={switchLang}
+          aria-label={t.nav.switchLabel}
+          className="glass shadow-card rounded-full px-4 py-2 text-xs uppercase tracking-[0.2em] border border-foreground/10 text-foreground/80"
+        >
+          {other}
         </button>
       </header>
 
@@ -60,15 +73,8 @@ export const Navigation = () => {
         )}
       >
         <div className="container">
-          <nav
-            className={cn(
-              "flex items-center gap-6 rounded-full px-6 py-3 transition-all duration-300 glass shadow-card border border-foreground/10"
-            )}
-          >
-            <button
-              onClick={() => handleClick("inicio")}
-              className="font-display text-2xl shrink-0"
-            >
+          <nav className="flex items-center gap-6 rounded-full px-6 py-3 transition-all duration-300 glass shadow-card border border-foreground/10">
+            <button onClick={() => handleClick("inicio")} className="font-display text-2xl shrink-0">
               <span className="text-foreground drop-shadow-sm">Diego</span>
               <span className="font-serifItalic italic text-brand drop-shadow-sm">García</span>
             </button>
@@ -79,9 +85,7 @@ export const Navigation = () => {
                     onClick={() => handleClick(link.id)}
                     className={cn(
                       "px-4 py-2 rounded-full text-sm font-medium transition-all relative",
-                      active === link.id
-                        ? "text-foreground"
-                        : "text-foreground/70 hover:text-foreground"
+                      active === link.id ? "text-foreground" : "text-foreground/70 hover:text-foreground"
                     )}
                   >
                     {active === link.id && (
@@ -91,6 +95,17 @@ export const Navigation = () => {
                   </button>
                 </li>
               ))}
+              <li>
+                <button
+                  onClick={switchLang}
+                  aria-label={t.nav.switchLabel}
+                  title={t.nav.switchLabel}
+                  className="ml-2 inline-flex items-center gap-2 px-4 py-2 rounded-full border border-foreground/15 text-xs uppercase tracking-[0.2em] text-foreground/80 hover:text-brand hover:border-brand/40 transition-all"
+                >
+                  <Languages className="h-4 w-4" />
+                  {other}
+                </button>
+              </li>
             </ul>
           </nav>
         </div>
@@ -108,7 +123,7 @@ export const Navigation = () => {
                   onClick={() => handleClick(link.id)}
                   aria-label={link.label}
                   className={cn(
-                    "flex flex-col items-center gap-1 px-3 py-2 rounded-xl transition-all relative",
+                    "flex flex-col items-center gap-1 px-2.5 py-2 rounded-xl transition-all relative",
                     isActive ? "text-brand" : "text-foreground/70 hover:text-foreground"
                   )}
                 >
@@ -116,7 +131,7 @@ export const Navigation = () => {
                     <span className="absolute inset-0 rounded-xl bg-brand/15 border border-brand/30" />
                   )}
                   <Icon className={cn("h-5 w-5 transition-transform relative", isActive && "scale-110")} />
-                  <span className="text-[10px] font-medium relative">{link.label}</span>
+                  <span className="text-[9px] font-medium relative">{link.label}</span>
                 </button>
               </li>
             );
