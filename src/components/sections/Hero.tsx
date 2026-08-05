@@ -1,13 +1,16 @@
-import { ArrowDown, MapPin } from "lucide-react";
+import { ArrowDown, MapPin, FileDown } from "lucide-react";
 import diegoPhoto from "@/assets/diego.jpg.asset.json";
+import { useLang } from "@/i18n/LanguageContext";
 
 export const Hero = () => {
+  const { t } = useLang();
+  const h = t.hero;
+
   return (
     <section
       id="inicio"
       className="relative min-h-screen flex items-center justify-center pt-28 pb-20 overflow-hidden"
     >
-      {/* Soft top vignette portrait-like glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[60rem] h-[40rem] bg-[radial-gradient(ellipse_at_center,hsl(var(--brand)/0.10),transparent_60%)] pointer-events-none" />
 
       <div className="container relative">
@@ -31,8 +34,10 @@ export const Hero = () => {
                 >
                   <img
                     src={diegoPhoto.url}
-                    alt="Portrait of Diego Jose Garcia"
+                    alt={`${h.name} — ${h.titleTop} ${h.titleBottom}`}
                     className="w-full h-full object-cover"
+                    width={640}
+                    height={640}
                     loading="eager"
                   />
                 </div>
@@ -41,29 +46,27 @@ export const Hero = () => {
 
             {/* Content */}
             <div className="text-center md:text-left flex-1">
-              <div
-                className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass text-[11px] uppercase tracking-[0.25em] text-foreground/70 mb-8 animate-fade-in-up"
-              >
+              <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full glass text-[11px] uppercase tracking-[0.25em] text-foreground/70 mb-8 animate-fade-in-up">
                 <span className="w-1.5 h-1.5 rounded-full bg-brand animate-pulse" />
-                Available for new projects
+                {h.badge}
               </div>
 
               <h1
                 className="font-display text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-normal leading-[0.95] tracking-tight mb-6 animate-fade-in-up break-words"
                 style={{ animationDelay: "120ms", opacity: 0 }}
               >
-                <span className="text-foreground">Web Developer</span>
+                <span className="text-foreground">{h.titleTop}</span>
                 <br />
-                <span className="font-serifItalic italic text-brand">&amp; Designer</span>
+                <span className="font-serifItalic italic text-brand">{h.titleBottom}</span>
               </h1>
 
               <p
                 className="text-sm sm:text-base md:text-lg text-foreground/65 max-w-xl mx-auto md:mx-0 mb-8 animate-fade-in-up leading-relaxed"
                 style={{ animationDelay: "240ms", opacity: 0 }}
               >
-                I'm <span className="text-foreground">Diego Jose Garcia</span> — a junior
-                developer specialized in JavaScript, Python and Flask. I build fast PWAs, APIs
-                and production-ready experiences.
+                {h.introPre}
+                <span className="text-foreground">{h.name}</span>
+                {h.introPost}
               </p>
 
               <div
@@ -71,7 +74,7 @@ export const Hero = () => {
                 style={{ animationDelay: "320ms", opacity: 0 }}
               >
                 <MapPin className="h-3.5 w-3.5" />
-                San Juan, Argentina
+                {h.location}
               </div>
 
               <div
@@ -79,14 +82,22 @@ export const Hero = () => {
                 style={{ animationDelay: "400ms", opacity: 0 }}
               >
                 <a
+                  href={h.cvUrl}
+                  download
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand text-brand-foreground text-sm font-medium tracking-wide hover:shadow-glow transition-all"
+                >
+                  <FileDown className="h-4 w-4" />
+                  {t.common.downloadCv}
+                </a>
+                <a
                   href="#proyectos"
                   onClick={(e) => {
                     e.preventDefault();
                     document.getElementById("proyectos")?.scrollIntoView({ behavior: "smooth" });
                   }}
-                  className="px-6 py-3 rounded-full bg-brand text-brand-foreground text-sm font-medium tracking-wide hover:shadow-glow transition-all"
+                  className="px-6 py-3 rounded-full border border-foreground/15 text-sm font-medium tracking-wide hover:bg-surface-elevated transition-all"
                 >
-                  View projects
+                  {h.ctaProjects}
                 </a>
                 <a
                   href="#contacto"
@@ -96,7 +107,7 @@ export const Hero = () => {
                   }}
                   className="px-6 py-3 rounded-full border border-foreground/15 text-sm font-medium tracking-wide hover:bg-surface-elevated transition-all"
                 >
-                  Get in touch
+                  {h.ctaContact}
                 </a>
               </div>
             </div>
