@@ -101,6 +101,7 @@ const g = {
 
 const urls = {
   trainerRepo: "https://github.com/dg203302/AIPersonalTrainer",
+  trainerSite: "https://aipersonaltr.netlify.app",
   postcredits: "https://postcredits.netlify.app",
   postcreditsPwa: "https://www.pwastore.io/app/post-credits",
   viceclock: "https://viceclock.netlify.app",
@@ -314,7 +315,10 @@ export const content = {
             },
           ],
           stack: ["AI / LLM", "PWA", "JavaScript", "Personalization"],
-          links: [{ label: "Repository", url: urls.trainerRepo, icon: Github, primary: true }],
+          links: [
+            { label: "Visit site", url: urls.trainerSite, icon: ExternalLink, primary: true },
+            { label: "Repository", url: urls.trainerRepo, icon: Github },
+          ],
           gallery: g.trainer,
           logo: trainerLogo,
         },
@@ -709,7 +713,10 @@ export const content = {
             },
           ],
           stack: ["IA / LLM", "PWA", "JavaScript", "Personalización"],
-          links: [{ label: "Repositorio", url: urls.trainerRepo, icon: Github, primary: true }],
+          links: [
+            { label: "Visitar sitio", url: urls.trainerSite, icon: ExternalLink, primary: true },
+            { label: "Repositorio", url: urls.trainerRepo, icon: Github },
+          ],
           gallery: g.trainer,
           logo: trainerLogo,
         },
