@@ -20,27 +20,27 @@ const EditorialCard = ({ project, flip }: { project: Project; flip: boolean }) =
     return () => clearInterval(id);
   }, [project.gallery.length, zoom]);
 
-  const muted = "text-[#f5f3ee]/70";
-  const rule = "border-[#f5f3ee]/20";
-  const chipBorder = "border-[#f5f3ee]/30";
-  const imageBorder = "border-[#f5f3ee]/15";
-  const primaryBtn = "bg-[#f5f3ee] text-[#0a0a0a] hover:bg-white";
-  const ghostBtn = "border border-[#f5f3ee]/40 text-[#f5f3ee] hover:bg-[#f5f3ee]/10";
+  const muted = "text-foreground/55";
+  const rule = "border-foreground/20";
+  const chipBorder = "border-foreground/25";
+  const imageBorder = "border-foreground/15";
+  const primaryBtn = "bg-brand text-brand-foreground hover:bg-brand/90";
+  const ghostBtn = "border border-foreground/30 text-foreground hover:bg-foreground/5";
 
   const shotAlt = (i: number) =>
     `${project.name} — ${project.kicker.toLowerCase()} (${i + 1}/${project.gallery.length})`;
 
   return (
-    <article className="relative w-full project-glass-card text-[#f5f3ee] overflow-hidden shadow-card border border-[#f5f3ee]/20">
+    <article className="relative w-full project-glass-card text-foreground overflow-hidden border-y border-foreground/20">
       {/* Top meta bar */}
-      <div className={`flex items-center justify-between px-6 md:px-12 pt-6 md:pt-8 text-[10px] tracking-[0.3em] uppercase ${muted}`}>
+      <div className={`flex items-center justify-between pt-6 md:pt-8 text-[10px] tracking-[0.3em] uppercase ${muted}`}>
         <span>{project.kicker}</span>
         <span className="font-editorial text-base tracking-normal">{project.index}</span>
       </div>
 
-      <div className="project-glass-content mx-3 md:mx-6 mb-3 md:mb-6 px-5 md:px-8 pt-5 md:pt-7 pb-8 md:pb-10">
+      <div className="project-glass-content pt-7 pb-10 md:pb-16">
         <div className="flex items-end justify-between gap-6 mb-5 md:mb-6">
-          <h3 className="font-editorial uppercase leading-[0.9] tracking-tight text-4xl md:text-6xl lg:text-7xl">
+          <h3 className="font-editorial uppercase leading-[0.88] text-5xl md:text-7xl lg:text-8xl font-light">
             {project.name}
           </h3>
           {project.logo && (
@@ -50,22 +50,20 @@ const EditorialCard = ({ project, flip }: { project: Project; flip: boolean }) =
               loading="lazy"
               width={64}
               height={64}
-              className={`shrink-0 hidden sm:block w-14 h-14 md:w-16 md:h-16 object-contain bg-[#f5f3ee]/5 p-2 border ${rule}`}
+              className={`shrink-0 hidden sm:block w-14 h-14 md:w-16 md:h-16 object-contain bg-foreground/5 p-2 border ${rule}`}
             />
           )}
         </div>
 
         <div className="flex items-center gap-2 mb-5">
-          <span className="h-1 w-6 bg-[#f5f3ee]" />
-          <span className="h-1 w-3 bg-[#f5f3ee]" />
-          <span className="h-1 w-3 bg-[#f5f3ee]/50" />
+          <span className="h-px w-16 bg-brand" />
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
           {/* Gallery */}
           <div className={`lg:col-span-5 ${flip ? "lg:order-2" : ""}`}>
             <div className="space-y-3">
-              <div className={`relative group w-full overflow-hidden border ${imageBorder} bg-[#0a0a0a] flex items-center justify-center`}>
+            <div className={`relative group w-full overflow-hidden border ${imageBorder} bg-surface flex items-center justify-center`}>
                 {project.gallery.map((src, idx) => (
                   <img
                     key={src}
@@ -84,7 +82,7 @@ const EditorialCard = ({ project, flip }: { project: Project; flip: boolean }) =
                   type="button"
                   onClick={() => setZoom(true)}
                   aria-label={t.common.openGallery}
-                  className="absolute bottom-3 right-3 p-2 rounded-full bg-[#0a0a0a]/70 border border-[#f5f3ee]/30 text-[#f5f3ee] opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity"
+                  className="absolute bottom-3 right-3 p-2 bg-background/80 border border-foreground/30 text-foreground opacity-0 group-hover:opacity-100 focus-visible:opacity-100 transition-opacity"
                 >
                   <Maximize2 className="h-4 w-4" />
                 </button>
@@ -100,8 +98,8 @@ const EditorialCard = ({ project, flip }: { project: Project; flip: boolean }) =
                       aria-current={active === idx}
                       className={`relative aspect-square overflow-hidden border transition-all ${
                         active === idx
-                          ? "border-[#f5f3ee] opacity-100"
-                          : "border-[#f5f3ee]/20 opacity-50 hover:opacity-100"
+                          ? "border-brand opacity-100"
+                          : "border-foreground/20 opacity-50 hover:opacity-100"
                       }`}
                     >
                       <img
@@ -110,7 +108,7 @@ const EditorialCard = ({ project, flip }: { project: Project; flip: boolean }) =
                         aria-hidden="true"
                         loading="lazy"
                         decoding="async"
-                        className="w-full h-full object-contain bg-[#0a0a0a]"
+                        className="w-full h-full object-contain bg-surface"
                       />
                     </button>
                   ))}
@@ -124,7 +122,7 @@ const EditorialCard = ({ project, flip }: { project: Project; flip: boolean }) =
             {project.role && (
               <p className={`text-[10px] tracking-[0.3em] uppercase ${muted} mb-3`}>{project.role}</p>
             )}
-            <p className="text-sm md:text-base leading-relaxed mb-6 text-[#f5f3ee]/85">
+            <p className="text-sm md:text-base leading-relaxed mb-6 text-foreground/75">
               {project.description}
             </p>
 
@@ -132,11 +130,11 @@ const EditorialCard = ({ project, flip }: { project: Project; flip: boolean }) =
             <dl className={`mb-8 border-l-2 ${rule} pl-4 space-y-2`}>
               <div>
                 <dt className={`text-[10px] tracking-[0.25em] uppercase ${muted}`}>{t.common.myRole}</dt>
-                <dd className="text-xs md:text-sm text-[#f5f3ee]/85">{project.myRole}</dd>
+                <dd className="text-xs md:text-sm text-foreground/80">{project.myRole}</dd>
               </div>
               <div>
                 <dt className={`text-[10px] tracking-[0.25em] uppercase ${muted}`}>{t.common.result}</dt>
-                <dd className="text-xs md:text-sm text-[#f5f3ee]/85">{project.result}</dd>
+                <dd className="text-xs md:text-sm text-foreground/80">{project.result}</dd>
               </div>
             </dl>
 
@@ -158,7 +156,7 @@ const EditorialCard = ({ project, flip }: { project: Project; flip: boolean }) =
                   <h4 className="font-editorial uppercase text-sm md:text-base leading-tight mb-2">
                     {f.title}
                   </h4>
-                  <p className="text-xs leading-relaxed text-[#f5f3ee]/65">{f.text}</p>
+                  <p className="text-xs leading-relaxed text-foreground/60">{f.text}</p>
                 </div>
               ))}
             </div>
@@ -215,8 +213,8 @@ export const Projects = () => {
   const p = t.projects;
 
   return (
-    <section id="proyectos" className="py-24 md:py-32 relative">
-      <div className="container space-y-20">
+    <section id="proyectos" className="py-24 md:py-40 relative">
+      <div className="container space-y-32 md:space-y-48">
         <div>
           <SectionHeader
             eyebrow={p.personal.eyebrow}
@@ -224,7 +222,7 @@ export const Projects = () => {
             description={p.personal.description}
           />
 
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-16 md:gap-28">
             {p.items.map((project, i) => (
               <Reveal key={project.name} delay={i * 80}>
                 <EditorialCard project={project} flip={i % 2 === 1} />
@@ -253,7 +251,7 @@ export const Projects = () => {
             }
           />
 
-          <div className="flex flex-col gap-8">
+          <div className="flex flex-col gap-16 md:gap-28">
             {p.teamItems.map((project, i) => (
               <Reveal key={project.name} delay={i * 80}>
                 <EditorialCard project={project} flip={i % 2 === 1} />

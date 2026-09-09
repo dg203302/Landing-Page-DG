@@ -1,12 +1,12 @@
 import { useEffect, useRef } from "react";
 
-const BUBBLE_COUNT = 35;
+const BUBBLE_COUNT = 12;
 
 // Yellow palette adapted from the provided red palette
 const params = {
-  bubbleFill: "rgba(255, 210, 70, ",
-  bubbleStroke: "rgba(255, 230, 130, ",
-  gradient: "linear-gradient(135deg, #4a3a02 0%, #170f00 100%)",
+  bubbleFill: "hsla(39, 47%, 60%, ",
+  bubbleStroke: "hsla(40, 52%, 74%, ",
+  gradient: "hsl(0, 0%, 3%)",
 };
 
 class Bubble {
@@ -23,12 +23,12 @@ class Bubble {
   constructor(width: number, height: number) {
     this.x = Math.random() * width;
     this.y = Math.random() * height;
-    this.radius = Math.random() * 90 + 20;
+    this.radius = Math.random() * 130 + 40;
     const speedMult = 0.4;
     this.vx = (Math.random() - 0.5) * speedMult;
     this.vy = (Math.random() - 0.5) * speedMult;
     this.isBlurred = Math.random() > 0.4;
-    this.baseOpacity = Math.random() * 0.3 + 0.05;
+    this.baseOpacity = Math.random() * 0.08 + 0.02;
     this.pulseRate = Math.random() * 0.01 + 0.005;
     this.angle = Math.random() * Math.PI * 2;
   }
@@ -128,8 +128,7 @@ export const BackgroundBubbles = () => {
       style={{ background: params.gradient }}
     >
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full block" />
-      {/* Subtle vignette to keep text readable */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_55%,rgba(0,0,0,0.55)_100%)]" />
+      <div className="absolute inset-0 bg-background/35" />
     </div>
   );
 };
