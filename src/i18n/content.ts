@@ -83,7 +83,11 @@ export type Project = {
 };
 
 const g = {
-  trainer: [trainer1, trainer2, trainer3, trainer4, trainer5],
+  trainer: [
+    trainer1, trainer2, trainer3, trainer4, trainer5,
+    trainer6, trainer7, trainer8, trainer9, trainer10,
+    trainer11, trainer12, trainer13, trainer14, trainer15,
+  ],
   postcredits: [
     postcredits1, postcredits2, postcredits3, postcredits4, postcredits5,
     postcredits6, postcredits7, postcredits8, postcredits9, postcredits10,
