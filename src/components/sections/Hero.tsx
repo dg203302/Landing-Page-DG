@@ -1,5 +1,4 @@
 import { ArrowDown, ArrowUpRight, MapPin, FileDown } from "lucide-react";
-import diegoPhoto from "@/assets/diego.jpg.asset.json";
 import { useLang } from "@/i18n/LanguageContext";
 
 export const Hero = () => {
@@ -9,16 +8,16 @@ export const Hero = () => {
   return (
     <section
       id="inicio"
-      className="relative min-h-screen pt-32 md:pt-44 pb-20 overflow-hidden"
+      className="relative min-h-screen pt-28 md:pt-44 pb-24 overflow-hidden"
     >
       <div className="container relative">
         <div className="border-t border-foreground/20 pt-5">
-          <div className="flex items-center justify-between text-[9px] uppercase tracking-[0.3em] text-foreground/50 mb-12">
+          <div className="flex items-center justify-between text-[9px] uppercase tracking-[0.3em] text-foreground/50 mb-8 md:mb-12">
             <span>{h.badge}</span>
             <span className="hidden sm:inline">Portfolio / 2026</span>
           </div>
 
-          <h1 className="font-display uppercase font-light text-[clamp(3.8rem,10vw,9rem)] leading-[0.8] mb-10">
+          <h1 className="font-display uppercase font-light text-[clamp(3rem,10vw,9rem)] leading-[0.82] mb-8 md:mb-10">
             <span className="block">{h.titleTop}</span>
             <span className="block text-right text-brand">{h.titleBottom}</span>
           </h1>
@@ -29,9 +28,9 @@ export const Hero = () => {
               className="relative animate-fade-in-up md:col-span-4 md:order-2"
               style={{ animationDelay: "60ms", opacity: 0 }}
             >
-              <div className="relative aspect-[4/5] w-full max-w-sm mx-auto md:mr-0 overflow-hidden border border-foreground/15">
+              <div className="relative aspect-[4/5] w-44 sm:w-56 md:w-full max-w-sm mx-auto md:mr-0 overflow-hidden border border-foreground/15">
                   <img
-                    src={diegoPhoto.url}
+                    src="/favicon.png"
                     alt={`${h.name} — ${h.titleTop} ${h.titleBottom}`}
                     className="w-full h-full object-cover object-top"
                     width={640}
