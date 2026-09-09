@@ -1,12 +1,10 @@
 import { Github, ExternalLink, Download } from "lucide-react";
 import trainerLogo from "@/assets/trainer-logo.webp";
-import trainer1 from "@/assets/trainer-1.webp";
-import trainer2 from "@/assets/trainer-2.webp";
-import trainer3 from "@/assets/trainer-3.webp";
-import trainer4 from "@/assets/trainer-4.webp";
-import trainer5 from "@/assets/trainer-5.webp";
-import trainer6 from "@/assets/trainer-6.webp";
-import trainer7 from "@/assets/trainer-7.webp";
+import trainer1 from "@/assets/trainer-1.webp.asset.json";
+import trainer2 from "@/assets/trainer-2.webp.asset.json";
+import trainer3 from "@/assets/trainer-3.webp.asset.json";
+import trainer4 from "@/assets/trainer-4.webp.asset.json";
+import trainer5 from "@/assets/trainer-5.webp.asset.json";
 import debituLogo from "@/assets/debitu-logo.webp";
 import debitu1 from "@/assets/debitu-1.webp";
 import debitu2 from "@/assets/debitu-2.webp";
