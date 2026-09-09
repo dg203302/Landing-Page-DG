@@ -5,6 +5,16 @@ import trainer2 from "@/assets/trainer-2.webp";
 import trainer3 from "@/assets/trainer-3.webp";
 import trainer4 from "@/assets/trainer-4.webp";
 import trainer5 from "@/assets/trainer-5.webp";
+import trainer6 from "@/assets/trainer-6.webp";
+import trainer7 from "@/assets/trainer-7.webp";
+import trainer8 from "@/assets/trainer-8.webp";
+import trainer9 from "@/assets/trainer-9.webp";
+import trainer10 from "@/assets/trainer-10.webp";
+import trainer11 from "@/assets/trainer-11.webp";
+import trainer12 from "@/assets/trainer-12.webp";
+import trainer13 from "@/assets/trainer-13.webp";
+import trainer14 from "@/assets/trainer-14.webp";
+import trainer15 from "@/assets/trainer-15.webp";
 import debituLogo from "@/assets/debitu-logo.webp";
 import debitu1 from "@/assets/debitu-1.webp";
 import debitu2 from "@/assets/debitu-2.webp";
@@ -73,7 +83,11 @@ export type Project = {
 };
 
 const g = {
-  trainer: [trainer1, trainer2, trainer3, trainer4, trainer5],
+  trainer: [
+    trainer1, trainer2, trainer3, trainer4, trainer5,
+    trainer6, trainer7, trainer8, trainer9, trainer10,
+    trainer11, trainer12, trainer13, trainer14, trainer15,
+  ],
   postcredits: [
     postcredits1, postcredits2, postcredits3, postcredits4, postcredits5,
     postcredits6, postcredits7, postcredits8, postcredits9, postcredits10,
