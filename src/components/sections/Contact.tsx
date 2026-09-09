@@ -47,7 +47,7 @@ export const Contact = () => {
         <SectionHeader eyebrow={c.eyebrow} title={c.title} description={c.description} />
 
         <Reveal>
-          <div className="mb-8 p-6 md:p-8 rounded-3xl glass shadow-card flex flex-col md:flex-row md:items-center gap-5 justify-between">
+          <div className="mb-12 py-8 border-y border-foreground/20 flex flex-col md:flex-row md:items-center gap-5 justify-between">
             <div className="flex-1">
               <h3 className="font-display text-xl md:text-2xl font-semibold mb-1">{c.cvTitle}</h3>
               <p className="text-sm text-foreground/65">{c.cvText}</p>
@@ -56,7 +56,7 @@ export const Contact = () => {
               <a
                 href={t.hero.cvUrl}
                 download
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-brand text-brand-foreground text-sm font-medium tracking-wide hover:shadow-glow transition-all"
+                className="editorial-action bg-brand text-brand-foreground"
               >
                 <FileDown className="h-4 w-4" />
                 {t.common.downloadCv}
@@ -64,7 +64,7 @@ export const Contact = () => {
               <button
                 type="button"
                 onClick={copyEmail}
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-foreground/15 text-sm font-medium tracking-wide hover:bg-surface-elevated transition-all"
+                className="editorial-action border border-foreground/25 text-foreground hover:bg-foreground/5"
               >
                 {copied ? <Check className="h-4 w-4 text-brand" /> : <Copy className="h-4 w-4" />}
                 {copied ? c.copied : c.copy}
@@ -73,16 +73,16 @@ export const Contact = () => {
           </div>
         </Reveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-5 border-t border-l border-foreground/20">
           <Reveal className="lg:col-span-2">
-            <div className="h-full p-8 rounded-3xl glass shadow-card">
+             <div className="h-full p-8 border-r border-b border-foreground/20">
               <h3 className="font-display text-xl font-semibold mb-6">{c.personalTitle}</h3>
               <ul className="space-y-5">
                 {c.personal.map((p) => {
                   const Icon = personalIcons[p.key as keyof typeof personalIcons];
                   return (
                     <li key={p.key} className="flex items-start gap-4">
-                      <div className="w-10 h-10 shrink-0 rounded-xl bg-surface-elevated flex items-center justify-center">
+                      <div className="w-10 h-10 shrink-0 border border-foreground/15 flex items-center justify-center">
                         <Icon className="h-4 w-4 text-brand" />
                       </div>
                       <div>
@@ -98,7 +98,7 @@ export const Contact = () => {
             </div>
           </Reveal>
 
-          <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-4">
+           <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2">
             {contacts.map((item, i) => {
               const Icon = item.icon;
               return (
@@ -107,13 +107,13 @@ export const Contact = () => {
                     href={item.href}
                     target={item.href.startsWith("http") ? "_blank" : undefined}
                     rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                    className={`group block h-full p-6 rounded-2xl glass shadow-card transition-all hover:-translate-y-1 ${
-                      item.primary ? "ring-1 ring-brand/40" : ""
+                    className={`group block h-full p-6 border-r border-b border-foreground/20 transition-colors hover:bg-foreground/[0.025] ${
+                      item.primary ? "bg-brand/5" : ""
                     }`}
                   >
                     <div
                       className={`w-11 h-11 rounded-xl flex items-center justify-center mb-4 ${
-                        item.primary ? "bg-gradient-brand shadow-glow" : "bg-surface-elevated"
+                        item.primary ? "bg-brand" : "border border-foreground/15"
                       }`}
                     >
                       <Icon

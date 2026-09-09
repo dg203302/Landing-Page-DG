@@ -42,17 +42,18 @@ export const Experience = () => {
       <div className="container">
         <SectionHeader eyebrow={e.eyebrow} title={e.title} description={e.description} />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="border-t border-foreground/20">
           {e.skills.map((skill, i) => {
             const Icon = skillIcons[skill.key as keyof typeof skillIcons];
             return (
               <Reveal key={skill.key} delay={i * 80}>
-                <article className="group h-full p-6 rounded-2xl glass hover:border-brand/40 hover:-translate-y-1 transition-all duration-500 shadow-card">
-                  <div className="w-11 h-11 rounded-xl bg-gradient-brand flex items-center justify-center mb-5 shadow-glow">
-                    <Icon className="h-5 w-5 text-brand-foreground" />
+                <article className="group grid grid-cols-[5rem_1fr_auto] md:grid-cols-[11rem_1fr_3rem] items-center gap-5 border-b border-foreground/20 py-7 md:py-9 transition-colors hover:bg-foreground/[0.025]">
+                  <div className="font-display text-6xl md:text-8xl font-light text-foreground/20 group-hover:text-brand transition-colors">0{i + 1}</div>
+                  <div>
+                    <h3 className="font-display text-2xl md:text-4xl font-light uppercase mb-2">{skill.title}</h3>
+                    <p className="max-w-2xl text-sm text-foreground/55 leading-relaxed">{skill.text}</p>
                   </div>
-                  <h3 className="font-display text-lg font-semibold mb-2">{skill.title}</h3>
-                  <p className="text-sm text-foreground/65 leading-relaxed">{skill.text}</p>
+                  <Icon className="h-5 w-5 text-brand" />
                 </article>
               </Reveal>
             );
@@ -62,9 +63,8 @@ export const Experience = () => {
         {/* My Stack */}
         <div id="tecnologias" className="mt-24 md:mt-32">
           <Reveal>
-            <div className="flex justify-center mb-10">
-              <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full glass text-[11px] uppercase tracking-[0.25em] text-foreground/70">
-                <span className="w-1.5 h-1.5 rounded-full bg-brand" />
+            <div className="flex justify-start mb-10 border-t border-foreground/20 pt-5">
+              <div className="text-[10px] uppercase tracking-[0.3em] text-brand">
                 {e.stackLabel}
               </div>
             </div>
@@ -72,7 +72,7 @@ export const Experience = () => {
 
           <Reveal delay={80}>
             <div className="relative mb-16 md:mb-20">
-              <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6 md:gap-x-14 opacity-70">
+              <div className="flex flex-wrap items-center justify-start gap-x-10 gap-y-6 md:gap-x-14 opacity-70">
                 {logos.map((l) => (
                   <div
                     key={l.slug}
@@ -95,16 +95,14 @@ export const Experience = () => {
             </div>
           </Reveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-3 border-t border-l border-foreground/20">
             {e.stackCards.map((c, i) => {
               const Icon = stackIcons[c.key as keyof typeof stackIcons];
               return (
                 <Reveal key={c.key} delay={i * 100}>
-                  <article className="group h-full p-7 rounded-2xl glass shadow-card hover:border-brand/40 hover:-translate-y-1 transition-all duration-500">
+                  <article className="group h-full p-7 md:p-9 border-r border-b border-foreground/20 hover:bg-foreground/[0.025] transition-colors">
                     <div className="flex items-center justify-between mb-6">
-                      <div className="w-11 h-11 rounded-xl bg-gradient-brand flex items-center justify-center shadow-glow">
-                        <Icon className="h-5 w-5 text-brand-foreground" />
-                      </div>
+                      <Icon className="h-6 w-6 text-brand" />
                       <ArrowUpRight className="h-4 w-4 text-foreground/30 group-hover:text-brand group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-all" />
                     </div>
                     <h3 className="font-display text-xl font-semibold mb-3 uppercase tracking-wide">
