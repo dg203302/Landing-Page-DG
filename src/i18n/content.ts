@@ -34,13 +34,6 @@ import lote2 from "@/assets/lote-2.webp";
 import lote3 from "@/assets/lote-3.webp";
 import lote4 from "@/assets/lote-4.webp";
 import lote5 from "@/assets/lote-5.webp";
-import viceclock1 from "@/assets/viceclock-1.webp";
-import viceclock2 from "@/assets/viceclock-2.webp";
-import viceclock3 from "@/assets/viceclock-3.webp";
-import viceclock4 from "@/assets/viceclock-4.webp";
-import viceclock5 from "@/assets/viceclock-5.webp";
-import viceclock6 from "@/assets/viceclock-6.webp";
-import viceclockLogo from "@/assets/viceclock-logo.webp";
 import postcredits1 from "@/assets/postcredits-1.webp";
 import postcredits2 from "@/assets/postcredits-2.webp";
 import postcredits3 from "@/assets/postcredits-3.webp";
@@ -92,7 +85,6 @@ const g = {
     postcredits1, postcredits2, postcredits3, postcredits4, postcredits5,
     postcredits6, postcredits7, postcredits8, postcredits9, postcredits10,
   ],
-  viceclock: [viceclock1, viceclock2, viceclock3, viceclock4, viceclock5, viceclock6],
   habitx: [habitx1, habitx2, habitx3],
   zondamov: [zondamov1, zondamov2, zondamov3, zondamov4, zondamov5, zondamov6],
   debitu: [debitu1, debitu2, debitu3, debitu4, debitu5],
@@ -104,8 +96,6 @@ const urls = {
   trainerSite: "https://aipersonaltr.netlify.app",
   postcredits: "https://postcredits.netlify.app",
   postcreditsPwa: "https://www.pwastore.io/app/post-credits",
-  viceclock: "https://viceclock.netlify.app",
-  viceclockPwa: "https://www.pwastore.io/app/viceclock",
   habitx: "https://habitxapp.netlify.app",
   habitxPwa: "https://www.pwastore.io/app/habitx",
   zondamov: "https://github.com/dg203302/ZondaMov",
@@ -351,33 +341,6 @@ export const content = {
         },
         {
           index: "03",
-          kicker: "GTA VI COUNTDOWN",
-          name: "ViceClock",
-          role: "JavaScript · YouTube API",
-          myRole: "Full stack developer — countdown logic, YouTube API and art direction.",
-          result: "An immersive landing published on PWA Store and installable from the browser.",
-          description:
-            "Immersive landing page with a real-time countdown to the GTA VI launch. Vice City aesthetic, integrated trailers, background images and music.",
-          features: [
-            {
-              title: "Responsive design",
-              text: "Adaptive layout and modern aesthetic inspired by the game's visual identity, optimized for any device.",
-            },
-            {
-              title: "Immersive multimedia",
-              text: "Trailers embedded via the YouTube API, background images from the Vice universe and ambient music.",
-            },
-          ],
-          stack: ["JavaScript", "YouTube API"],
-          links: [
-            { label: "Visit site", url: urls.viceclock, icon: ExternalLink, primary: true },
-            { label: "PWA Store", url: urls.viceclockPwa, icon: Download },
-          ],
-          gallery: g.viceclock,
-          logo: viceclockLogo,
-        },
-        {
-          index: "04",
           kicker: "HABIT TRACKING WEB APP",
           name: "HabitX",
           role: "Vanilla HTML · CSS · JavaScript",
@@ -406,7 +369,7 @@ export const content = {
       ] as Project[],
       teamItems: [
         {
-          index: "05",
+          index: "04",
           kicker: "REAL-TIME LOYALTY",
           name: "Clientes El Lote",
           role: "Backend developer",
@@ -441,7 +404,7 @@ export const content = {
           logo: loteLogo,
         },
         {
-          index: "06",
+          index: "05",
           kicker: "REAL-TIME TRANSPORT",
           name: "ZondaMov",
           role: "Backend developer",
@@ -465,7 +428,7 @@ export const content = {
           logo: zondamovLogo,
         },
         {
-          index: "07",
+          index: "06",
           kicker: "CUSTOMER ACCOUNTS",
           name: "Debitú",
           role: "Backend developer",
@@ -749,33 +712,6 @@ export const content = {
         },
         {
           index: "03",
-          kicker: "CUENTA REGRESIVA GTA VI",
-          name: "ViceClock",
-          role: "JavaScript · YouTube API",
-          myRole: "Desarrollador full stack — lógica del contador, YouTube API y dirección de arte.",
-          result: "Una landing inmersiva publicada en PWA Store e instalable desde el navegador.",
-          description:
-            "Landing inmersiva con cuenta regresiva en tiempo real hasta el lanzamiento de GTA VI. Estética Vice City, tráilers integrados, imágenes de fondo y música.",
-          features: [
-            {
-              title: "Diseño responsivo",
-              text: "Layout adaptable y estética moderna inspirada en la identidad visual del juego, optimizada para cualquier dispositivo.",
-            },
-            {
-              title: "Multimedia inmersiva",
-              text: "Tráilers embebidos con la API de YouTube, imágenes de fondo del universo Vice y música ambiental.",
-            },
-          ],
-          stack: ["JavaScript", "YouTube API"],
-          links: [
-            { label: "Visitar sitio", url: urls.viceclock, icon: ExternalLink, primary: true },
-            { label: "PWA Store", url: urls.viceclockPwa, icon: Download },
-          ],
-          gallery: g.viceclock,
-          logo: viceclockLogo,
-        },
-        {
-          index: "04",
           kicker: "APP DE SEGUIMIENTO DE HÁBITOS",
           name: "HabitX",
           role: "HTML · CSS · JavaScript vanilla",
@@ -804,7 +740,7 @@ export const content = {
       ] as Project[],
       teamItems: [
         {
-          index: "05",
+          index: "04",
           kicker: "FIDELIZACIÓN EN TIEMPO REAL",
           name: "Clientes El Lote",
           role: "Desarrollador backend",
@@ -839,7 +775,7 @@ export const content = {
           logo: loteLogo,
         },
         {
-          index: "06",
+          index: "05",
           kicker: "TRANSPORTE EN TIEMPO REAL",
           name: "ZondaMov",
           role: "Desarrollador backend",
@@ -863,7 +799,7 @@ export const content = {
           logo: zondamovLogo,
         },
         {
-          index: "07",
+          index: "06",
           kicker: "CUENTAS DE CLIENTES",
           name: "Debitú",
           role: "Desarrollador backend",
